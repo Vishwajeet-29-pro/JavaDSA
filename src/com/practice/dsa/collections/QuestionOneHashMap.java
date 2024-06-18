@@ -15,7 +15,7 @@ public class QuestionOneHashMap {
         String choice;
         do {
             System.out.println("Enter the operation want to perform on HashMap");
-            System.out.println("Add, Remove, Display, Find");
+            System.out.println("Add, Remove, Display, Find, Q to exit");
             choice = scanner.next().toLowerCase();
 
             switch (choice){
@@ -57,5 +57,6 @@ public class QuestionOneHashMap {
         map.forEach((key, value) ->{
             System.out.print(key +" : "+value+" ");
         });
+        System.out.println();
     }
 }
