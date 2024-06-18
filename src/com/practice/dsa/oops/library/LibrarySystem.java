@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LibrarySystem {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Library library = new Library();
@@ -15,7 +15,7 @@ public class LibrarySystem {
     public static void chooseOperation(Library library){
         String choice;
         do {
-            System.out.println("Enter your choice: (Add, Remove, Display, Search): ");
+            System.out.println("Enter your choice: (Add, Remove, Display, Search, Exit): ");
             choice = scanner.next().toLowerCase();
 
             switch (choice){

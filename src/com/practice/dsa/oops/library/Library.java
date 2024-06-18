@@ -1,8 +1,8 @@
 package com.practice.dsa.oops.library;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 
 public class Library {
     private List<Book> list;
@@ -16,11 +16,18 @@ public class Library {
     }
 
     public void removeBook(String title){
-        for (var book: list){
-            if (book.getTitle().equalsIgnoreCase(title)){
-                list.remove(book);
+        Iterator<Book> iterator = list.listIterator();
+        boolean found = false;
+        while (iterator.hasNext()){
+            Book book = iterator.next();
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                iterator.remove();
+                found = true;
+                System.out.println("Book Deleted Successfully");
             }
-            else System.out.println("Book not found");
+        }
+        if (!found){
+            System.out.println("Book Not found");
         }
     }
 
