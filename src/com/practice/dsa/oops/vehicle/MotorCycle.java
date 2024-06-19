@@ -11,6 +11,6 @@ public class MotorCycle extends Vehicle {
     @Override
     void displayDetails() {
         super.displayDetails();
-        System.out.println("Has Side car: "+hasSideCar);
+        System.out.println("Has Side Car:"+(hasSideCar ? "YES" : "NO"));
     }
 }

@@ -14,6 +14,6 @@ public class Truck extends Vehicle{
     void displayDetails() {
         super.displayDetails();
         System.out.println("Load Capacity in KG: "+loadCapacityInKG);
-        System.out.println("Has Trailer: "+hasTrailer);
+        System.out.println("Has Trailer: "+(hasTrailer ? "YES" : "NO"));
     }
 }

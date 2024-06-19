@@ -14,6 +14,6 @@ public class Car extends Vehicle {
     void displayDetails() {
         super.displayDetails();
         System.out.println("Number of Doors: "+numberOfDoors);
-        System.out.println("Is Convertible: "+isConvertible);
+        System.out.println("Is Convertible: "+(isConvertible ? "YES" : "NO"));
     }
 }
