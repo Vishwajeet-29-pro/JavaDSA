@@ -12,7 +12,7 @@ public class FullTimeEmployees extends Employee{
     @Override
     public void calculatePay() {
         double monthlyPay = annualSalary / 12;
-        System.out.println("The Monthly Pay for FullTime Employee is: "+monthlyPay);
+        System.out.println("The Monthly Pay for FullTime Employee is: "+String.format("%.2f",monthlyPay));
     }
 
 }
