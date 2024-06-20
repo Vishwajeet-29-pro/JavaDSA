@@ -1,5 +1,5 @@
 package com.practice.dsa.oops.shape;
 
-public interface Shape {
+public interface Drawable {
     void draw();
 }
