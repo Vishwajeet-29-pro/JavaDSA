@@ -13,6 +13,7 @@ public class Triangle extends Shape{
     @Override
     void calculateArea() {
         area = 0.5 * base * height;
+        area = Double.parseDouble(String.format("%.2f",area));
     }
 
     @Override
