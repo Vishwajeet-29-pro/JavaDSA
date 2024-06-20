@@ -1,6 +1,6 @@
 package com.practice.dsa.oops.shape;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable{
     protected String color;
     protected double area;
 

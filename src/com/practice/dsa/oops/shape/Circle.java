@@ -1,6 +1,6 @@
 package com.practice.dsa.oops.shape;
 
-public class Circle extends Shape implements Drawable{
+public class Circle extends Shape {
     private double radius;
 
     public Circle(String color, double radius){
