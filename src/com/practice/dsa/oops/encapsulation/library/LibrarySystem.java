@@ -1,7 +1,5 @@
-package com.practice.dsa.oops.library;
+package com.practice.dsa.oops.encapsulation.library;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class LibrarySystem {

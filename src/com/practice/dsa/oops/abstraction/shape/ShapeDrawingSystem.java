@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.shape;
+package com.practice.dsa.oops.abstraction.shape;
 
 public class ShapeDrawingSystem {
     public static void main(String[] args) {

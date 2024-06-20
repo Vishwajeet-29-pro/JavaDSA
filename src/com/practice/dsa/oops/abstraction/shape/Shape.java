@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.shape;
+package com.practice.dsa.oops.abstraction.shape;
 
 public abstract class Shape implements Drawable{
     protected String color;

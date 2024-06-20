@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.shape;
+package com.practice.dsa.oops.abstraction.shape;
 
 public class Circle extends Shape {
     private double radius;

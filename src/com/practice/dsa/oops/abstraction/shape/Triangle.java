@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.shape;
+package com.practice.dsa.oops.abstraction.shape;
 
 public class Triangle extends Shape{
     private double base;

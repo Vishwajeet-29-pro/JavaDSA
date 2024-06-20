@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.employee;
+package com.practice.dsa.oops.polymorphism.employee;
 
 public class EmployeeSystem {
     public static void main(String[] args) {

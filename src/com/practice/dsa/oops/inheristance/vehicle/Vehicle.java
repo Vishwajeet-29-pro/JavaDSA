@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.vehicle;
+package com.practice.dsa.oops.inheristance.vehicle;
 
 public class Vehicle {
     private String make;

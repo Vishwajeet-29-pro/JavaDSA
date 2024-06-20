@@ -1,4 +1,4 @@
-package com.practice.dsa.oops.library;
+package com.practice.dsa.oops.encapsulation.library;
 
 public class Book {
     private String title;
