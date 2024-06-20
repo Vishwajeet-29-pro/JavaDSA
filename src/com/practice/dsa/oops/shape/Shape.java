@@ -1,8 +1,8 @@
 package com.practice.dsa.oops.shape;
 
 public abstract class Shape {
-    private String color;
-    private double area;
+    protected String color;
+    protected double area;
 
     public Shape(String color){
         this.color = color;
