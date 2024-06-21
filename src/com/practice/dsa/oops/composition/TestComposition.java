@@ -20,4 +20,11 @@ public class TestComposition {
 
         System.out.println();
     }
+
+    /*
+    Benefits of Composition over Inheritance:
+        Flexibility: You can change the engine of the car at runtime by simply assigning a different Engine object.
+        Reusability: You can reuse the Engine classes in other contexts without modifying the Car class.
+        Decoupling: The Car class is decoupled from the specific implementations of the engines, following the dependency inversion principle.
+    */
 }
