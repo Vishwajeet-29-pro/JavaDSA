@@ -1,9 +1,9 @@
 package com.practice.dsa.design_pattern.factory_pattern;
 
 /*
-* This implementation of the Observer pattern allows multiple investors to be notified whenever there is a change in the
-* stock price, without tightly coupling the stock to the investors. The stock (subject) maintains a list of investors
-* (observers) and notifies them whenever its state changes.
+* This implementation of the Factory Method pattern decouples the client code from the specific classes of the objects
+* it needs to create. Instead of instantiating the objects directly, the client code calls the factory method, which
+* returns the appropriate object based on the input. This makes the code more flexible and easier to maintain.
 * */
 
 public class FactoryMethodPatternTest {
