@@ -1,0 +1,16 @@
+Overview:
+The Strategy Pattern is a behavioral design pattern that enables selecting an algorithm's behavior at runtime. Instead
+of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms
+to use. This pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+
+Intent:
+
+Define a family of algorithms.
+Encapsulate each algorithm.
+Make the algorithms interchangeable within that family.
+Allow the algorithm to vary independently, from clients that use it.
+Key Concepts:
+
+Context: The class which uses a Strategy to perform a task.
+Strategy: The interface that declares the method(s) to be implemented by concrete strategies.
+Concrete Strategies: Classes that implement the Strategy interface with specific algorithms.
