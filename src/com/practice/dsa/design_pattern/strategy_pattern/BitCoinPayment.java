@@ -8,7 +8,7 @@ public class BitCoinPayment implements PaymentStrategy {
     }
 
     @Override
-    public void pay() {
-        System.out.println("Payment from BitCoins !!");
+    public void pay(int amount) {
+        System.out.println("Paid "+amount+" using BitCoins !!");
     }
 }
