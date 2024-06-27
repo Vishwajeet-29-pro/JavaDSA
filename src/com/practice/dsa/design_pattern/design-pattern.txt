@@ -26,7 +26,7 @@ Visitor Pattern
 Here are the most common design patterns list:
 1. Singleton Pattern        : done
 2. Factory Method Pattern   : done
-3. Builder Pattern          :
+3. Builder Pattern          : done
 4. Adapter Pattern          : done
 5. Decorator Pattern        : done
 6. Proxy Pattern            :
