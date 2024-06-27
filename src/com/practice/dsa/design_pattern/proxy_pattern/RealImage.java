@@ -1,6 +1,4 @@
-package com.practice.dsa.design_pattern;
-
-import com.practice.dsa.design_pattern.proxy_pattern.Image;
+package com.practice.dsa.design_pattern.proxy_pattern;
 
 public class RealImage implements Image {
     private String fileName;
