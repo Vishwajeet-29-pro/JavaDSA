@@ -24,12 +24,12 @@ Template Method Pattern
 Visitor Pattern
 
 Here are the most common design patterns list:
-1. Singleton Pattern
-2. Factory Method Pattern
-3. Builder Pattern
-4. Adapter Pattern
-5. Decorator Pattern
-6. Proxy Pattern
-7. Observer Pattern
-8. Strategy Pattern
-9. Template Method Pattern
+1. Singleton Pattern        : done
+2. Factory Method Pattern   : done
+3. Builder Pattern          :
+4. Adapter Pattern          : done
+5. Decorator Pattern        : done
+6. Proxy Pattern            :
+7. Observer Pattern         : done
+8. Strategy Pattern         : done
+9. Template Method Pattern  :
