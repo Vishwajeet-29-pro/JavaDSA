@@ -1,0 +1,32 @@
+Types of Exceptions
+
+Checked Exceptions:
+Checked exceptions are checked at compile-time.
+These exceptions must be either caught using a try-catch block or declared in the method signature using the throws
+keyword.
+Examples: IOException, SQLException.
+
+Unchecked Exceptions:
+Unchecked exceptions are not checked at compile-time, but rather at runtime.
+These exceptions do not need to be explicitly caught or declared.
+Examples: NullPointerException, ArrayIndexOutOfBoundsException, IllegalArgumentException.
+
+Exception handling in Java is a powerful mechanism to handle runtime errors and maintain the normal flow of the
+application. It allows you to catch and handle errors gracefully without crashing your program. Here is a detailed
+explanation and example to help you understand and implement exception handling in Java.
+
+Key Concepts:
+
+Try-Catch Block:
+Try: A block of code that is likely to throw an exception.
+Catch: A block of code that handles the exception.
+
+Finally Block:
+A block that executes regardless of whether an exception is thrown or caught.
+
+Throw and Throws:
+Throw: Used to explicitly throw an exception.
+Throws: Indicates that a method can throw an exception.
+
+Custom Exceptions:
+Creating your own exception classes.
