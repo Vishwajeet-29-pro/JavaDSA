@@ -1,0 +1,29 @@
+Static Inner Class
+Detailed Description
+A static inner class is a nested class that is declared with the static keyword. This type of inner class has the
+following characteristics:
+
+No Access to Non-static Members: A static inner class cannot directly access non-static members (fields and methods) of
+the outer class. However, it can access static members of the outer class.
+Independent of Outer Class Instances: Since it does not require an instance of the outer class, a static inner class can
+be instantiated without creating an instance of the outer class.
+Usage: Static inner classes are used when the nested class does not need to interact with the instance members of the
+outer class. It is often used to group static members (like static methods or constants) logically.
+
+Syntax:
+
+    public class OuterClass {
+        private static String staticField = "Static Field"
+
+        static class InnerClass {
+            void innerMethod() {
+                System.out.println("Static field: " +staticField);
+            }
+        }
+    }
+
+Creating an Instance
+A static inner class can be instantiated without an instance of the outer class:
+
+OuterClass.InnerClass inner = new OuterClass.InnerClass();
+inner.innerMethod();
