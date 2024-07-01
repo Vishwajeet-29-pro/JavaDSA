@@ -11,3 +11,21 @@ Single Use: They are often used for one-time use, usually to provide a simple im
 Instantiation and Declaration: They are declared and instantiated simultaneously.
 Can Extend a Class or Implement an Interface: You can create an anonymous inner class to extend an existing class or to
     implement an interface.
+
+Syntax:
+    // Anonymous inner class implementing an interface
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            System.out.println("Running in an anonymous inner class");
+        }
+    };
+
+    // Anonymous inner class extending a class
+    Button button = new Button("Click Me");
+    button.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("Button clicked!");
+        }
+    });
