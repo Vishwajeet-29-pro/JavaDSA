@@ -37,4 +37,13 @@ public class BankTest {
         assertDoesNotThrow(()-> account.deposit(500));
         assertEquals(1000, account.getBalance());
     }
+
+    @Test
+    void testDepositZeroAmount() {
+        BankAccount account = new BankAccount(500);
+        InvalidAmountException thrown = assertThrows(InvalidAmountException.class, ()->{
+            account.deposit(0);
+        });
+        assertEquals("Deposit amount must be positive.",thrown.getMessage());
+    }
 }
