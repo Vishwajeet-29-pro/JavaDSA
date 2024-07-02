@@ -40,4 +40,22 @@ public class FileProcessingTest {
         String content = fileProcessor.readFile(tempFile.toString());
         assertEquals("Hello, world/nThis is test file./n", content);
     }
+
+    @Test
+    public void testProcessFile_FileEmpty_ThrowIllegalArgument() throws FileProcessingException, IOException {
+        FileProcessor fileProcessor = new FileProcessor();
+        Path tempFile = tempDir.resolve("emptyFile.txt");
+
+        try(FileWriter writer = new FileWriter(tempFile.toFile())){
+            // Write nothing to file keeping it empty
+        }
+        String content = fileProcessor.readFile(tempFile.toString());
+
+        FileProcessingException thrown = assertThrows(FileProcessingException.class,() ->{
+            fileProcessor.processData(content);
+        });
+        assertTrue(thrown.getMessage().contains("Error in processing file."));
+        assertTrue(thrown.getCause() instanceof IllegalArgumentException);
+        assertTrue(thrown.getCause().getMessage().contains("Data cannot be empty."));
+    }
 }
