@@ -58,4 +58,17 @@ public class FileProcessingTest {
         assertInstanceOf(IllegalArgumentException.class, thrown.getCause());
         assertTrue(thrown.getCause().getMessage().contains("Data cannot be empty."));
     }
+
+    @Test
+    public void testProcessFile_Successful() throws IOException, FileProcessingException {
+        FileProcessor fileProcessor = new FileProcessor();
+        Path tempFile = tempDir.resolve("testFile.txt");
+
+        try(FileWriter writer = new FileWriter(tempFile.toFile())) {
+            writer.write("this is test file");
+        }
+        String content = fileProcessor.readFile(tempFile.toString());
+
+        assertEquals("THIS IS TEST FILE/N",fileProcessor.processData(content));
+    }
 }
