@@ -79,6 +79,12 @@ public class BankTest {
     void testSuccessfulAmount() {
         BankAccount account = new BankAccount(500);
         assertDoesNotThrow(() -> account.withdraw(300));
-        assertEquals(200,account.getBalance());
+        assertEquals(200, account.getBalance());
+    }
+
+    @Test
+    void testGetBalance() {
+        BankAccount account = new BankAccount(500);
+        assertEquals(500, account.getBalance());
     }
 }
