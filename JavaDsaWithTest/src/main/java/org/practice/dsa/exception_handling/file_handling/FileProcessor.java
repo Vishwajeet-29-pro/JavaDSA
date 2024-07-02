@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class FileProcessor {
     public String readFile(String filePath) throws FileProcessingException {
         StringBuilder content = new StringBuilder();
-        try {
-            Scanner scanner = new Scanner(new File(filePath));
+        try(Scanner scanner = new Scanner(new File(filePath))){
             while (scanner.hasNextLine()) {
                 content.append(scanner.nextLine()).append("/n");
             }
