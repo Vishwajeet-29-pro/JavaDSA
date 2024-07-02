@@ -55,7 +55,7 @@ public class FileProcessingTest {
             fileProcessor.processData(content);
         });
         assertTrue(thrown.getMessage().contains("Error in processing file."));
-        assertTrue(thrown.getCause() instanceof IllegalArgumentException);
+        assertInstanceOf(IllegalArgumentException.class, thrown.getCause());
         assertTrue(thrown.getCause().getMessage().contains("Data cannot be empty."));
     }
 }
