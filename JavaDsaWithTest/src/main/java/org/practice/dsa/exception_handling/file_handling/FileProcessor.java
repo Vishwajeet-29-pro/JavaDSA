@@ -8,7 +8,7 @@ public class FileProcessor {
         StringBuilder content = new StringBuilder();
         try(Scanner scanner = new Scanner(new File(filePath))){
             while (scanner.hasNextLine()) {
-                content.append(scanner.nextLine()).append("/n");
+                content.append(scanner.nextLine()).append(System.lineSeparator());
             }
         } catch (FileNotFoundException e) {
             throw new FileProcessingException("File Not found: "+filePath, e);

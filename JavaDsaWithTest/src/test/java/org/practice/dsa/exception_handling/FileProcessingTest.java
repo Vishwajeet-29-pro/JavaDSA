@@ -7,6 +7,7 @@ import org.practice.dsa.exception_handling.file_handling.FileProcessor;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -70,5 +71,37 @@ public class FileProcessingTest {
         String content = fileProcessor.readFile(tempFile.toString());
 
         assertEquals("THIS IS TEST FILE/N",fileProcessor.processData(content));
+    }
+
+    @Test
+    public void testWriteFile_ErrorInWriting() throws IOException, FileProcessingException {
+        FileProcessor fileProcessor = new FileProcessor();
+        Path tempFile = tempDir.resolve("outputFile.txt");
+        String data = "some data to write in file";
+        try {
+            Files.writeString(tempFile, data);
+            tempFile.toFile().setReadOnly();
+
+            FileProcessingException thrown = assertThrows(FileProcessingException.class, () -> {
+                fileProcessor.writeFile(tempFile.toString(),data);
+            });
+
+            assertEquals("Error in File write.",thrown.getMessage());
+        } finally {
+            tempFile.toFile().setWritable(true);
+        }
+    }
+
+    // This test failing due to new line in file.
+    @Test
+    public void testWriteFile_Success() throws FileProcessingException {
+        FileProcessor fileProcessor = new FileProcessor();
+        Path tempFile = tempDir.resolve("outputFile.txt");
+        String data = "some data to write in file.\n";
+
+        fileProcessor.writeFile(tempFile.toString(),data);
+
+        String fileData = fileProcessor.readFile(tempFile.toString());
+        assertEquals("some data to write in file.\n", fileData);
     }
 }
