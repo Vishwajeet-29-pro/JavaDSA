@@ -32,4 +32,13 @@ public class ShoppingCart {
             item.setPrice(discountPrice);
         }
     }
+
+    public boolean checkout(PaymentProcessor processor) {
+        double totalPrice = getTotalPrice();
+        boolean paymentSuccessful = processor.processPayment(totalPrice);
+        if (paymentSuccessful) {
+            items.clear();
+        }
+        return paymentSuccessful;
+    }
 }
