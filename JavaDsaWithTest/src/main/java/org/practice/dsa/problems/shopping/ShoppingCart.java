@@ -21,4 +21,8 @@ public class ShoppingCart {
     public double getTotalPrice() {
         return items.stream().mapToDouble(Item::getPrice).sum();
     }
+
+    public void removeItemFromCart(Item item) {
+        items.remove(item);
+    }
 }
