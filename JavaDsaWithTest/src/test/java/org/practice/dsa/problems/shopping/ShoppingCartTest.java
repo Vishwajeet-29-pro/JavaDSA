@@ -14,6 +14,6 @@ public class ShoppingCartTest {
         cart.addItem(item);
 
         assertEquals(1, cart.getItemCount());
-        assertEquals(20, cart.getTotalprice());
+        assertEquals(20, cart.getTotalPrice());
     }
 }
