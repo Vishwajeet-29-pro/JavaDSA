@@ -25,4 +25,11 @@ public class ShoppingCart {
     public void removeItemFromCart(Item item) {
         items.remove(item);
     }
+
+    public void applyDiscount(double discount) {
+        for (Item item : items) {
+            double discountPrice = item.getPrice() * (1- discount);
+            item.setPrice(discountPrice);
+        }
+    }
 }
