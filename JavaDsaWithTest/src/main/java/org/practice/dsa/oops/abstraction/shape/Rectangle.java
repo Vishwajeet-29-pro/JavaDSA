@@ -16,7 +16,7 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    void calculateArea() {
+    public void calculateArea() {
         area = width * height;
         area = Double.parseDouble(String.format("%.2f",area));
     }

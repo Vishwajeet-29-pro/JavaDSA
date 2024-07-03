@@ -14,7 +14,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    void calculateArea() {
+    public void calculateArea() {
         area = Math.PI * radius * radius;
         area = Double.parseDouble(String.format("%.2f",area));
     }

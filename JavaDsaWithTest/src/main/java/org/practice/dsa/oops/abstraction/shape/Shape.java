@@ -7,8 +7,8 @@ public abstract class Shape implements Drawable{
     public Shape(String color){
         this.color = color;
     }
-    abstract void calculateArea();
-    void displayDetails(){
+    public abstract void calculateArea();
+    public void displayDetails(){
         System.out.println("The color for shape is : "+color);
         System.out.println("The area of the shape is: "+area);
     }
