@@ -15,7 +15,7 @@ public class QuestionRemoveOvals {
         System.out.println(output);
     }
 
-    private static String removeVowels(String input) {
+    public static String removeVowels(String input) {
         input = input.toLowerCase();
         var str = input.toCharArray();
         StringBuilder output = new StringBuilder();
