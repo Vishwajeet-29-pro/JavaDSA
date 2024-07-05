@@ -17,13 +17,11 @@ public class QuestionRemoveOvals {
 
     public static String removeVowels(String input) {
         input = input.toLowerCase();
-        var str = input.toCharArray();
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < input.length(); i++) {
-            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
-               str[i] = str[i+1];
-            } else {
-                output.append(str[i]);
+            char ch = input.charAt(i);
+            if (ch !='a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u'){
+                output.append(ch);
             }
         }
         return output.toString();
