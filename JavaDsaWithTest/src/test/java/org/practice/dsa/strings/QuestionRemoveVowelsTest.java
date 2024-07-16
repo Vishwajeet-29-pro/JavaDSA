@@ -1,7 +1,6 @@
-package org.practice.dsa.string;
+package org.practice.dsa.strings;
 
 import org.junit.jupiter.api.Test;
-import org.practice.dsa.strings.QuestionRemoveOvals;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
