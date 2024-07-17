@@ -6,12 +6,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CountVowelsTest {
 
+    QuestionCountVowels vowels = new QuestionCountVowels();
+
     @Test
     void testCountVowels() {
-        QuestionCountVowels vowels = new QuestionCountVowels();
         String input = "hello world";
         int result = vowels.countVowels(input);
 
         assertEquals(3, result);
+    }
+
+    @Test
+    void testIfNoVowelReturnZero() {
+        String input = "rhythm";
+        int result = vowels.countVowels(input);
+
+       assertEquals(0, result);
     }
 }
