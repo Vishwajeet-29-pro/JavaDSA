@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RotationStringsTest {
 
-    private QuestionIsRotationStrings rotationStrings = new QuestionIsRotationStrings();
+    private final QuestionIsRotationStrings rotationStrings = new QuestionIsRotationStrings();
 
     @Test
     void testIsRotation() {
