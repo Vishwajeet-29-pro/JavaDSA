@@ -5,6 +5,7 @@ import org.practice.dsa.java8.lamdba_expressions.QuestionCalculateMaximumFromLis
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,7 +15,7 @@ public class MaximumFromListTest {
     void testMaximumFromList() {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
 
-        int result = QuestionCalculateMaximumFromList.maximumElement(list);
+        Optional<Integer> result = QuestionCalculateMaximumFromList.maximumElement(list);
 
         assertEquals(8, result);
     }
