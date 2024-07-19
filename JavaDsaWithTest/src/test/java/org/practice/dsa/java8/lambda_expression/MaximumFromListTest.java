@@ -16,7 +16,10 @@ public class MaximumFromListTest {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
 
         Optional<Integer> result = QuestionCalculateMaximumFromList.maximumElement(list);
-
-        assertEquals(8, result);
+        int actualValue = 0;
+        if(result.isPresent()) {
+            actualValue = result.get();
+        }
+        assertEquals(8, actualValue);
     }
 }

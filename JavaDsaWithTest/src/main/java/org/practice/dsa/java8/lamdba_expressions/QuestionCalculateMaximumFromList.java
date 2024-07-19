@@ -5,6 +5,6 @@ import java.util.Optional;
 
 public class QuestionCalculateMaximumFromList {
     public static Optional<Integer> maximumElement(List<Integer> list) {
-        return list.stream().max((a, b) -> a.compareTo(b));
+        return list.stream().max(Integer::compareTo);
     }
 }
