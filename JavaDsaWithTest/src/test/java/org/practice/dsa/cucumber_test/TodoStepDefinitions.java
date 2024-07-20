@@ -4,14 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TodoStepDefinitions {
-
     private List<String> todoList;
 
     @Given("I have an empty todo list")
@@ -28,7 +25,6 @@ public class TodoStepDefinitions {
     public void theTodoListShouldContainTodo(int count) {
         assertEquals(count, todoList.size());
     }
-
 
     @And("the title of the first todo should be {string}")
     public void theTitleOfTheFirstTodoShouldBe(String title) {
