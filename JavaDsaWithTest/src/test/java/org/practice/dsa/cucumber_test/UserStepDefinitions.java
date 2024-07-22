@@ -29,4 +29,14 @@ public class UserStepDefinitions {
     public void iShouldSeeASuccessMessage() {
         assertEquals("Registration Successful", registrationMessage);
     }
+
+    @When("I login with username {string} and password {string}")
+    public void iLoginWithUsernameAndPassword(String username, String password) {
+        loginMessage = userService.login(username, password);
+    }
+
+    @Then("I should be redirected to the dashboard")
+    public void iShouldBeRedirectedToTheDashboard() {
+        assertEquals("Dashboard",loginMessage);
+    }
 }
