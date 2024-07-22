@@ -39,4 +39,9 @@ public class UserStepDefinitions {
     public void iShouldBeRedirectedToTheDashboard() {
         assertEquals("Dashboard",loginMessage);
     }
+
+    @Then("I should see a Username already exists")
+    public void iShouldSeeAUsernameAlreadyExists() {
+        assertEquals("Username already exists", registrationMessage);
+    }
 }
