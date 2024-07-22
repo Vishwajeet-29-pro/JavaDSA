@@ -11,7 +11,7 @@ public class UserService {
             return "Username already exists";
         }
         users.put(username, password);
-        return "Registration successful";
+        return "Registration Successful";
     }
 
     public String login(String username, String password) {

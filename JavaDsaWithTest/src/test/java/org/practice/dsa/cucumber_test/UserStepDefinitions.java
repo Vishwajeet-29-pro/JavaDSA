@@ -12,6 +12,9 @@ public class UserStepDefinitions {
     private String registrationMessage;
     private String loginMessage;
 
+    public  UserStepDefinitions(){
+        this.userService = new UserService();
+    }
     @Given("I am on the registration page")
     public void iAmOnTheRegistrationPage() {
         // navigate to the browser
