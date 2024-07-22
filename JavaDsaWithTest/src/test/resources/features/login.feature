@@ -15,3 +15,8 @@ Feature: User registration and login
       And I have registered with username "user1" and password "password123"
       When I have registered with username "user1" and password "password1234"
       Then I should see a Username already exists
+
+    Scenario: Invalid username or password
+      Given I have registered with username "user1" and password "password123"
+      When I login with username "user2" and password "password123"
+      Then I should see a Invalid username or password

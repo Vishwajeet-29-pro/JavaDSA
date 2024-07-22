@@ -44,4 +44,9 @@ public class UserStepDefinitions {
     public void iShouldSeeAUsernameAlreadyExists() {
         assertEquals("Username already exists", registrationMessage);
     }
+
+    @Then("I should see a Invalid username or password")
+    public void iShouldSeeAInvalidUsernameOrPassword() {
+        assertEquals("Invalid username or password", loginMessage);
+    }
 }
