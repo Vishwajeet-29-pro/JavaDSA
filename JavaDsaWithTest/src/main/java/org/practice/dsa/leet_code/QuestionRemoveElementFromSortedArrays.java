@@ -15,5 +15,17 @@ public class QuestionRemoveElementFromSortedArrays {
     Return k.
     */
 
+    public static int removeDuplicates(int[] nums) {
+        int k = 0;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[k]) {
+                k++;
+                nums[k] = nums[i];
+            }
+        }
+        System.out.println("k:-> "+k+" k+1:-> "+(k+1));
+        return k+1;
+    }
 
 }
