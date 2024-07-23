@@ -61,4 +61,13 @@ public class RemoveElementsFromSortedArrayTest {
         int result = QuestionRemoveElementFromSortedArrays.removeDuplicates(nums);
         assertEquals(expectedK, result);
     }
+
+    @Test
+    public void testEmptyArray() {
+        int[] nums = {};
+        int expectedK = 0;
+
+        int result = QuestionRemoveElementFromSortedArrays.removeDuplicates(nums);
+        assertEquals(expectedK, result);
+    }
 }
