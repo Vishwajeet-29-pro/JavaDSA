@@ -24,8 +24,6 @@ public class QuestionRemoveElementFromSortedArrays {
                 nums[k] = nums[i];
             }
         }
-        System.out.println("k:-> "+k+" k+1:-> "+(k+1));
         return k+1;
     }
-
 }

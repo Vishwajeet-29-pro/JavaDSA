@@ -16,4 +16,12 @@ public class RemoveElementsFromSortedArrayTest {
         assertEquals(expectedOutput, result);
     }
 
+    @Test
+    public void testRemoveElementsFromSortedArray() {
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int expectedK = 5;
+
+        int result = QuestionRemoveElementFromSortedArrays.removeDuplicates(nums);
+        assertEquals(expectedK, result);
+    }
 }
