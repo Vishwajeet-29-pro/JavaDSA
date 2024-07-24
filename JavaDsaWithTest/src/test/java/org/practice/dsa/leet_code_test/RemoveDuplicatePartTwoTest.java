@@ -16,4 +16,12 @@ public class RemoveDuplicatePartTwoTest {
         assertEquals(expectedK, result);
     }
 
+    @Test
+    public void testRemoveDuplicates_() {
+        int[] nums = {0,0,1,1,1,1,2,3,3};
+        int expectedK = 7;
+
+        int result = QuestionRemoveDuplicatePartTwo.removeDuplicates(nums);
+        assertEquals(expectedK, result);
+    }
 }
