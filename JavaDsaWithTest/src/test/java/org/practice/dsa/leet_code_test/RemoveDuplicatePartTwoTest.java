@@ -24,4 +24,31 @@ public class RemoveDuplicatePartTwoTest {
         int result = QuestionRemoveDuplicatePartTwo.removeDuplicates(nums);
         assertEquals(expectedK, result);
     }
+
+    @Test
+    public void testRemoveDuplicatesWithNoDuplicates() {
+        int[] nums = {1,2,3,4,5};
+        int k = 5;
+
+        int result = QuestionRemoveDuplicatePartTwo.removeDuplicates(nums);
+        assertEquals(k, result);
+    }
+
+    @Test
+    public void testNoElements() {
+        int[] nums = {};
+        int k = 0;
+
+        int result = QuestionRemoveDuplicatePartTwo.removeDuplicates(nums);
+        assertEquals(k, result);
+    }
+
+    @Test
+    public void testSingleElement() {
+        int[] nums = {8};
+        int k = 1;
+
+        int result = QuestionRemoveDuplicatePartTwo.removeDuplicates(nums);
+        assertEquals(k, result);
+    }
 }
