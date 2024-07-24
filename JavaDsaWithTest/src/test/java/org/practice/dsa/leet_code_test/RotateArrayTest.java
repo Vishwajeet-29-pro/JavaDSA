@@ -17,4 +17,14 @@ public class RotateArrayTest {
         QuestionRotateArray.rotate(nums, k);
         assertArrayEquals(expected, nums);
     }
+
+    @Test
+    public void testRotateArray_() {
+        int[] nums = {-1,-100,3,99};
+        int k = 2;
+        int[] expected = {3,99,-1,-100};
+
+        QuestionRotateArray.rotate(nums,k);
+        assertArrayEquals(expected, nums);
+    }
 }
