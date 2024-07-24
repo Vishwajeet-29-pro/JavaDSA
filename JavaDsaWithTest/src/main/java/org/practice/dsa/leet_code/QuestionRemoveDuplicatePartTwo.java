@@ -14,14 +14,14 @@ public class QuestionRemoveDuplicatePartTwo {
     */
 
     public static int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
+
         int k = 1;
         int counter = 1;
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == nums[i-1]){
-                counter++;
-            } else if (nums[i] != nums[i-1]) {
-                counter = 1;
-            }
+            if (nums[i] == nums[i-1])counter++;
+            else counter = 1;
+
             if(counter <= 2) {
                 nums[k] = nums[i];
                 k++;
