@@ -15,4 +15,13 @@ public class ProfitCalculationTest {
         int result = QuestionProfitCalculation.maxProfit(prices);
         assertEquals(expectedOutput, result);
     }
+
+    @Test
+    public void calculateProfit_() {
+        int[] prices = {7,6,4,3,1};
+        int expectedOutput = 0;
+
+        int result = QuestionProfitCalculation.maxProfit(prices);
+        assertEquals(expectedOutput, result);
+    }
 }
