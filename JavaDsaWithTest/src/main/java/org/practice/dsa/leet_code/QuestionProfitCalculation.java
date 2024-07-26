@@ -9,27 +9,19 @@ public class QuestionProfitCalculation {
     * return 0.
     * */
     public static int maxProfit(int[] prices) {
-        if (prices == null || prices.length < 2) {
-            return 0; // No profit can be made with fewer than 2 prices
-        }
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
 
-        // Initialize variables
-        int minPrice = Integer.MAX_VALUE; // Start with the maximum possible value
-        int maxProfit = 0; // Start with zero profit
-
-        // Iterate through each price
         for (int price : prices) {
-            // Update the minimum price encountered so far
-            minPrice = Math.min(minPrice, price);
-
-            // Calculate potential profit with the current price
+            if (price < minPrice) {
+                minPrice = price;
+            }
             int profit = price - minPrice;
 
-            // Update the maximum profit if the current profit is greater
-            maxProfit = Math.max(maxProfit, profit);
+            if (profit > maxProfit) {
+                maxProfit = profit;
+            }
         }
-
-        // Return the maximum profit found
         return maxProfit;
     }
 }
