@@ -2,6 +2,9 @@ package org.practice.dsa.code_kata;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GildedRoseTest {
@@ -39,5 +42,15 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("bar",0, 49)};
         app.addQuality(items, 0);
         assertEquals(50, items[0].quality);
+    }
+
+    @Test
+    void create_map_for_storing_items_name() {
+        Map<String, String> itemNameMap = new HashMap<>();
+        itemNameMap.put("a","Aged Brie");
+        itemNameMap.put("b","Backstage passes to a TAFKAL80ETC concert");
+        itemNameMap.put("c","Sulfuras, Hand of Ragnaros");
+
+        assertEquals("Aged Brie",itemNameMap.get("a"), "value for 'a' should be 'Aged Brie'");
     }
 }

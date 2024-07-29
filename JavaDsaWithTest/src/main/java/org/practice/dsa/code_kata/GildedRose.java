@@ -37,7 +37,7 @@ class GildedRose {
                     if (!validateNames(i,"Backstage passes to a TAFKAL80ETC concert")) {
                         removeQuantity(items, i, "Sulfuras, Hand of Ragnaros");
                     } else {
-                        items[i].quality = items[i].quality - items[i].quality;
+                        items[i].quality = 0;
                     }
                 } else {
                     addQuality(items, i);
