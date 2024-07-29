@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GildedRoseTest {
 
-    Item[] items = new Item[] { new Item("Aged Brie", 0, 0) };
+    Item[] items = new Item[] { new Item("Aged Brie", 0, 2) };
     GildedRose app = new GildedRose(items);
     @Test
     void foo() {
@@ -26,4 +26,11 @@ class GildedRoseTest {
         assertFalse(result2);
     }
 
+    @Test
+    void when_items_price_greater_than_zero_reduce_quantity_by_one() {
+        String itemName = "foo";
+        Item[] items = new Item[] { new Item("foo", 0, 0) };
+        app.removeQuantity(items,0, itemName);
+        assertEquals(0, items[0].quality);
+    }
 }
