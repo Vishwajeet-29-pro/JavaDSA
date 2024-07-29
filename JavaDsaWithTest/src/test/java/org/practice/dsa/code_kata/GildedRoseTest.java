@@ -33,4 +33,11 @@ class GildedRoseTest {
         app.removeQuantity(items,0, itemName);
         assertEquals(0, items[0].quality);
     }
+
+    @Test
+    void when_items_quality_less_than_fifty_increase_quality_by_one() {
+        Item[] items = new Item[] { new Item("bar",0, 49)};
+        app.addQuality(items, 0);
+        assertEquals(50, items[0].quality);
+    }
 }
