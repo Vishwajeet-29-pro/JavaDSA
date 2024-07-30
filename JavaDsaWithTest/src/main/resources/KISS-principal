@@ -31,3 +31,17 @@ KISS Principal
         5. Simplify Logic and Control Structures
             1. Use simple conditional statements and loops.
             2. Replace complex nested structures with simpler alternatives.
+
+        6. Keep Classes and Methods Focused
+            1. Ensure each class has a single responsibility (SRP).
+            2. Keep methods short and focused on a single task.
+
+        7. Avoid Unnecessary Dependencies
+            1. Minimize dependencies between classes to reduce complexity and improve maintainability.
+            2. Use interfaces and dependency injection to decouple components.
+
+        Benefits of KISS
+        Easier Maintenance: Simple code is easier to understand and maintain.
+        Fewer Bugs: Simplicity reduces the likelihood of errors and bugs.
+        Improved Performance: Simple solutions are often more efficient and performant.
+        Better Collaboration: Simple code is easier for team members to understand and work with.
