@@ -17,7 +17,7 @@ class GildedRose {
                 removeQuantity(items, i, itemsNameMap().get("c"));
             } else {
                 if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1;
+                    items[i].quality += 1;
 
                     if (validateNames(i,itemsNameMap().get("b"))) {
                         if (items[i].sellIn < 11) {
@@ -32,7 +32,7 @@ class GildedRose {
             }
 
             if (!validateNames(i,itemsNameMap().get("b"))) {
-                items[i].sellIn = items[i].sellIn - 1;
+                items[i].sellIn -= 1;
             }
 
             if (items[i].sellIn < 0) {
@@ -60,14 +60,14 @@ class GildedRose {
 
     public void addQuality(Item[] items, int i) {
         if (items[i].quality < 50) {
-            items[i].quality = items[i].quality + 1;
+            items[i].quality += 1;
         }
     }
 
     public void removeQuantity(Item[] items, int i, String itemName) {
         if (items[i].quality > 0) {
             if (!validateNames(i,itemName)) {
-                items[i].quality = items[i].quality - 1;
+                items[i].quality -= 1;
             }
         }
     }
