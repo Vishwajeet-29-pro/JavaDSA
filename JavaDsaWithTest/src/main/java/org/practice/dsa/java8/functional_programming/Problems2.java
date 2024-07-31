@@ -25,4 +25,8 @@ public class Problems2 {
                 .stream().toList();
     }
 
+    /*Given the list of integers, find the first element of the list using Stream functions*/
+    public int findFirstElementOfList(List<Integer> integers) {
+        return integers.stream().findFirst().orElse(0);
+    }
 }

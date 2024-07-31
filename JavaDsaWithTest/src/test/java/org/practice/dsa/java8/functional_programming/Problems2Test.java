@@ -25,8 +25,17 @@ public class Problems2Test {
         List<Integer> expected = List.of(1,4,6);
 
         List<Integer> result = problems.findDuplicatesFromList(list);
-        result.forEach(System.out::print);
         assertEquals(expected.size(), result.size());
+        assertEquals(expected, result);
+    }
+
+    /*Given the list of integers, find the first element of the list using Stream functions?*/
+    @Test
+    public void testFindFirstElementOfList() {
+        List<Integer> integers = List.of(1,2,3,5,6);
+        int expected = 1;
+
+        int result =  problems.findFirstElementOfList(integers);
         assertEquals(expected, result);
     }
 }
