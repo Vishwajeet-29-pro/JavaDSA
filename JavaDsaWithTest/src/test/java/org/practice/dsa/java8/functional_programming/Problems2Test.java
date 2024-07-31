@@ -17,4 +17,16 @@ public class Problems2Test {
         var result = problems.integersStartWithOne(numbers);
         assertEquals(expected, result);
     }
+
+    /*How to find duplicate elements in a given integers list in java using Stream functions*/
+    @Test
+    public void testFindDuplicatesFromList() {
+        List<Integer> list = List.of(1,1,2,3,4,4,5,6,6,6);
+        List<Integer> expected = List.of(1,4,6);
+
+        List<Integer> result = problems.findDuplicatesFromList(list);
+        result.forEach(System.out::print);
+        assertEquals(expected.size(), result.size());
+        assertEquals(expected, result);
+    }
 }
