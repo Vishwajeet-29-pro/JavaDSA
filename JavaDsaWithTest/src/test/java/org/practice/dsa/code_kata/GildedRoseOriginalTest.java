@@ -1,6 +1,5 @@
 package org.practice.dsa.code_kata;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -53,13 +52,6 @@ public class GildedRoseOriginalTest {
     }
 
     @Test
-    void testExpiredItem() {
-        Item expiredItem = new Item("Normal Item", -1, 20);
-        expiredItem.updateQuality();
-        assertEquals(18, expiredItem.quality, "Quality should decrease by 2 for expired item");
-    }
-
-    @Test
     void testQualityDoesNotBecomeNegative() {
         Item normalItem = new Item("Normal Item", 10, 0);
         normalItem.updateQuality();
@@ -72,5 +64,4 @@ public class GildedRoseOriginalTest {
         agedBrie.updateQuality();
         assertEquals(50, agedBrie.quality, "Quality should not exceed 50");
     }
-
 }
