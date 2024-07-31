@@ -1,6 +1,8 @@
 package org.practice.dsa.java8.functional_programming;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -8,9 +10,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Questions {
-    Function<Integer, Integer> fact = n-> {
+    Function<Integer, Integer> fact = n -> {
         if (n == 0 || n == 1) return 1;
-        return n * this.fact.apply(n-1);
+        return n * this.fact.apply(n - 1);
     };
 
     Predicate<String> isPalindrome = s -> {
@@ -22,7 +24,15 @@ public class Questions {
         return Stream.concat(list1.stream(), list2.stream()).sorted().toList();
     };
 
-    public int calculateFactorial(int number){
+    static Function<List<String>, Map<Integer, List<String>>> groupByLength = list -> {
+       return list.stream().collect(Collectors.groupingBy(String::length));
+    };
+
+    public Map<Integer, List<String>> groupListByLength(List<String> words) {
+        return groupByLength.apply(words);
+    }
+
+    public int calculateFactorial(int number) {
         return fact.apply(number);
     }
 

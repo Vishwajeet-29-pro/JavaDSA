@@ -3,7 +3,9 @@ package org.practice.dsa.java8.functional_programming;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,5 +36,14 @@ public class QuestionsTest {
 
         List<String> result = questions.mergeLists(list1, list2);
         assertEquals(expected, result,"Result should be merged lists");
+    }
+
+    @Test
+    void testGroupListByLength() {
+        List<String> words = Arrays.asList("apple", "banana", "cherry", "date", "egg", "fig", "grape");
+
+
+        Map<Integer, List<String>> result = questions.groupListByLength(words);
+        assertEquals(4, result.size(),"Map size should be same");
     }
 }
