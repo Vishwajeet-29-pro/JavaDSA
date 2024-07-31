@@ -1,9 +1,6 @@
 package org.practice.dsa.java8.functional_programming;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Problems2 {
@@ -28,5 +25,10 @@ public class Problems2 {
     /*Given the list of integers, find the first element of the list using Stream functions*/
     public int findFirstElementOfList(List<Integer> integers) {
         return integers.stream().findFirst().orElse(0);
+    }
+
+    /*Given a list of integers, find the total number of elements present in the list using Stream functions*/
+    public long findTotalNumber(List<Integer> integers) {
+        return integers.stream().count();
     }
 }

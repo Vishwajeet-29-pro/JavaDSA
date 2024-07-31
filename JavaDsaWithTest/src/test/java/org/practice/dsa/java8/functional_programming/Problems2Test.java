@@ -38,4 +38,14 @@ public class Problems2Test {
         int result =  problems.findFirstElementOfList(integers);
         assertEquals(expected, result);
     }
+
+    /*Given a list of integers, find the total number of elements present in the list using Stream functions*/
+    @Test
+    public void testFindTotalNumber() {
+        List<Integer> integers = List.of(1,2,3,5,6);
+        int expected = 5;
+
+        long result = problems.findTotalNumber(integers);
+        assertEquals(expected, result);
+    }
 }
