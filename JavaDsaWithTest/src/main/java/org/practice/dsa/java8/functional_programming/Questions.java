@@ -1,7 +1,11 @@
 package org.practice.dsa.java8.functional_programming;
 
+import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Questions {
     Function<Integer, Integer> fact = n-> {
@@ -14,11 +18,19 @@ public class Questions {
         return s.equals(reverse);
     };
 
+    BiFunction<List<String>, List<String>, List<String>> mergeLists = (list1, list2) -> {
+        return Stream.concat(list1.stream(), list2.stream()).sorted().toList();
+    };
+
     public int calculateFactorial(int number){
         return fact.apply(number);
     }
 
     public boolean validatePalindrome(String s) {
         return isPalindrome.test(s);
+    }
+
+    public List<String> mergeLists(List<String> list1, List<String> list2) {
+        return mergeLists.apply(list1, list2);
     }
 }
