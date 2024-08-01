@@ -59,8 +59,10 @@ public class Problems2Test {
         assertEquals(-1, problems.findMaxFromList(list2));
 
         List<Integer> list3 = List.of();
-        assertThrows(IllegalArgumentException.class,() -> {
+        var exception = assertThrows(IllegalArgumentException.class,() -> {
             problems.findMaxFromList(list3);
         });
+
+        assertEquals("Empty list", exception.getMessage());
     }
 }
