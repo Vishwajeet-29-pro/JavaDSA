@@ -12,15 +12,15 @@ abstract class AbstractItems {
 
     abstract void updateQuality();
 
-    public void incrementQuality() {
+    protected void incrementQuality() {
         if (item.quality < 50 ) item.quality++;
     }
 
-    public void decrementQuality() {
+    protected void decrementQuality() {
         if (item.quality > 0) item.quality -=1;
     }
 
-    public void decrementSellIn() {
+    protected void decrementSellIn() {
         item.sellIn -= 1;
     }
 
