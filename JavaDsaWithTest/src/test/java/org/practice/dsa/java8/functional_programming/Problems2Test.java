@@ -65,4 +65,13 @@ public class Problems2Test {
 
         assertEquals("Empty list", exception.getMessage());
     }
+
+    /*Write a Java 8 program to remove duplicate elements from a list using the stream API and lambda expressions.*/
+    @Test
+    public void testRemoveDuplicatesFromList() {
+        List<Integer> list = List.of(1,2,2,4,3,3,6,6,6);
+        List<Integer>  result = problems.removeDuplicates(list);
+        result.forEach(System.out::print);
+        assertEquals(5,result.size());
+    }
 }

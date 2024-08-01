@@ -37,4 +37,13 @@ public class Problems2 {
         if (list.isEmpty()) throw new IllegalArgumentException("Empty list");
         return list.stream().max(Integer::compareTo).orElse(Integer.MIN_VALUE);
     }
+
+
+    /*Write a Java 8 program to remove duplicate elements from a list using the stream API and lambda expressions.*/
+    public List<Integer> removeDuplicates(List<Integer> list) {
+        return new LinkedHashSet<>(list)
+                .stream()
+                .toList();
+    }
+
 }
