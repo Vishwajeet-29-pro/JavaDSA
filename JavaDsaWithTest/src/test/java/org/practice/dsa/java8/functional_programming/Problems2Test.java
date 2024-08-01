@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Problems2Test {
 
@@ -47,5 +48,19 @@ public class Problems2Test {
 
         long result = problems.findTotalNumber(integers);
         assertEquals(expected, result);
+    }
+
+    /*Given a list of integers, find the maximum value element present in it using Stream functions?*/
+    @Test
+    public void testFindMaximum() {
+        List<Integer> list = List.of(1,2,3,4,5);
+        assertEquals(5, problems.findMaxFromList(list));
+        List<Integer> list2 = List.of(-1, -1);
+        assertEquals(-1, problems.findMaxFromList(list2));
+
+        List<Integer> list3 = List.of();
+        assertThrows(IllegalArgumentException.class,() -> {
+            problems.findMaxFromList(list3);
+        });
     }
 }

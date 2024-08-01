@@ -31,4 +31,10 @@ public class Problems2 {
     public long findTotalNumber(List<Integer> integers) {
         return integers.stream().count();
     }
+
+    /*Given a list of integers, find the maximum value element present in it using Stream functions?*/
+    public int findMaxFromList(List<Integer> list) {
+        if (list.isEmpty()) throw new IllegalArgumentException("Empty list");
+        return list.stream().max(Integer::compareTo).orElse(Integer.MIN_VALUE);
+    }
 }
