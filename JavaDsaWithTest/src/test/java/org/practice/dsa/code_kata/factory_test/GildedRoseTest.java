@@ -35,4 +35,14 @@ public class GildedRoseTest {
         AbstractItems abstractItems = gildedRose.createItem(items[0]);
         assertInstanceOf(Sulfuras.class, abstractItems,"Expected an Sulfuras instance");
     }
+
+    @Test
+    public void testUpdateQuality_AgedBrie() {
+        Item[] items = { new Item("Aged Brie", 2,0)};
+        gildedRose = new GildedRose(items);
+
+        gildedRose.updateQuality();
+        assertEquals(1, items[0].sellIn, "SellIn should be decrement");
+        assertEquals(1, items[0].quality, "Quality should be increment");
+    }
 }
