@@ -105,5 +105,13 @@ public class GildedRoseTest {
         assertEquals(9, items[0].sellIn, "SellIn should be decrement");
     }
 
+    @Test
+    void testUpdatedQuality_RegularItem_Expired() {
+        Item[] items = {new Item("Regular item",0,10)};
+        gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
 
+        assertEquals(-1, items[0].sellIn, "Sell should decrement");
+        assertEquals(8, items[0].quality, "Quality should decrement by 2 after expiry.");
+    }
 }
