@@ -18,7 +18,7 @@ public class BackstagePass extends AbstractItems {
         }
         decrementSellIn();
         if (item.sellIn < 0) {
-            item.sellIn = 0;
+            item.quality = 0;
         }
     }
 }

@@ -72,7 +72,8 @@ public class GildedRoseTest {
         gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
 
-        assertEquals(0, items[0].sellIn, "SellIn should be set to 0");
+        assertEquals(-3, items[0].sellIn, "SellIn should decrement");
+        assertEquals(0, items[0].quality, "Quality should be set to 0");
     }
 
     @Test
@@ -103,4 +104,6 @@ public class GildedRoseTest {
         assertEquals(10,items[0].quality,"Quality should be decrement");
         assertEquals(9, items[0].sellIn, "SellIn should be decrement");
     }
+
+
 }
