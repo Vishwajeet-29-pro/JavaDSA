@@ -30,4 +30,11 @@ public class Problem3Test {
         assertFalse(problem.validateArray(inputs));
     }
 
+    /*Write a Java 8 program to concatenate two Streams*/
+    @Test
+    public void testTwoStringListsConcatenation() {
+        List<String> s1 = List.of("Hello");
+        List<String> s2 = List.of("World");
+        assertEquals(List.of("Hello", "World"),problem.concateTwoStringLists(s1, s2));
+    }
 }

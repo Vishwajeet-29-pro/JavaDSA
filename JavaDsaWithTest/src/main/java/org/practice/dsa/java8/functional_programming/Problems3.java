@@ -1,6 +1,7 @@
 package org.practice.dsa.java8.functional_programming;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Problems3 {
 
@@ -16,5 +17,9 @@ public class Problems3 {
                 .boxed().toList();
         Set<Integer> integersSet = new HashSet<>(list);
         return integersSet.size() != list.size();
+    }
+
+    public List<String> concateTwoStringLists(List<String> s1, List<String> s2) {
+       return Stream.concat(s1.stream(), s2.stream()).toList();
     }
 }
