@@ -66,4 +66,12 @@ public class GildedRoseTest {
         assertEquals(10, items[0].sellIn, "SellIn should be decrement");
     }
 
+    @Test
+    public void testUpdateQuality_backstage_pass_if_item_sellIn_is_than_0() {
+        Item[] items = { new Item("Backstage passes to a TAFKAL80ETC concert", -2,11)};
+        gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+
+        assertEquals(0, items[0].sellIn, "SellIn should be set to 0");
+    }
 }
