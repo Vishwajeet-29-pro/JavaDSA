@@ -37,4 +37,14 @@ public class Problem3Test {
         List<String> s2 = List.of("World");
         assertEquals(List.of("Hello", "World"),problem.concateTwoStringLists(s1, s2));
     }
+
+    /*Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
+    @Test
+    public void testCubeNumbersAndNumbersGreaterThan50() {
+        List<Integer> integerList = List.of(1,2,3,4,5,6,7,8,9);
+        List<Integer> expectedList = List.of(64,125,216,343,512,729);
+        assertEquals(expectedList, problem.findCubeAndReturnGreaterThanFifty(integerList));
+        var result = problem.findCubeAndReturnGreaterThanFifty(integerList);
+        assertEquals(expectedList.getFirst(), result.getFirst());
+    }
 }

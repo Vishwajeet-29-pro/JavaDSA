@@ -22,4 +22,11 @@ public class Problems3 {
     public List<String> concateTwoStringLists(List<String> s1, List<String> s2) {
        return Stream.concat(s1.stream(), s2.stream()).toList();
     }
+
+    public List<Integer> findCubeAndReturnGreaterThanFifty(List<Integer> integerList) {
+        return integerList.stream()
+                .map(s-> s*s*s)
+                .filter(s-> s>50)
+                .toList();
+    }
 }
