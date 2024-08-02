@@ -84,4 +84,13 @@ public class GildedRoseTest {
         assertEquals(10, items[0].sellIn,"Sell should be same");
         assertEquals(11, items[0].quality,"Quality should be same");
     }
+
+    @Test
+    public void testCreateItem_Regular() {
+        Item[] items = { new Item("Regular Item",10,11)};
+        gildedRose = new GildedRose(items);
+
+        AbstractItems abstractItems = gildedRose.createItem(items[0]);
+        assertInstanceOf(AbstractItems.class, abstractItems,"If no special item, then it should be Regular item");
+    }
 }
