@@ -1,8 +1,6 @@
 package org.practice.dsa.java8.functional_programming;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Problems3 {
 
@@ -11,5 +9,12 @@ public class Problems3 {
         return list.stream()
                 .sorted(Collections.reverseOrder())
                 .toList();
+    }
+
+    public boolean validateArray(int[] arr) {
+        List<Integer> list = Arrays.stream(arr)
+                .boxed().toList();
+        Set<Integer> integersSet = new HashSet<>(list);
+        return integersSet.size() != list.size();
     }
 }

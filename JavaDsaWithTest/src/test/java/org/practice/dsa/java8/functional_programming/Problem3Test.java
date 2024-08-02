@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Problem3Test {
 
-    private Problems3 problem = new Problems3();
+    private final Problems3 problem = new Problems3();
 
     /*Given a list of integers, sort all the values present in it in descending order using Stream functions?*/
     @Test
@@ -19,4 +19,15 @@ public class Problem3Test {
         List<Integer> result = problem.sortListInReverseOrder(list);
         assertEquals(expected, result);
     }
+
+    /*Given an integer array nums, return true if any value appears at least twice in the array, and return false if
+    every element is distinct*/
+    @Test
+    public void test(){
+        int[] arr = new int[] {1,2,3,1};
+        assertTrue(problem.validateArray(arr));
+        int[] inputs = new int[] {1,2,3,4};
+        assertFalse(problem.validateArray(inputs));
+    }
+
 }
