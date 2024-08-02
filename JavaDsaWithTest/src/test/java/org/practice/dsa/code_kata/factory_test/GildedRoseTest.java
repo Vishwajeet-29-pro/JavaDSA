@@ -45,4 +45,14 @@ public class GildedRoseTest {
         assertEquals(1, items[0].sellIn, "SellIn should be decrement");
         assertEquals(1, items[0].quality, "Quality should be increment");
     }
+
+    @Test
+    public void testUpdateQuality_BackstagePass() {
+        Item[] items = { new Item("Backstage passes to a TAFKAL80ETC concert", 11,10)};
+        gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+
+        assertEquals(11, items[0].quality, "Quality should be increment");
+        assertEquals(10, items[0].sellIn, "SellIn should be decrement");
+    }
 }
