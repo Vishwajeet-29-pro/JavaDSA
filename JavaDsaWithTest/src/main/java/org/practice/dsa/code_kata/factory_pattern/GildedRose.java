@@ -15,9 +15,9 @@ public class GildedRose {
 
     public AbstractItems createItem(Item item) {
         return switch (item.name) {
-            case "AgedBrie" -> new AgedBrie(item);
-            case "BackstagePass" -> new BackstagePass(item);
-            case "Sulfuras" -> new Sulfuras(item);
+            case "Aged Brie" -> new AgedBrie(item);
+            case "Backstage passes to a TAFKAL80ETC concert" -> new BackstagePass(item);
+            case "Sulfuras, Hand of Ragnaros" -> new Sulfuras(item);
             default -> new RegularItem(item);
         };
     }
