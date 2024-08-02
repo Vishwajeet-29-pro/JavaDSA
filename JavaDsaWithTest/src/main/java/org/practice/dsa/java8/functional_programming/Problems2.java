@@ -46,4 +46,9 @@ public class Problems2 {
                 .toList();
     }
 
+    /*Write a Java 8 program to find the frequency of each element in an array or a list using streams and collectors.*/
+    public Map<Integer, Long> frequencyOfElements(List<Integer> list) {
+        return list.stream()
+                .collect(Collectors.groupingBy(s-> s, Collectors.counting()));
+    }
 }

@@ -1,8 +1,13 @@
 package org.practice.dsa.java8.functional_programming;
 
+import io.cucumber.java.sl.In;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -73,5 +78,15 @@ public class Problems2Test {
         List<Integer>  result = problems.removeDuplicates(list);
         result.forEach(System.out::print);
         assertEquals(5,result.size());
+    }
+
+    /*Write a Java 8 program to find the frequency of each element in an array or a list using streams and collectors.*/
+    @Test
+    public void testFrequencyOfElements(){
+        List<Integer> list = List.of(1,2,2,4,3,3,6,6,6);
+        Map<Integer, Long> output = problems.frequencyOfElements(list);
+        output.forEach((a,b) -> System.out.println(a+" -> "+b));
+        Map<Integer, Integer> map = Map.of(1,1,2,2,4,1,3,2,6,3);
+        assertEquals(output.size(), map.size());
     }
 }
