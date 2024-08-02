@@ -10,10 +10,10 @@ public class BackstagePass extends AbstractItems {
     @Override
     void updateQuality() {
         incrementQuality();
-        if (item.quality < 11) {
+        if (item.sellIn < 11) {
             incrementQuality();
         }
-        if (item.quality < 6) {
+        if (item.sellIn < 6) {
             incrementQuality();
         }
         decrementSellIn();
