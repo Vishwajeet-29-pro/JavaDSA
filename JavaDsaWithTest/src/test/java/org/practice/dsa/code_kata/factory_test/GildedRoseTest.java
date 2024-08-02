@@ -74,4 +74,14 @@ public class GildedRoseTest {
 
         assertEquals(0, items[0].sellIn, "SellIn should be set to 0");
     }
+
+    @Test
+    public void testUpdateQuality_Sulfuras() {
+        Item[] items = { new Item("Sulfuras, Hand of Ragnaros", 10,11)};
+        gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+
+        assertEquals(10, items[0].sellIn,"Sell should be same");
+        assertEquals(11, items[0].quality,"Quality should be same");
+    }
 }
