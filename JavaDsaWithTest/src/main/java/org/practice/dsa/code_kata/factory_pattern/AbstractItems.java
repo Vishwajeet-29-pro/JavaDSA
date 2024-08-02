@@ -2,7 +2,7 @@ package org.practice.dsa.code_kata.factory_pattern;
 
 import org.practice.dsa.code_kata.Item;
 
-abstract class AbstractItems {
+public abstract class AbstractItems {
 
     Item item;
 
