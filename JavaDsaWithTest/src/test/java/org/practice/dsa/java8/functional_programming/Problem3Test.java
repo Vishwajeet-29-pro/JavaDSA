@@ -47,4 +47,12 @@ public class Problem3Test {
         var result = problem.findCubeAndReturnGreaterThanFifty(integerList);
         assertEquals(expectedList.getFirst(), result.getFirst());
     }
+
+    /*How to use map to convert List of string into Uppercase in Java 8*/
+    @Test
+    public void testUpperCase() {
+        List<String> input = List.of("hello","world","string");
+        List<String> expected = List.of("HELLO","WORLD","STRING");
+        assertEquals(expected, problem.toUpperCaseObject(input));
+    }
 }

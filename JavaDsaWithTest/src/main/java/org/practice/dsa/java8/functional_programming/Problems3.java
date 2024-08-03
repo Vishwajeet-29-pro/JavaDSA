@@ -29,4 +29,8 @@ public class Problems3 {
                 .filter(s-> s>50)
                 .toList();
     }
+
+    public List<String> toUpperCaseObject(List<String> stringList) {
+        return stringList.stream().map(String::toUpperCase).toList();
+    }
 }
