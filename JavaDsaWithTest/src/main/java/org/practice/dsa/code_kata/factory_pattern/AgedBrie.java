@@ -1,17 +1,15 @@
 package org.practice.dsa.code_kata.factory_pattern;
 
-import org.practice.dsa.code_kata.Item;
-
-public class AgedBrie extends AbstractItems{
-    public AgedBrie(Item item) {
-        super(item);
+public class AgedBrie extends Item {
+    public AgedBrie(String name, int sellIn, int quality) {
+        super(name, sellIn, quality);
     }
 
     @Override
     void updateQuality() {
         incrementQuality();
         decrementSellIn();
-        if (item.sellIn < 0) {
+        if (sellIn < 0) {
             incrementQuality();
         }
     }

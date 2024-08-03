@@ -1,10 +1,8 @@
 package org.practice.dsa.code_kata.factory_pattern;
 
-import org.practice.dsa.code_kata.Item;
-
-public class Sulfuras extends AbstractItems {
-    public Sulfuras(Item item) {
-        super(item);
+public class Sulfuras extends Item {
+    public Sulfuras(String name, int sellIn, int quality) {
+        super(name, sellIn, quality);
     }
 
     @Override

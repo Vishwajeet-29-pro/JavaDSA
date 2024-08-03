@@ -1,17 +1,15 @@
 package org.practice.dsa.code_kata.factory_pattern;
 
-import org.practice.dsa.code_kata.Item;
-
-public class RegularItem extends AbstractItems {
-    public RegularItem(Item item) {
-        super(item);
+public class RegularItem extends Item {
+    public RegularItem(String name, int sellIn, int quality) {
+        super(name, sellIn, quality);
     }
 
     @Override
     void updateQuality() {
         decrementQuality();
         decrementSellIn();
-        if (item.sellIn < 0) {
+        if (sellIn < 0) {
             decrementQuality();
         }
     }

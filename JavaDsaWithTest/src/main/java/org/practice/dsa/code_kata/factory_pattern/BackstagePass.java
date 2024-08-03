@@ -1,24 +1,22 @@
 package org.practice.dsa.code_kata.factory_pattern;
 
-import org.practice.dsa.code_kata.Item;
-
-public class BackstagePass extends AbstractItems {
-    public BackstagePass(Item item) {
-        super(item);
+public class BackstagePass extends Item {
+    public BackstagePass(String name, int sellIn, int quality) {
+        super(name, sellIn, quality);
     }
 
     @Override
     void updateQuality() {
         incrementQuality();
-        if (item.sellIn < 11) {
+        if (sellIn < 11) {
             incrementQuality();
         }
-        if (item.sellIn < 6) {
+        if (sellIn < 6) {
             incrementQuality();
         }
         decrementSellIn();
-        if (item.sellIn < 0) {
-            item.quality = 0;
+        if (sellIn < 0) {
+            quality = 0;
         }
     }
 }
