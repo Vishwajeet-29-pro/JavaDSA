@@ -52,3 +52,7 @@
 - [ ] annotations
 - [ ] mocking
 - [ ] stubs.
+
+#### Useful links:
+Java 8 programming question and answers: [sample coding questions](https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/)
+Reactive programming Spring webflux: [Spring Reactive webflux](https://www.inexture.com/guide-to-spring-reactive-programming-using-webflux/#:~:text=Reactive%20programming%20is%20about%20handling,model%20might%20seem%20more%20straightforward.)
