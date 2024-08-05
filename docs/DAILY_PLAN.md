@@ -42,3 +42,4 @@
 - [ ] 15 Mins for docker revision and running commands.
 - [ ] Solid principals.
 - [ ] Completing core java part and revision of spring boot.
+- [ ] Creating document for git commit messages and notes on git. 
