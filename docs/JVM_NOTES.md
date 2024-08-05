@@ -49,7 +49,7 @@ Optimizing the Java Virtual Machine involves tuning various parameters and emplo
     - Class Loading Caching: Use class loader caching mechanisms to avoid redundant class loading and reduce startup time.
     - Remove Unused Classes: Remove unused classes and dependencies to reduce memory footprint and improve startup time.
 
-### Garbage Collection in JAVA
+### Garbage Collection in JAVA [Garbage collection](https://newrelic.com/blog/best-practices/java-garbage-collection)
 Garbage collection is a key feature for developers who build and compile Java programs on a Java Virtual Machine, or JVM. Java objects are created on the heap, which is a section of memory dedicated to a program. When objects are no longer needed, the garbage collector finds and tracks these unused objects and deletes them to free up the space. Without garbage collection, the heap would eventually run out of memory, leading to a runtime OutOfMemoryError.
 
 Java garbage collection helps your Java environments and applications perform more efficiently. However, you can still potentially run into issues with automatic garbage collection, including poor application performance. While you can't manually override automatic garbage collection, these are things you can do to optimize garbage collection in your application environment, such as changing the garbage collector you use, removing all references to unused Java objects, and using an application monitoring tool to optimize performance and detects issues as soon as they arise.
