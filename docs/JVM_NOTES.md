@@ -68,3 +68,28 @@ Sometimes, a developer will inadvertently write code that continues to be refere
 
 To ensure that garbage collectors work efficiently, the JVM separates the heap into separate spaces, and then garbage collectors use a mark-and-sweep algorithm to traverse these spaces and clear out unused objects. 
 
+## How to write code so that performance of JVM should be at peak?
+1. Avoid Writing Long Methods:
+   In Java, a long method is a method that contains a large number of lines of code, making it more difficult to read, maintain, and test. Long methods can be a performance bottleneck, as they can be difficult to optimize and can lead to poor application performance.<br>
+   To avoid writing long methods in Java, developers should follow the Single Responsibility principal, which states that each method should have a single responsibility and focus on a specific task or functionality. Additionally, developers can user refactoring techniques to break down long methods into smaller, more manageable chunks, such as by extracting methods or creating new classes. <br><br>
+
+2. Use Caching:
+   Caching is a technique that can be used to improve performance by storing frequently accessed data in memory. This can help to reduce the number of times that the data needs to be read from disk or database, which can significantly improve performance. In Java, caching can be implemented using various frameworks such as Ehcache, Hazelcast or Caffeine. <br><br>
+
+3. Leverage StringBuilder:
+   StringBuilder is a class in Java that allows developers to manipulate strings easily. It is used to create mutable string objects, which can be modified without creating new string objects. Java developers can use StringBuilder to make string concatenation easier by appending new strings to existing StringBuilder object instead of creating new string objects each time a concatenation 
+   operation is performed. This can improve performance and reduce memory usage. <br><br>
+
+4. Optimize If-Else Statements
+   If-else statements can affect Java performance because they require the JVM to evaluate each condition sequentially, which can slow down the execution of the code. To optimize the use of if-else statements, developers should try to use simpler conditions first and use short-circuit evaluation when possible. <br>
+   Additionally, we can leverage switch statements instead of long chains of if-else statements to improve performance. Switch statements allows the JVM to jump directly to the relevant code block, rather than evaluating each condition sequentially, which can be faster for certain use cases. <br><br>
+
+5. Don't Over-optimize
+   Over-optimization of Java performance can lead to code that is difficult to maintain and modify, which can hinder future development efforts. To avoid over-optimization, developers should focus on optimizing critical sections of the code and avoiding premature optimization. By optimizing only as needed, developers can keep code clean and maintainable while still achieving good performance. <br>
+   It's also important to avoid over-engineering solutions to performance problems, which ca lead to unnecessary complexity. Developers should start by profiling the application to identify bottlenecks, and then make incremental improvements to address those bottlenecks.<br><br>
+
+6. Use Java Profilers
+   Java profilers are tools that can be used to measure the performance of Java code. They can help to identify performance bottlenecks and provide insights into how to optimize performance. <br>
+   For example, Granulate's continuous profiler is a free and open source Java profiler with an always-on approach. It samples the CPU, allowing you to investigate performance at any given time to see the impact of version releases, understand the performance impact of new features, compare deployments and isolate performance issues. <br>
+   By Continuously analyzing code performance across your entire environment, you can optimize the most resource-consuming parts of your code, improve application performance and reduce costs. <br><br>
+     
