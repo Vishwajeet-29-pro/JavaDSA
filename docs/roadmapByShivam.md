@@ -54,5 +54,14 @@
 - [ ] stubs.
 
 #### Useful links:
-Java 8 programming question and answers: [sample coding questions](https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/)
-Reactive programming Spring webflux: [Spring Reactive webflux](https://www.inexture.com/guide-to-spring-reactive-programming-using-webflux/#:~:text=Reactive%20programming%20is%20about%20handling,model%20might%20seem%20more%20straightforward.)
+Java 8 programming question and answers: [sample coding questions](https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/) <br>
+Reactive programming Spring webflux: [Spring Reactive webflux](https://www.inexture.com/guide-to-spring-reactive-programming-using-webflux/#:~:text=Reactive%20programming%20is%20about%20handling,model%20might%20seem%20more%20straightforward.) <br>
+Geeks for geeks Interview question on java: [Interview questions](https://www.geeksforgeeks.org/java-interview-questions/) <br>
+Pitest official notes: [Pitest](https://pitest.org/quickstart/basic_concepts/) <br>
+Reactive webflux: [webflux](https://medium.com/pictet-technologies-blog/reactive-programming-with-spring-data-r2dbc-ee9f1c24848b) <br>
+
+
+
+#### Job Search links
+Top MNC's [MNC](https://www.sapopenings.com/top-companies-career-page-links/)
+
