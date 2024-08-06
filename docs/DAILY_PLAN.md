@@ -34,12 +34,25 @@
 - [x] Functional and Java oops concepts revision with test cases.
 - [x] PiTest video lectures or notes.
 - [x] Refactoring the GildedRose example, somehow mixed the decorator and factory method design patterns.
+
 ###### 5 Aug 2024
-- [ ] JVM notes and understanding (YouTube lectures or other way)
-- [ ] Functional and Java object oriented revision.
-- [ ] Reactive webflux completing service layer with test cases.
-- [ ] Job apply search.
-- [ ] 15 Mins for docker revision and running commands.
-- [ ] Solid principals.
+- [x] JVM notes and understanding (YouTube lectures or other way)
+- [x] Functional and Java object-oriented revision.
+- [x] Reactive webflux completing service layer with test cases.
+- [x] Job apply search.
+- [x] 15 Min's for docker revision and running commands.
+- [x] Solid principals. (Single Responsibility)
 - [ ] Completing core java part and revision of spring boot.
-- [ ] Creating document for git commit messages and notes on git. 
+- [x] Connecting with peoples via what's app.
+- [x] Creating document for git commit messages and notes on git
+
+###### 6 Aug 2024
+- [ ] Job apply
+- [ ] Practice on Java and Functional programming (revision)
+- [ ] Completing reactive webflux service layer for student.
+- [ ] SOLID principals (Open/ Closed principal)
+- [ ] JVM Notes
+- [ ] TDD (reading documentation)
+- [ ] Spring boot revision.
+- [ ] Java interview questions (basic to advance).
+- [ ] Converting .txt files from repo to .md files.
