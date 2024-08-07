@@ -47,11 +47,11 @@
 - [x] Creating document for git commit messages and notes on git
 
 ###### 6 Aug 2024
-- [ ] Job apply
+- [X] Job apply
 - [ ] Practice on Java and Functional programming (revision)
 - [ ] Completing reactive webflux service layer for student.
 - [ ] SOLID principals (Open/ Closed principal)
-- [ ] JVM Notes
+- [X] JVM Notes
 - [ ] TDD (reading documentation)
 - [ ] Spring boot revision.
 - [ ] Java interview questions (basic to advance).
