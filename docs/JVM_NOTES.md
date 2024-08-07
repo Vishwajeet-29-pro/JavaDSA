@@ -10,6 +10,9 @@
 - It interprets the compiled java bytecode and convert into machine code that the host system can execute.
 - This allows java to be platform-independent, meaning that code written on one machine can execute\run on other machine that has a JVM installed.
 - It manages systems memory and provides security and performance optimization features.
+
+![JVM](https://media.geeksforgeeks.org/wp-content/uploads/20240401182730/JVM-768.png)
+
 ### How JVM works?
 - The Java virtual machine is a sophisticated component that allows java program to run on any devices with JVM installed. It abstracts the underlying hardware and operating system details, providing a consistent runtime environment.
     - Start up: When a Java application starts, the JVM invoked and it initializes the necessary runtime environment.
