@@ -56,3 +56,14 @@
 - [ ] Spring boot revision.
 - [ ] Java interview questions (basic to advance).
 - [ ] Converting .txt files from repo to .md files.
+
+###### Covering yesterday's backlog:
+###### 7 Aug 2024
+- [ ] Practice on Java and Functional programming (revision)
+- [x] Job apply
+- [ ] Completing reactive webflux service layer for student.
+- [ ] SOLID principals (Open/ Closed principal)
+- [ ] TDD (reading documentation)
+- [ ] Spring boot revision.
+- [ ] Java interview questions (basic to advance).
+- [ ] Converting .txt files from repo to .md files.
