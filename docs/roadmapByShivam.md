@@ -65,4 +65,4 @@ Java 8 geeks for geeks [top 30](https://www.geeksforgeeks.org/java-8-interview-q
 
 #### Job Search links
 Top MNC's [MNC](https://www.sapopenings.com/top-companies-career-page-links/)
-
+*To get back soon from company you should apply from the company website directly ,firstly take out the company name from goggle were the opening are there and then go to the website of each and apply from there , it would help you better.*
