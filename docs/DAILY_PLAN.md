@@ -61,9 +61,20 @@
 ###### 7 Aug 2024
 - [ ] Practice on Java and Functional programming (revision)
 - [x] Job apply
-- [ ] Completing reactive webflux service layer for student.
-- [ ] SOLID principals (Open/ Closed principal)
-- [ ] TDD (reading documentation)
+- [x] Completing reactive webflux service layer for student.
+- [x] SOLID principals (Open/ Closed principal)
+- [x] TDD (reading documentation) junit 5 doc.
 - [ ] Spring boot revision.
 - [ ] Java interview questions (basic to advance).
-- [ ] Converting .txt files from repo to .md files.
+- [x] Converting .txt files from repo to .md files. 
+##### Not able to complete the yesterday's and day before yesterday's plan totally.
+
+##### 8 Aug 2024
+- [ ] Job Apply
+- [ ] SOLID principles (LSP)
+- [ ] JVM Notes
+- [ ] Practice - Java and Java 8
+- [ ] Creating controller layer for reactive webflux project.
+- [ ] Spring boot revision.
+- [ ] Interview questions.
+- [ ] Revision.
