@@ -112,3 +112,53 @@ Similarly, we can add more vehicles by making another subclass extending from th
 affect the existing application.
 
 ### Liskov Substitution Principle (LSP)
+The Liskov Substitution Principle was introduced by Barbara Liskov. It applies to inheritance in such a way that the derived 
+classes must be completely substitutable for their base classes. In other words, if class A is a subtype of class B, then 
+we should be able to replace B with A without interrupting the behavior of the program.
+It extends the open-close principle and also focuses on the behavior of superclass and its subtypes. We should design the 
+classes to preserve the property unless we have a strong reason to do otherwise. Let's understand the principle through 
+an example.
+### Applying LSP in Java
+To properly apply LSP in Java, follow these guidelines:
+1. **Ensure Correct Override of Methods:**
+    - Subclasses should override methods from the base class in a way that preserves the behavior expected by clients of the base class.
+2. **Avoid Strengthening Preconditions:**
+    - A subclass should not enforce stricter preconditions than the base class method.
+3. **Preserve Postconditions:**
+    - A subclass should not weaken the postconditions established by the base class method.
+4. **Maintain Invariants:**
+    - Ensure that any invariants of the base class are preserved in the subclass.
+5. **Avoid Changing the Base Class’s Contract:**
+    - Don't alter the expected behavior of the base class methods in the subclass.
+
+Student.java
+```
+public class Student {
+	private double height;
+	private double weight;
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	public vid setWeigth(double weight) {
+		this.weight = weight;	
+	}
+	// other functionality
+}
+
+public class StudentBMI extends Student {
+	public void setHeight(double height) {
+		super.setHeight(height);
+		super.setWeight(weight)	
+	}
+	public void setWeight(double weight) {
+		super.setHeight(height);
+		super.setWeight(weight);	
+	}
+}
+```
+
+The above classes violates the Liskov substitution principle because the `StudentBMI` class has extra constraints i.e. 
+height and weight that must be the same. Therefore, the Student class  (base class) cannot be replaced by `StudentBMI` 
+class (derived class).
