@@ -162,3 +162,50 @@ public class StudentBMI extends Student {
 The above classes violates the Liskov substitution principle because the `StudentBMI` class has extra constraints i.e. 
 height and weight that must be the same. Therefore, the Student class  (base class) cannot be replaced by `StudentBMI` 
 class (derived class).
+
+### Interface Segregation Principle
+The principle states that the larger interfaces split into smaller ones. Because the implementation classes use only the 
+methods that are required. We should not force the client to use the methods that they do not want to use.
+
+The goal of the interface segregation principle is similar to the single responsibility principle. Let's understand the 
+principle through an example.
+
+![Interface Segregation Principle](https://static.javatpoint.com/core/images/solid-principles-java2.png)
+
+Suppose, we have created an interface named Conversion having three methods `intToDouble()`, `intToChar()`, `charToString()`
+
+```
+public interface Conversion {
+	public void intToDouble();
+	public void intToChar();
+	public void charToString();
+}
+```
+The above interface has three methods. If we want to use only a method `intToChar()` we have no choice to implement the 
+single method. To overcome the problem, the principle allows us to split the interface into three separate ones.
+
+```
+public interface convertIntToDouble {
+	public void intToDouble();
+}
+
+public interface ConvertIntToChar {
+	public void intToChar();
+}
+
+public interface ConvertCharToString {
+	public void charToString();
+}
+```
+Now we can use only the method that is required. Suppose we want to convert the integer to double and character to string
+then, we will use only the methods `intToDouble()` and `charToString()`
+```
+public class DataTypeConversion implements ConvertIntToDouble, ConvertCharToString {
+	public void intToDouble() {
+		// conversion logic
+	}
+	public void charToString() {
+		// conversion logic
+	}
+} 
+```
