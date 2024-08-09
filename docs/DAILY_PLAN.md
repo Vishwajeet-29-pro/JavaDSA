@@ -70,11 +70,21 @@
 ##### Not able to complete the yesterday's and day before yesterday's plan totally.
 
 ##### 8 Aug 2024
-- [ ] Job Apply
-- [ ] SOLID principles (LSP)
-- [ ] JVM Notes
-- [ ] Practice - Java and Java 8
-- [ ] Creating controller layer for reactive webflux project.
+- [x] Job Apply
+- [x] SOLID principles (LSP)
+- [x] JVM Notes
+- [x] Practice - Java and Java 8
+- [x] Creating controller layer for reactive webflux project.
 - [ ] Spring boot revision.
 - [ ] Interview questions.
-- [ ] Revision.
+- [x] Revision.
+- [x] Add openApi to micronaut
+
+9 Aug 2024:
+- [ ] Job Apply
+- [ ] SOLID Principle (ISP)
+- [ ] Practice Java and Java 8
+- [ ] Testing reactive webflux project and making more changes.
+- [ ] Spring boot revision
+- [ ] Interview Questions.
+- [ ] TDD
