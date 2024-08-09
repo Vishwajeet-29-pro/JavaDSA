@@ -12,4 +12,22 @@ public class TestQuestion1 {
         int[] arr = new int[] {2,3,5,6,3,7};
         assertEquals(6, question1.secondLargest(arr));
     }
+
+    @Test
+    public void testSecondLargestWithAllSame() {
+        int[] arr = new int[] {1,1,1,1};
+        assertEquals(Integer.MIN_VALUE, question1.secondLargest(arr));
+    }
+
+    @Test
+    public void testSecondLargestWithSingleValue() {
+        int[] arr = new int[] {1};
+        assertEquals(Integer.MIN_VALUE, question1.secondLargest(arr));
+    }
+
+    @Test
+    public void testAnotherSecondLargestMethod() {
+        int[] arr = new int[] {2,3,5,1,7};
+        assertEquals(5, question1.anotherSecondLargest(arr));
+    }
 }

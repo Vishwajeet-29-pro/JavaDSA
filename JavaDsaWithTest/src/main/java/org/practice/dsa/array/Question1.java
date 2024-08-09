@@ -1,5 +1,8 @@
 package org.practice.dsa.array;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Question1 {
 
     /* Find the Second-Largest Number in an Array*/
@@ -19,5 +22,10 @@ public class Question1 {
             }
         }
         return second == Integer.MIN_VALUE ? Integer.MIN_VALUE : second;
+    }
+
+    public int anotherSecondLargest(int[] arr) {
+        int[] sortedArray = Arrays.stream(arr).sorted().toArray();
+        return sortedArray[sortedArray.length-2];
     }
 }
