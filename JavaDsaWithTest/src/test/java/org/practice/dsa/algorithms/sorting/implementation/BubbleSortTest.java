@@ -3,6 +3,7 @@ package org.practice.dsa.algorithms.sorting.implementation;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BubbleSortTest {
     private final BubbleSort bubbleSort = new BubbleSort();
@@ -13,5 +14,16 @@ public class BubbleSortTest {
         bubbleSort.bubbleSort(arr);
         assertEquals(2, arr[1],"After swap the second number should be 2");
         assertEquals(10, arr[arr.length-1], "After swap the last number should be 10");
+    }
+
+    @Test
+    public void testIfArrayLengthIsZero() {
+        int[] arr = {};
+
+        Exception exception = assertThrows(RuntimeException.class,() -> {
+            bubbleSort.bubbleSort(arr);
+        });
+
+        assertEquals("Empty array passed", exception.getMessage());
     }
 }
