@@ -30,4 +30,10 @@ public class TestQuestion1 {
         int[] arr = new int[] {2,3,5,1,7};
         assertEquals(5, question1.anotherSecondLargest(arr));
     }
+
+    @Test
+    public void testSecondLargestWithBubbleSort() {
+        int[] arr = {2,3,9,4,7};
+        assertEquals(7, question1.secondLargestWithBubbleSort(arr));
+    }
 }
