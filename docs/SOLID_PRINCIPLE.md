@@ -209,3 +209,57 @@ public class DataTypeConversion implements ConvertIntToDouble, ConvertCharToStri
 	}
 } 
 ```
+
+### Dependency Inversion Principle
+
+The principle states that we must use abstraction (abstract classes and interfaces) instead of concrete implementations. High-level modules should not depend on the low-level module but both should depend on the abstraction. Because the abstraction does not depend on details but the details depends on abstraction. It decouples the software.
+```
+public class WindowMachine {
+// functionality
+}
+```
+It is worth, if we have not keyboard and mouse to work on Windows. To solve this problem, we create a constructor of the class and add the instances of the keyboard and monitor. After adding the instances, the class looks like the following:
+```
+public class WindowsMachine {
+	public final keyboard;
+	public final monitor;
+
+	public WindowsMachine() {
+		monitor = new monitor();
+		keyboard = new keyboard();
+	}
+}
+```
+
+Now we can work on the Windows machine with the help of a keyboard and mouse. But we still face the problem. Because we have tightly coupled the three classes together by using the new keyword. It is hard to test the class Windows machine.
+
+To make the code loosely coupled, we decouple the `WindowsMachine` from the keyboard by using the Keyboard interface and this keyword.
+
+Keyboard.java
+```
+public interface Keyboard {
+// functionality
+}
+
+WindowsMachine.java
+
+public class WindowsMachine {
+	private final Keyboard keyboard;
+	private final Monitor monitor;
+
+	public WindowsMachine(Keyboard keyboard, Monitor monitor) {
+		this.keyboard = keyboard;
+		this.monitor = monitor;
+	}
+}
+```
+
+In the above code, we have used the dependency injection to add the keyboard dependency in the `WindowsMachine` classes.
+
+![dependency inversion](https://static.javatpoint.com/core/images/solid-principles-java3.png)
+
+# Why should we use SOLID principles?
+- It reduces the dependencies so that a block of code can be changed without affecting the other code blocks.
+- The principles intended to make design easier, understandable.
+- By using the principles, the system is maintainable, testable, scalable, and reuseble.
+- It avoids the bad design of the software.
