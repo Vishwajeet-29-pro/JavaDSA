@@ -4,6 +4,7 @@ package org.practice.dsa.algorithms.sorting.implementation;
 public class BubbleSort {
 
     public void bubbleSort(int[] arr) {
+        if (arr == null || arr.length < 2) throw  new RuntimeException("Empty array passed");
         boolean swapped;
 
         for (int i =0; i < arr.length; i++) {
