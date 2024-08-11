@@ -19,4 +19,11 @@ public class LinearSearchTest {
         int[] arr = {};
         assertEquals(Integer.MAX_VALUE, ls.linearSearch(arr, 0));
     }
+
+    @Test
+    public void testLinearSearchNoTargetFound() {
+        int[] arr = {10, 20, 30, 40, 50, 60};
+        int target = 55;
+        assertEquals(Integer.MAX_VALUE, ls.linearSearch(arr, target));
+    }
 }
