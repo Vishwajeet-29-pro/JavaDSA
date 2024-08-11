@@ -3,6 +3,7 @@ package org.practice.dsa.algorithms.searching.implementation;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LinearSearchTest {
     private final LinearSearch ls = new LinearSearch();
@@ -25,5 +26,21 @@ public class LinearSearchTest {
         int[] arr = {10, 20, 30, 40, 50, 60};
         int target = 55;
         assertEquals(Integer.MAX_VALUE, ls.linearSearch(arr, target));
+    }
+
+    @Test
+    public void testLinearSearchEnhanceImplForEmptyArray() {
+        int[]  arr = {};
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            ls.linearSearchEnhance(arr, 0);
+        });
+        assertEquals("Empty arr passed", exception.getMessage());
+    }
+
+    @Test
+    public void testLinearSearchEnhanceImpl() {
+        int[] arr = {10, 20, 30, 40, 50};
+        int target = 50;
+        assertEquals(50, ls.linearSearchEnhance(arr, target));
     }
 }
