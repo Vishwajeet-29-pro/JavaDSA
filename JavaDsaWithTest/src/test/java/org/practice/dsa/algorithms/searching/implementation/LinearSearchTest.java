@@ -13,4 +13,10 @@ public class LinearSearchTest {
         int target = 60;
         assertEquals(5, ls.linearSearch(arr, target));
     }
+
+    @Test
+    public void testLinearSearchForEmptyArr() {
+        int[] arr = {};
+        assertEquals(Integer.MAX_VALUE, ls.linearSearch(arr, 0));
+    }
 }
