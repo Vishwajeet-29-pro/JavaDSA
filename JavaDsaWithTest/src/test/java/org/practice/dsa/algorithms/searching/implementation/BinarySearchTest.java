@@ -3,6 +3,7 @@ package org.practice.dsa.algorithms.searching.implementation;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BinarySearchTest {
 
@@ -14,5 +15,16 @@ public class BinarySearchTest {
         int target = 50;
         assertEquals(4, bs.binarySearch(arr, target));
         assertEquals(0, bs.binarySearch(arr, 10));
+    }
+
+    @Test
+    public void testBinarySearchForEmptyArray() {
+        int [] arr = {};
+        int target = 0;
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            bs.binarySearch(arr, target);
+        });
+
+        assertEquals("Empty arr passed.", exception.getMessage());
     }
 }
