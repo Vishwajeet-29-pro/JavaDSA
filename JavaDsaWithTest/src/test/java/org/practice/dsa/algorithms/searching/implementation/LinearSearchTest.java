@@ -47,8 +47,8 @@ public class LinearSearchTest {
     public void testBooleanOutputOfLinearSearchImpl() {
         int[] arr = {10, 20, 30, 40, 50};
         int target = 50;
-        assertTrue(ls.booleanLinearSearch(arr, target));
+        assertTrue(ls.booleanLinearSearch(arr, target), "If element found should return true");
         int noMatch = 55;
-        assertFalse(ls.booleanLinearSearch(arr, noMatch));
+        assertFalse(ls.booleanLinearSearch(arr, noMatch), "If element not found should return false");
     }
 }
