@@ -1,0 +1,16 @@
+package org.practice.dsa.algorithms.searching.implementation;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class LinearSearchTest {
+    private final LinearSearch ls = new LinearSearch();
+
+    @Test
+    public void testLinearSearchImpl() {
+        int[] arr = {10, 20, 30, 40, 50, 60, 70};
+        int target = 60;
+        assertEquals(60, ls.linearSearch(arr, target));
+    }
+}
