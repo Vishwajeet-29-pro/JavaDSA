@@ -23,4 +23,15 @@ public class LinearSearch {
         }
         throw new RuntimeException("Target element is not found.");
     }
+
+    public boolean booleanLinearSearch(int[] arr, int target) {
+        if (arr == null || arr.length < 1) throw new RuntimeException("Empty arr passed");
+
+        for(int element : arr) {
+            if (element == target) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
