@@ -5,6 +5,8 @@ public class BinarySearch {
 
     public int binarySearch(int[] arr, int target) {
 
+        if (arr == null || arr.length < 1) throw  new RuntimeException("Empty arr passed.");
+
         int start = 0;
         int end = arr.length-1;
 
