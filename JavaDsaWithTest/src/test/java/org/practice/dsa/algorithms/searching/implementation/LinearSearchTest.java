@@ -2,8 +2,7 @@ package org.practice.dsa.algorithms.searching.implementation;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LinearSearchTest {
     private final LinearSearch ls = new LinearSearch();
@@ -42,5 +41,14 @@ public class LinearSearchTest {
         int[] arr = {10, 20, 30, 40, 50};
         int target = 50;
         assertEquals(50, ls.linearSearchEnhance(arr, target));
+    }
+
+    @Test
+    public void testBooleanOutputOfLinearSearchImpl() {
+        int[] arr = {10, 20, 30, 40, 50};
+        int target = 50;
+        assertTrue(ls.booleanLinearSearch(arr, target));
+        int noMatch = 55;
+        assertFalse(ls.booleanLinearSearch(arr, noMatch));
     }
 }
