@@ -17,4 +17,11 @@ public class CyclicSortTest {
 
         assertEquals("Empty array passed.", exception.getMessage());
     }
+
+    @Test
+    public void testCyclicSort() {
+        int[] arr = {5, 4, 3, 2, 1};
+        sort.cyclicSort(arr);
+        assertEquals(5, arr[4], "After sorting the 4th element of array should be 5");
+    }
 }
