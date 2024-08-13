@@ -81,10 +81,20 @@
 - [x] Add openApi to micronaut
 
 9 Aug 2024:
-- [ ] Job Apply
-- [ ] SOLID Principle (ISP)
-- [ ] Practice Java and Java 8
-- [ ] Testing reactive webflux project and making more changes.
-- [ ] Spring boot revision
+- [x] Job Apply
+- [x] SOLID Principle (ISP)
+- [x] Practice Java and Java 8
+- [x] Testing reactive webflux project and making more changes.
+- [x] Spring boot revision
 - [ ] Interview Questions.
-- [ ] TDD
+- [x] TDD
+
+##### 13 Aug 2024
+- [x] Job Apply
+- [ ] JVM Notes
+- [ ] Practice Java and Java 8
+- [ ] Figure out issue from reactive webflux.
+- [ ] Spring boot revision.
+- [ ] Interview Questions.
+- [ ] TDD (Junit5 also some cucumber)
+- [ ] Mocking
