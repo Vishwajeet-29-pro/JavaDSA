@@ -106,3 +106,15 @@ The JIT compiler is enabled by default. When a method has been compiled, the JMV
 JIT compilation does require processor time and memory usage. When the JVM first starts up, thousands of methods are called. Compiling all of these methods can significantly affect startup time, even if the program eventually achieves very good peak performance.
 
 In practice, methods are not compiled the first time they are called. For each method, the JVM maintains an invocation count, which starts at a predefined compilation threshold value and is decremented every time the method is called. When the invocation count reaches zero, a just-in-time compilation for the method is triggered. Therefore, often-used methods are compiled much later, or not at all. The JIT compilation threshold helps the JVM start quickly and still have improved performance. The threshold helps the JVM start quickly and still have improved performance. The threshold value was selected to obtain an optimal balance between startup times and long-term performance. 
+
+## Frequently asked questions about the JIT compiler.
+1. Can I disable the JIT compiler?
+   Yes. The JIT compiler is turned on by default, but you can turn it off with the appropriate command-line parameter. [Disabling JIT](https://www.ibm.com/docs/en/SSYKE2_8.0.0/com.ibm.java.vm.80.doc/docs/jit_pd_disable.html#jit_pd_disable)
+2. Can I use another vendor's JIT compiler?
+   No.
+3. Can I use any version of the JIT compiler with the JVM?
+   No. The two are tightly coupled. You must use the version of the JIT compiler that comes with the JVM package that you use.
+4. Can the JIT compiler decompile methods?
+   Typically, The JIT compiler does not decompile methods. However, in rare instances the JIT compiler is forced to decompile a method. Such instances arise when the JIT compiler applies speculative optimizations based on compile-time assumptions, the assumptions are later violated, and JIT is then unable to recompile the method. Due to implementation restrictions, such methods remain interpreted until the end of the application.
+5. Can I dynamically control the JIT compiler?
+   No. You can pass options to the JIT compiler to modify the behavior, but only at JVM startup time, because the JIT compiler is started up at the same time as the JVM. However, a Java program can use the `java.lang.Compiler` API to enable and disable the JIT compiler at run time.
