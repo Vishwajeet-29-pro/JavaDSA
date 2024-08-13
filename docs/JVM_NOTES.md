@@ -95,4 +95,14 @@ To ensure that garbage collectors work efficiently, the JVM separates the heap i
    Java profilers are tools that can be used to measure the performance of Java code. They can help to identify performance bottlenecks and provide insights into how to optimize performance. <br>
    For example, Granulate's continuous profiler is a free and open source Java profiler with an always-on approach. It samples the CPU, allowing you to investigate performance at any given time to see the impact of version releases, understand the performance impact of new features, compare deployments and isolate performance issues. <br>
    By Continuously analyzing code performance across your entire environment, you can optimize the most resource-consuming parts of your code, improve application performance and reduce costs. <br><br>
-     
+
+### What is JIT?
+The Just-In-Time complier is a component of the runtime environment that improves the performance of Java applications by compiling bytecodes to native machine code at runtime.
+
+Java programs consists of classes, which contain platform-neutral bytecodes that can be interpreted by a JVM on many different computer architectures. At run time, the JVM loads the class files, determines the semantics of each individual bytecode, and performs the appropriate computation. The additional processor and memory usage during interpretation means that a Java application performs more slowly than a native application. The JIT compiler helps improve the performance of Java program by compiling bytecodes into native machine code at run time.
+
+The JIT compiler is enabled by default. When a method has been compiled, the JMV calls the compiled code of that method directly instead of interpreting it. Theoretically, if compilation did not require processor time and memory usage, compiling every method could allow the speed of the Java program to match that of a native application.
+
+JIT compilation does require processor time and memory usage. When the JVM first starts up, thousands of methods are called. Compiling all of these methods can significantly affect startup time, even if the program eventually achieves very good peak performance.
+
+In practice, methods are not compiled the first time they are called. For each method, the JVM maintains an invocation count, which starts at a predefined compilation threshold value and is decremented every time the method is called. When the invocation count reaches zero, a just-in-time compilation for the method is triggered. Therefore, often-used methods are compiled much later, or not at all. The JIT compilation threshold helps the JVM start quickly and still have improved performance. The threshold helps the JVM start quickly and still have improved performance. The threshold value was selected to obtain an optimal balance between startup times and long-term performance. 
