@@ -118,3 +118,25 @@ In practice, methods are not compiled the first time they are called. For each m
    Typically, The JIT compiler does not decompile methods. However, in rare instances the JIT compiler is forced to decompile a method. Such instances arise when the JIT compiler applies speculative optimizations based on compile-time assumptions, the assumptions are later violated, and JIT is then unable to recompile the method. Due to implementation restrictions, such methods remain interpreted until the end of the application.
 5. Can I dynamically control the JIT compiler?
    No. You can pass options to the JIT compiler to modify the behavior, but only at JVM startup time, because the JIT compiler is started up at the same time as the JVM. However, a Java program can use the `java.lang.Compiler` API to enable and disable the JIT compiler at run time.
+
+# Frequently Asked Interview Questions on JVM.
+1. What do you mean by JVM?
+   - JVM is the abbreviation for Java Virtual Machine. JVM is the virtual machine that executes Java code and translates the byte code into machine-specific code to allow computers to run and interpret Java programs.
+2. How is the Java programming language independent of machines and platforms?
+   - The output of compiling a Java code is a .class file containing machine and platform-independent byte codes. JVM interprets byte code and executes Java programs. Particular JVMs are for particular platforms. The same .class file can execute on any platform and machine with a JVM. Because of this, we can write and compile a Java program once and can execute it on any platform.
+3. Explain Java byte codes.
+   - Java byte code is an intermediate language between Java, the programming language developers use and the machine language that executes the program. After compilation of the Java program, the outcome is a .class file containing byte codes. JVM loads and executes Java classes via the class loader.
+4. What do you mean by pass by reference and pass by value in Java?
+   - Pass by reference involves passing the address itself instead of the value, where as pas by value is passing a copy of the value.
+5. Define phantom memory.
+   - The phantom memory is a memory that does not exist in reality and is a false memory.
+6. Name the superclass of every class.
+   - Object is the superclass of every class.
+7. Are there global variables in Java and why?
+   - No, there are no global variables in Java. Java does not support global variables because it interferes with the referential transparency and may also make collisions in the namespace.
+8. Define `ClassLoader` in JVM.
+   - Class loaders dynamically load Java classes to the JVM during runtime. They are also components of the Java Runtime Environment. Class loaders eliminate the necessity for the JVM to understand the underlying files or file systems to execute Java program.
+9. What is the role of the execution engine?
+   - The execution engine is the core component of the Java Virtual Machine. It interacts with various JVM memory regions. Primarily, it runs the byte code allocated to the runtime data region in JVM via a class loader.
+10. What do you know about heap in Java?
+    - It is the memory region used to keep objects created by JVM-based applications. Heap memory creates when the JVM start an any objects in a heap are shareable between threads until the application gets deployed.
