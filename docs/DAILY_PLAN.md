@@ -91,10 +91,20 @@
 
 ##### 13 Aug 2024
 - [x] Job Apply
-- [ ] JVM Notes
-- [ ] Practice Java and Java 8
-- [ ] Figure out issue from reactive webflux.
+- [x] JVM Notes
+- [x] Practice Java and Java 8
+- [x] Figure out issue from reactive webflux. (In application.properties already set the webflux configs which leads to wrong api call)
+- [ ] Spring boot revision.
+- [x] Interview Questions.
+- [x] TDD (Junit5 also some cucumber documentation)
+- [x] Mocking (One video tutorial)
+
+##### 14 Aug 2024
+- [ ] Job Apply
+- [ ] JVM Notes (commonly asked interview questions)
+- [ ] Practice on Java and Java 8 (Algorithms)
+- [ ] Reactive webflux, adding exception handling the current code.
 - [ ] Spring boot revision.
 - [ ] Interview Questions.
-- [ ] TDD (Junit5 also some cucumber)
-- [ ] Mocking
+- [ ] TDD (Junit5 and cucumber documentation)
+- [ ] Mocking (One or many YouTube tutorial)
