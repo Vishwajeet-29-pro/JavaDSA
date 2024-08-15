@@ -33,4 +33,11 @@ public class EmployeeRepository {
                         ).orElse(true)
                 ).collect(Collectors.toList());
     }
+
+    public Employee findFirstEmployeeWithPhoneNumber(List<Employee> employees) {
+        return employees.stream()
+                .filter(employee -> employee.getPhoneNumber().isPresent())
+                .findFirst()
+                .orElse(new Employee("default","default@example.com",Optional.empty(), Optional.empty()));
+    }
 }

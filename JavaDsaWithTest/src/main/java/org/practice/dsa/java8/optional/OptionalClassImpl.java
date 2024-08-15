@@ -25,5 +25,7 @@ public class OptionalClassImpl {
 
         System.out.println(employeeRepository.filterEmployeeByDepartment(employees, Optional.of("Backend")));
         System.out.println(employeeRepository.filterEmployeeByDepartment(employees, Optional.empty()));
+
+        System.out.println(employeeRepository.findFirstEmployeeWithPhoneNumber(employees));
     }
 }
