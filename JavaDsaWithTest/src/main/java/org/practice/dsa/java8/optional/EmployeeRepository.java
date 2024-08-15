@@ -24,6 +24,7 @@ public class EmployeeRepository {
     }
 
     // Filter Employees by department
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     public List<Employee> filterEmployeeByDepartment(List<Employee> employees, Optional<String> department) {
         return employees.stream()
                 .filter(employee -> department

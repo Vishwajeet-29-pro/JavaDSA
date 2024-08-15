@@ -2,11 +2,12 @@ package org.practice.dsa.java8.optional;
 
 import java.util.Optional;
 
+@SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public class Employee {
-    private String name;
-    private String email;
-    private Optional<String> phoneNumber;
-    private Optional<String> department;
+    private final String name;
+    private final String email;
+    private final Optional<String> phoneNumber;
+    private final Optional<String> department;
 
     public Employee(String name, String email, Optional<String> phoneNumber, Optional<String> department) {
         this.name = name;
