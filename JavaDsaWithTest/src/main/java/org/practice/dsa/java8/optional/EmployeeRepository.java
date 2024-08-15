@@ -11,4 +11,13 @@ public class EmployeeRepository {
                 .map(Employee::toString)
                 .orElse("Employee Not found");
     }
+
+    // find employee's phone number by email
+    public String findPhoneNumberByEmail(List<Employee> employees, String email) {
+        return employees.stream()
+                .filter(employee -> employee.getEmail().equalsIgnoreCase(email))
+                .findFirst()
+                .flatMap(Employee::getPhoneNumber)
+                .orElse("PhoneNumber not found");
+    }
 }

@@ -18,5 +18,8 @@ public class OptionalClassImpl {
         System.out.println(employeeRepository.findEmployeeByName(employees, "Amit"));
         System.out.println(employeeRepository.findEmployeeByName(employees,"Vishwajeet"));
 
+        System.out.println(employeeRepository.findPhoneNumberByEmail(employees,"vishwajeet@example.com"));
+        System.out.println(employeeRepository.findPhoneNumberByEmail(employees,"amit@example.com"));
+        System.out.println(employeeRepository.findPhoneNumberByEmail(employees, "balraj@example.com"));
     }
 }
