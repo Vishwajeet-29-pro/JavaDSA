@@ -15,5 +15,8 @@ public class OptionalClassImpl {
                 new Employee("Amit","amit@example.com", Optional.empty(), Optional.of("HR"))
         );
 
+        System.out.println(employeeRepository.findEmployeeByName(employees, "Amit"));
+        System.out.println(employeeRepository.findEmployeeByName(employees,"Vishwajeet"));
+
     }
 }
