@@ -1,6 +1,8 @@
 package org.practice.dsa.java8.optional;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class EmployeeRepository {
     // find employee by employee name
@@ -19,5 +21,16 @@ public class EmployeeRepository {
                 .findFirst()
                 .flatMap(Employee::getPhoneNumber)
                 .orElse("PhoneNumber not found");
+    }
+
+    // Filter Employees by department
+    public List<Employee> filterEmployeeByDepartment(List<Employee> employees, Optional<String> department) {
+        return employees.stream()
+                .filter(employee -> department
+                        .map(d -> employee.getDepartment()
+                                        .map(d::equals)
+                                        .orElse(false)
+                        ).orElse(true)
+                ).collect(Collectors.toList());
     }
 }
