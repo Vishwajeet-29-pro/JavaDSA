@@ -99,12 +99,28 @@
 - [x] TDD (Junit5 also some cucumber documentation)
 - [x] Mocking (One video tutorial)
 
-##### 14 Aug 2024
-- [ ] Job Apply
-- [ ] JVM Notes (commonly asked interview questions)
-- [ ] Practice on Java and Java 8 (Algorithms)
-- [ ] Reactive webflux, adding exception handling the current code.
-- [ ] Spring boot revision.
-- [ ] Interview Questions.
-- [ ] TDD (Junit5 and cucumber documentation)
+#### 14 Aug 2024
+- [x] Job Apply
+- [x] JVM Notes (commonly asked interview questions)
+- [x] Practice on Java and Java 8 (Algorithms)
+- [x] Reactive webflux, adding exception handling the current code.
+- [x] Spring boot revision.
+- [x] Interview Questions.
+- [x] TDD (Junit5 and cucumber documentation)
 - [ ] Mocking (One or many YouTube tutorial)
+
+#### 15 Aug 2024
+- [ ] Job Apply
+- [ ] Notes
+    - [ ] KISS
+    - [ ] TDD
+    - [ ] Other important
+- [ ] Practice on Java
+- [ ] Practice on Java 8 Optional Class Notes and implementation.
+- [ ] Reactive Webflux - custom error handling.
+- [ ] Spring boot with PiTest
+- [ ] Interview Questions
+- [ ] Mocking (2 or many YouTube Tutorials)
+- [ ] Financial Awareness
+    - [ ] Benefits of Credit Card
+    - [ ] SIP details.
