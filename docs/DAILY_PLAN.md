@@ -110,17 +110,28 @@
 - [ ] Mocking (One or many YouTube tutorial)
 
 #### 15 Aug 2024
-- [ ] Job Apply
-- [ ] Notes
-    - [ ] KISS
-    - [ ] TDD
-    - [ ] Other important
+- [x] Job Apply
+- [x] Notes
+  - [x] KISS
+  - [x] TDD (Cucumber notes)
+  - [x] Other important
 - [ ] Practice on Java
-- [ ] Practice on Java 8 Optional Class Notes and implementation.
-- [ ] Reactive Webflux - custom error handling.
-- [ ] Spring boot with PiTest
+- [x] Practice on Java 8 Optional Class Notes and implementation.
+- [x] Reactive Webflux - custom error handling but not worked well.
+- [x] Spring boot with PiTest Not worked with the reactive webflux project, need to create a new one.
 - [ ] Interview Questions
-- [ ] Mocking (2 or many YouTube Tutorials)
+- [x] Mocking (2 or many YouTube Tutorials)
+- [x] Financial Awareness
+  - [x] Benefits of Credit Card
+  - [x] SIP details.
+
+##### 16 Aug 2024
+- [ ] Job Apply
+- [ ] Core Java related stuff
+- [ ] Java 8 related stuff
+- [ ] New Project for Spring boot probably Todo list with PiTest integration
+- [ ] Mocking
+- [ ] TDD stuff (Prefer Cucumber for deep understanding.)
 - [ ] Financial Awareness
-    - [ ] Benefits of Credit Card
-    - [ ] SIP details.
+  - [ ] How to get Credit card if salary less than 20,000.
+  - [ ] SIP related stuff.
