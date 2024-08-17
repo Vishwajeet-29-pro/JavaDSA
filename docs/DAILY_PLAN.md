@@ -126,12 +126,26 @@
   - [x] SIP details.
 
 ##### 16 Aug 2024
+- [x] Job Apply
+- [ ] Core Java related stuff
+- [ ] Java 8 related stuff
+- [x] New Project for Spring boot probably Todo list with PiTest integration
+- [x] Mocking
+- [x] TDD stuff (Prefer Cucumber for deep understanding, but not understand just unit tests with mocking.)
+- [x] Financial Awareness
+  - [x] How to get Credit card if salary less than 20,000 possibilities are not good but lets see.
+  - [x] SIP related stuff.
+
+#### 17 Aug 2024
 - [ ] Job Apply
 - [ ] Core Java related stuff
 - [ ] Java 8 related stuff
-- [ ] New Project for Spring boot probably Todo list with PiTest integration
+- [ ] Todo List app complete implementation
 - [ ] Mocking
-- [ ] TDD stuff (Prefer Cucumber for deep understanding.)
+- [ ] TDD with Cucumber
+- [ ] Revision and Interview Questions
+- [ ] Reactive WebFlux Notes
 - [ ] Financial Awareness
-  - [ ] How to get Credit card if salary less than 20,000.
+  - [ ] Credit cards with Low salary.
   - [ ] SIP related stuff.
+  - [ ] Account on Grow.
