@@ -13,4 +13,9 @@ class ReverseStringTest {
         assertEquals("Empty string passed", exception.getMessage());
     }
 
+    @Test
+    public void testReverseString() {
+        String input = "simple";
+        assertEquals("elpmis", rs.reverseString(input));
+    }
 }
