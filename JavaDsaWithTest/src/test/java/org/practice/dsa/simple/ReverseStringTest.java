@@ -9,9 +9,7 @@ class ReverseStringTest {
 
     @Test
     public void testReverseStringIfEmptyInput() {
-        Exception exception = assertThrows(RuntimeException.class, () -> {
-            rs.reverseString("");
-        });
+        Exception exception = assertThrows(RuntimeException.class, () -> rs.reverseString(""));
         assertEquals("Empty string passed", exception.getMessage());
     }
 
