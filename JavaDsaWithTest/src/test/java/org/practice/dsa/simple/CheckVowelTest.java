@@ -13,4 +13,9 @@ class CheckVowelTest {
         assertTrue(vowel.checkStringContainsVowels("simple"));
     }
 
+    @Test
+    public void testCheckVowelIfNotPresent() {
+        assertFalse(vowel.checkStringContainsVowels("src"));
+        assertFalse(vowel.checkStringContainsVowels("Rhythm"));
+    }
 }
