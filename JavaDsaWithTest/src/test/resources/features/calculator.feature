@@ -14,3 +14,8 @@ Feature: Calculator
     Given I have a calculator
     When I multiply 5 and 3
     Then the result should be 15
+
+  Scenario:
+    Given I have a calculator
+    When I divide 6 by 3
+    Then  the result should be 2
