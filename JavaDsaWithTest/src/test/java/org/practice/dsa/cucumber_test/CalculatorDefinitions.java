@@ -26,6 +26,11 @@ public class CalculatorDefinitions {
         result = calculator.subtract(num1, num2);
     }
 
+    @When("I multiply {int} and {int}")
+    public void iMultiplyAnd(int num1, int num2) {
+        result = calculator.multiply(num1, num2);
+    }
+
     @Then("the result should be {int}")
     public void theResultShouldBe(int expectedResult) {
         assertEquals(expectedResult, result);
