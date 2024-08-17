@@ -19,3 +19,8 @@ Feature: Calculator
     Given I have a calculator
     When I divide 6 by 3
     Then  the result should be 2
+
+  Scenario:
+    Given I have a calculator
+    When I divide 6 by 0
+    Then an ArithmeticException should be thrown
