@@ -9,3 +9,8 @@ Feature: Calculator
     Given I have a calculator
     When I subtract 5 and 3
     Then the result should be 2
+
+  Scenario: Multiply two numbers
+    Given I have a calculator
+    When I multiply 5 and 3
+    Then the result should be 15
