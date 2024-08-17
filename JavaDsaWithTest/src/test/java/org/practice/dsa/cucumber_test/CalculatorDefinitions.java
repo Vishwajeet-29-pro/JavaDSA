@@ -21,6 +21,11 @@ public class CalculatorDefinitions {
         result = calculator.add(num1, num2);
     }
 
+    @When("I subtract {int} and {int}")
+    public void iSubtractAnd(int num1, int num2) {
+        result = calculator.subtract(num1, num2);
+    }
+
     @Then("the result should be {int}")
     public void theResultShouldBe(int expectedResult) {
         assertEquals(expectedResult, result);
