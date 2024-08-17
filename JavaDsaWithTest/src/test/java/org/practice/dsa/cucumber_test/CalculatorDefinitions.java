@@ -31,6 +31,11 @@ public class CalculatorDefinitions {
         result = calculator.multiply(num1, num2);
     }
 
+    @When("I divide {int} by {int}")
+    public void iDivideBy(int num1, int num2) {
+        result = calculator.divide(num1, num2);
+    }
+
     @Then("the result should be {int}")
     public void theResultShouldBe(int expectedResult) {
         assertEquals(expectedResult, result);
