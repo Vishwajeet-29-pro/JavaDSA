@@ -137,15 +137,29 @@
   - [x] SIP related stuff.
 
 #### 17 Aug 2024
-- [ ] Job Apply
-- [ ] Core Java related stuff
-- [ ] Java 8 related stuff
-- [ ] Todo List app complete implementation
-- [ ] Mocking
-- [ ] TDD with Cucumber
+- [x] Job Apply
+- [x] Core Java related stuff
+- [x] Java 8 related stuff
+- [x] Todo List app complete implementation (service layer complete)
+- [x] Mocking
+- [x] TDD with Cucumber
+- [x] Notes on Assertion
 - [ ] Revision and Interview Questions
-- [ ] Reactive WebFlux Notes
+- [x] Reactive WebFlux Notes
 - [ ] Financial Awareness
-  - [ ] Credit cards with Low salary.
+  - [x] Credit cards with Low salary.
   - [ ] SIP related stuff.
   - [ ] Account on Grow.
+#### 18 Aug 2024
+- [x] Java 8 `DateTimeApi`
+- [ ] GitHub actions documentation reading. may be creating notes on it.
+- [ ] Collecting information on Make file.
+- [ ] Java related stuff.
+- [ ] TDD with cucumber
+- [ ] Decide and use TDD approach for testing controller layer.
+- [ ] Some More Notes on Assertion (`AssertThat()`,`AssertDoesNotThrow()`)
+- [ ] Reactive WebFlux Notes
+- [ ] Financial Awareness
+  - [ ] Credit Cards
+  - [ ] Grow Account
+  - [ ] SIP searching 
