@@ -154,3 +154,52 @@ public class AssertJTest {
 - Use `assertThat()` when you need more expressive, readable, and flexible assertions.
 - It is particularly useful for complex assertions and can be extended with custom matchers.
 - Libraries like Hamcrest and AssertJ provide a wide range of matchers to use with `assertThat()`.
+
+### `assertDoesNotThrow()`
+The `assertDoesNotThrow()` method in JUnit5 is used to verify that a piece of code does not throw an exception. This is useful when you want to ensure that a method executes without errors, especially if you're not interested in the method's return value but rather in ensuring that it runs successfully.
+**Basic Syntax**:
+`assertDoesNotThrow(executable, messageSupplier);`
+- `executable`: This is typically a lambda expression or method reference that contains the code you expect not to throw an exception.
+- `messageSupplier`(Optional): A message that is displayed if the assertion fails.
+##### Example Usage
+```
+import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
+public class MyTest {
+	@Test
+	public void testMethodDoesNotThrowException() {
+		// Assuming this method might throw an exception, but you expect it not to.
+		assertDoesNotThrow(() -> myMethodShouldNotThrow(), "Method threw an exception unexpectedly");
+	}
+
+	@Test
+	public void testAnotherMEthodDoesNotThowException() {
+		// another example with a method reference
+		assertDoesNotThrow(this::anotherMethodThatShouldNotThrow);
+	}
+}
+```
+##### When to Use `assertDoesNotThrow`
+1. **Validating Safe Execution**: Use `assertDoesNotThrow` when you want to assert that a method completes without throwing any exception, regardless of the method's return value.
+2. **Testing for Non-Exceptional Behavior**: This is especially useful in cases where exceptions might be expected (e.g., due to improper input) but you're specifically testing a scenario where an exception should not occur.
+3. **Defensive code checks**: If your code is defensive against potential runtime issues, you can use `assertDoesNotThrow` to ensure that those issues are properly handled and no exceptions are thrown.
+###### Example with Optional Use Cases
+```
+import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*;
+
+public class OptionalTest {
+	@Test
+	public void testOptionalIfPresentDoesNotThrow() {
+		Optional<String> optional = Optional.of("Hello");
+
+		assertDoesNotThrow(() -> optional.if(value -> {
+			System.out.println(value);
+		}));
+	}
+}
+```
+##### Summary
+
+- `assertDoesNotThrow` is used to ensure that a block of code executes without throwing any exceptions.
+- It is particularly useful when the correctness of the test lies in the fact that no exceptions should occur, rather than in specific return values or output.
+- Ideal for scenarios where you want to validate the absence of exceptions in potentially risky code.
