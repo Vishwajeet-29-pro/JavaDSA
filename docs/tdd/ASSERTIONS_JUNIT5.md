@@ -75,3 +75,82 @@ public class MyTest {
 - Use `assertFalse()` when you expect the condition you're testing to be false.
 - It is useful for confirming that a particular negative condition is met, ensuring the correctness of your logic in those scenarios.
 
+#### `assertThat()`
+`assertThat()` is a powerful and flexible assertion method provided by various testing libraries, including `Hamcrest` and `AssertJ`, that allows for more expressive and readable test assertions compared to the traditional `assertEquals`, `assertTrue` and `assertFalse` methods. Unlike the simple assertions, `assertThat()` provides a fluent API that can be extended with custom matchers making it very useful for complex or specialized assertions.
+###### Basic Usage of `assertThat()`
+In general, the syntax for using `assertThat()` looks like this:
+```
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+public class MyTest {
+	@Test
+	public void testString() {
+		String str = "Hello, World!";
+		assertThat(str, containsString("world"));
+	}
+
+	@Test
+	public void testNumber() {
+		int number = 10;
+		assertThat(number, is(greaterThan(5)));
+	}
+}
+```
+##### When to Use `assertThat()`
+1. Complex Assertions: Use `assertThat()` when you need to make more complex assertion that are not easily expressed with `assertEquals`, `assertTrue`, `assertFalse`.
+2. Readability: `assertThat()` allows you to create readable and expressive tests. The fluent API and matcher methods make it clear what condition you are testing.
+3. Custom Matchers: If you need to create your own conditions (custom matchers), `assertThat()` is the preferred method. You can use pre-built matchers or create custom ones.
+#### Example with Hamcrest
+Hamcrest is the most commonly used library with `assertThat()` in Junit tests.
+```
+import static org.hamcrest.MatcherAssert.assertThat; import static org.hamcrest.Matchers.*;
+
+public class HamcrestTest {
+	@Test
+	public void testCollection() {
+		List<String> list = Arrays.asList("apple","banana","cherry");
+
+		assertThat(list, hasSize(3));
+		assertThat(list, contains("apple"));
+		assertThat(list, everyItem(containsString("a")));
+	}
+
+	@Test
+	public void testObjectProperty() {
+		Person person = new Person("John", 30);
+
+		assertThat(person.getName(), equalTo("John"));
+		assertThat(person.getAge(), is(30));
+	}
+}
+```
+##### Example with AssertJ
+AssertJ is another popular library that provides a similar fluent API for assertions:
+```
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class AssertJTest {
+	@Test
+	public void testString() {
+		String str = "Hello, world!";
+		assertThat(str).startWith("Hello")
+						.endsWith("world!")
+						.contains("world!")
+	}
+
+	@Test
+	public void testNumber() {
+		int number = 10;
+		assertThat(number).isGreaterThan(5)
+						.isLessThanOrEqualTo(10)
+						.isPositive();
+	}
+}
+```
+
+### Summary
+
+- Use `assertThat()` when you need more expressive, readable, and flexible assertions.
+- It is particularly useful for complex assertions and can be extended with custom matchers.
+- Libraries like Hamcrest and AssertJ provide a wide range of matchers to use with `assertThat()`.
