@@ -32,9 +32,9 @@ public class Date {
 
 		Month month = current.getMonth();
 		int day = current.getDayOfMonth();
-		int seconds = current.getSecond();
+		int year = current.getYear();
 
-		System.out.println("Month: "+month+" day : "+day+" seconds :  "+seconds);
+		System.out.println("Month: "+month+" Day : "+day+" Year :  "+year);
 
 		LocalDate date2 = LocalDate.of(1950,1,26);
 		System.out.println("the republic day: "+date2);
