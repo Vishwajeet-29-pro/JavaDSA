@@ -1,3 +1,17 @@
+1. `assertEquals()`
+2. `assertNotEquals()`
+3. `assertTrue()`
+4. `assertFalse()`
+5. `assertThrows()`
+6. `assertDoesNotThrow()`
+7. `assertThat() // from assertJ and hemcrest`
+8. `assertArrayEquals()`
+9. `assertIterableEquals()`
+10. `assertTimeout()`, `assertTimeoutPreemptively()`
+11. `assertSame()`, `assertNotSame()`
+12. `assertNull()`, `assertotNull()`
+13. `assertAll()`
+
 *If the method does not return anything and that time if you want to test the code, how can you?*
 -->  Whenever we create a method with return type void, it produces the side effect after calling the method. We can generally test these side effects.
 Examples:
@@ -74,6 +88,82 @@ public class MyTest {
 ```
 - Use `assertFalse()` when you expect the condition you're testing to be false.
 - It is useful for confirming that a particular negative condition is met, ensuring the correctness of your logic in those scenarios.
+
+### AssertThrows()
+If method will throw some exception at runtime or may be it will generate some exception, and we need to catch that, for that we can use `AssertThrows()`. here is how we can implement code for it.
+```
+public class ArrayCheck {
+public void checkArray(int[] arr) {
+	if(arr.length == 0) throw new RuntimeException("Empty array passed.");
+	// other logic to perform operation on array.
+	}
+}
+```
+The test case for the checking the exception using AssertThrows():
+```
+public class ArrayTest {
+	private final ArrayCheck check = new ArrayCheck();
+
+	@Test
+	public void testCheckArray() {
+		int arr[] = {};
+		Exception exception = assertThrows(RuntimeException.class, ()->{
+			check.checkArray(arr);
+		});	
+
+		assertThrows("Empty array passed.", exception.getMessage());
+	}
+}
+```
+
+### `assertDoesNotThrow()`
+The `assertDoesNotThrow()` method in JUnit5 is used to verify that a piece of code does not throw an exception. This is useful when you want to ensure that a method executes without errors, especially if you're not interested in the method's return value but rather in ensuring that it runs successfully.
+**Basic Syntax**:
+`assertDoesNotThrow(executable, messageSupplier);`
+- `executable`: This is typically a lambda expression or method reference that contains the code you expect not to throw an exception.
+- `messageSupplier`(Optional): A message that is displayed if the assertion fails.
+##### Example Usage
+```
+import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
+public class MyTest {
+	@Test
+	public void testMethodDoesNotThrowException() {
+		// Assuming this method might throw an exception, but you expect it not to.
+		assertDoesNotThrow(() -> myMethodShouldNotThrow(), "Method threw an exception unexpectedly");
+	}
+
+	@Test
+	public void testAnotherMEthodDoesNotThowException() {
+		// another example with a method reference
+		assertDoesNotThrow(this::anotherMethodThatShouldNotThrow);
+	}
+}
+```
+##### When to Use `assertDoesNotThrow`
+1. **Validating Safe Execution**: Use `assertDoesNotThrow` when you want to assert that a method completes without throwing any exception, regardless of the method's return value.
+2. **Testing for Non-Exceptional Behavior**: This is especially useful in cases where exceptions might be expected (e.g., due to improper input) but you're specifically testing a scenario where an exception should not occur.
+3. **Defensive code checks**: If your code is defensive against potential runtime issues, you can use `assertDoesNotThrow` to ensure that those issues are properly handled and no exceptions are thrown.
+###### Example with Optional Use Cases
+```
+import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*;
+
+public class OptionalTest {
+	@Test
+	public void testOptionalIfPresentDoesNotThrow() {
+		Optional<String> optional = Optional.of("Hello");
+
+		assertDoesNotThrow(() -> optional.if(value -> {
+			System.out.println(value);
+		}));
+	}
+}
+```
+### Summary
+
+- `assertDoesNotThrow` is used to ensure that a block of code executes without throwing any exceptions.
+- It is particularly useful when the correctness of the test lies in the fact that no exceptions should occur, rather than in specific return values or output.
+- Ideal for scenarios where you want to validate the absence of exceptions in potentially risky code.
 
 #### `assertThat()`
 `assertThat()` is a powerful and flexible assertion method provided by various testing libraries, including `Hamcrest` and `AssertJ`, that allows for more expressive and readable test assertions compared to the traditional `assertEquals`, `assertTrue` and `assertFalse` methods. Unlike the simple assertions, `assertThat()` provides a fluent API that can be extended with custom matchers making it very useful for complex or specialized assertions.
@@ -155,51 +245,78 @@ public class AssertJTest {
 - It is particularly useful for complex assertions and can be extended with custom matchers.
 - Libraries like Hamcrest and AssertJ provide a wide range of matchers to use with `assertThat()`.
 
-### `assertDoesNotThrow()`
-The `assertDoesNotThrow()` method in JUnit5 is used to verify that a piece of code does not throw an exception. This is useful when you want to ensure that a method executes without errors, especially if you're not interested in the method's return value but rather in ensuring that it runs successfully.
-**Basic Syntax**:
-`assertDoesNotThrow(executable, messageSupplier);`
-- `executable`: This is typically a lambda expression or method reference that contains the code you expect not to throw an exception.
-- `messageSupplier`(Optional): A message that is displayed if the assertion fails.
-##### Example Usage
+### `assertArrayEquals()`
+Compares two arrays to ensure they are equal.
+`assertArrayEquals()` is used to test whether two arrays are equal. This assertion checks that:
+1. Both arrays are of the same length.
+2. The elements at each index in both arrays are equal.
+   If these conditions are met, the assertion passes. If not, the test fails.
+
+###### Common Usages
+`assertArrayEquals()` can be used for various array types including `int[]`, `double[]`, `object[]` and more. It's typically used when you have a method that returns an array, and you want to verify that the output matches your expectations.
+**Syntax**:
 ```
-import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-
-public class MyTest {
-	@Test
-	public void testMethodDoesNotThrowException() {
-		// Assuming this method might throw an exception, but you expect it not to.
-		assertDoesNotThrow(() -> myMethodShouldNotThrow(), "Method threw an exception unexpectedly");
-	}
-
-	@Test
-	public void testAnotherMEthodDoesNotThowException() {
-		// another example with a method reference
-		assertDoesNotThrow(this::anotherMethodThatShouldNotThrow);
-	}
-}
+void assertArrayEquals(expectedArray, actualArray, String message);
 ```
-##### When to Use `assertDoesNotThrow`
-1. **Validating Safe Execution**: Use `assertDoesNotThrow` when you want to assert that a method completes without throwing any exception, regardless of the method's return value.
-2. **Testing for Non-Exceptional Behavior**: This is especially useful in cases where exceptions might be expected (e.g., due to improper input) but you're specifically testing a scenario where an exception should not occur.
-3. **Defensive code checks**: If your code is defensive against potential runtime issues, you can use `assertDoesNotThrow` to ensure that those issues are properly handled and no exceptions are thrown.
-###### Example with Optional Use Cases
+`expectedArray` The expected array.
+`actualArray`: The arrays that the method under test returns.
+`message`(Optional): A message that gets displayed if the assertion fails.
+#### Examples:
+1. Testing with Integer Arrays
+   ```
+   @Test
+   public void testIntegerArrayEquality() {
+       int[] expected = {1,2,3,4};
+       int[] actual = {1,2,3,4};
+       assertArrayEquals(expected, actual, "The integer array should be equal.");
+   }
+   ```
+2. Testing with Double Arrays(with Delta)
+   For floating-point numbers(`float[]` or  `double`), due to precision issues, you might need to use a delta to determine how close two numbers should be to be considered equal.
+  ```
+   @Test
+   public void testDoubleArrayEqualityWithDelta() {
+	   double[] expected = {1.0, 2.0, 3.0};
+	   double[] actual = {1.0, 2.00000001, 3.0};
+	   assertArrayEquals(expected, actual, 0.0001,"The double array should be equal within given delta.");
+   }
 ```
-import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*;
 
-public class OptionalTest {
-	@Test
-	public void testOptionalIfPresentDoesNotThrow() {
-		Optional<String> optional = Optional.of("Hello");
+**Best Practices**
+- Order matters: The order of elements in the arrays important, if the arrays have the same elements but in a different order, `assertArrayEquals()` will fail.
+- Use Delta for Floating Points: When comparing `float[]` or `double[]`, always use the delta version to avoid issues with precision.
+- Null Arrays: If either the expected or actual array is null, `assertArrayEquals()` will throw an `AssertionError`. If you expect a null array, use `assertNull()` instead.
 
-		assertDoesNotThrow(() -> optional.if(value -> {
-			System.out.println(value);
-		}));
-	}
-}
+### `assertIterableEquals()`
+`assertIterableEquals()` is used to compare two `Iterable` objects (like `List`, `Set`, or any other class that implements the `Iterable` interface) to check if they are equal. This assertion checks that:
+1. Both iterables have the same number of elements.
+2. The elements at each position in both iterables are equal and appear in the same order.
+   This is particularly useful when you want to test methods that return collections of objects or other iterable data structures.
+   **Syntax**:
 ```
-##### Summary
-
-- `assertDoesNotThrow` is used to ensure that a block of code executes without throwing any exceptions.
-- It is particularly useful when the correctness of the test lies in the fact that no exceptions should occur, rather than in specific return values or output.
-- Ideal for scenarios where you want to validate the absence of exceptions in potentially risky code.
+void assertIterableEquals(Iterable<?> expected, Iterable<?> actual, string message);
+```
+Examples
+1. Testing with Lists
+   ```
+   @Test
+   public void testListEquality() {
+       List<String> expected = Arrays.asList("JUnit","is","great");
+       List<String> actual = Arrays.asList("JUnit","is","great");
+       assertIterableEquals(expected, actual,"The lists should be equal.");
+   }
+   ```
+2. Testing with Sets
+   ```
+   @Test
+   public void testSetEquality() {
+       Set<Integer> expected = new HashSet<>(Arrays.asList(1, 2, 3));
+       Set<Integer> actual = new HashSet<>(Arrays.asList(1, 2, 3));
+       assertIterableEquals(expected, actual, "The sets should be equal.");
+   }
+   ```
+This test will pas because both sets contain the same elements. However, note that `Sets` do not maintain order, so this is better used with order-dependent iterables like `Lists`.
+**Best Practices**
+- Order Matters: When using `assertIterableEquals()` on ordered collections like `List`, the order of elements is crucial. If the order of elements differs between the `expected` and `actual` iterable, the test will fail.
+- Null Handling: If either the `expected` or `actual` iterable is `null`, as `AssertionError` will be thrown unless both are `null`.
+- Custom Object Equality: When testing collection of custom objects, ensure that the `equals()` and `hashcode()` methods are properly overridden to reflect equality based on the relevant fields.
