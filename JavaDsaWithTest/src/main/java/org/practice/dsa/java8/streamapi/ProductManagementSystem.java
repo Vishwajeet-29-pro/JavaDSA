@@ -18,4 +18,10 @@ public class ProductManagementSystem {
                 .sorted(Comparator.comparingDouble(Product::getPrice))
                 .toList();
     }
+
+    public List<Product> mostExpensiveProduct(List<Product> product) {
+        return product.stream()
+                .max(Comparator.comparingDouble(Product::getPrice))
+                .stream().toList();
+    }
 }
