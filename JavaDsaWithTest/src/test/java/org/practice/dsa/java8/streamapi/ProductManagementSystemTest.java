@@ -30,4 +30,10 @@ class ProductManagementSystemTest {
         assertEquals("Computer", actualProduct.getFirst().getName());
     }
 
+    @Test
+    public void testSortProductByPrice() {
+        List<Product> productList = system.sortProductByPrice(product);
+        assertEquals("Table", productList.getFirst().getName());
+        assertEquals(20000, productList.getFirst().getPrice());
+    }
 }
