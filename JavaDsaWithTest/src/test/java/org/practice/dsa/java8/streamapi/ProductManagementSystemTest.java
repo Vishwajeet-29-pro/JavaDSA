@@ -42,4 +42,11 @@ class ProductManagementSystemTest {
         List<Product> expensiveProducts = system.mostExpensiveProduct(product);
         assertEquals(50000, expensiveProducts.getFirst().getPrice());
     }
+
+    @Test
+    public void testGetAveragePriceFromCategory() {
+        String category = "Electronics";
+        double price = system.getAveragePriceFromCategory(product, category);
+        assertEquals(50000, price);
+    }
 }
