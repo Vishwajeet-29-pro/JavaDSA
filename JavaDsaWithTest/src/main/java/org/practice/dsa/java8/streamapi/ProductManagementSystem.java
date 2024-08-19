@@ -38,4 +38,9 @@ public class ProductManagementSystem {
                 .map(Product::getName)
                 .toList();
     }
+
+    public boolean isProductUnderSpecificPrice(List<Product> product, double price) {
+        return product.stream()
+                .anyMatch(p -> p.getPrice() < price);
+    }
 }
