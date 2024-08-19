@@ -133,7 +133,7 @@
 - [x] Mocking
 - [x] TDD stuff (Prefer Cucumber for deep understanding, but not understand just unit tests with mocking.)
 - [x] Financial Awareness
-  - [x] How to get Credit card if salary less than 20,000 possibilities are not good but lets see.
+  - [x] How to get Credit card if salary less than 20,000 possibilities are not good but let's see.
   - [x] SIP related stuff.
 
 #### 17 Aug 2024
@@ -152,14 +152,29 @@
   - [ ] Account on Grow.
 #### 18 Aug 2024
 - [x] Java 8 `DateTimeApi`
-- [ ] GitHub actions documentation reading. may be creating notes on it.
-- [ ] Collecting information on Make file.
-- [ ] Java related stuff.
-- [ ] TDD with cucumber
+- [x] GitHub actions documentation reading. may be creating notes on it.
+- [x] Collecting information on Make file. Certainly make file is mostly used for the C CPP based on internet community, but we will understand basics of GNU make to handle java projects.
+- [x] Java related stuff.
+- [x] TDD with cucumber
 - [ ] Decide and use TDD approach for testing controller layer.
-- [ ] Some More Notes on Assertion (`AssertThat()`,`AssertDoesNotThrow()`)
-- [ ] Reactive WebFlux Notes
+- [x] Some More Notes on Assertion (`AssertThat()`,`AssertDoesNotThrow()`)
+- [x] Reactive WebFlux Notes
 - [ ] Financial Awareness
   - [ ] Credit Cards
-  - [ ] Grow Account
-  - [ ] SIP searching 
+  - [x] Grow Account
+  - [x] SIP searching
+
+#### 19 Aug 2024
+- [ ] Job Apply
+- [ ] Java 8 related.
+- [ ] Java related things.
+- [ ] TDD with Cucumber
+- [ ] TDD for controller layer (PiTest)
+- [ ] Finding more assertion
+- [ ] Reactive WebFlux notes
+- [ ] GitHub action implementation (Gather requirement and understand basic commands/ setup)
+- [ ] Basic overview on Kubernetes, Jenkins
+- [ ] Financial Awareness
+  - [ ] Credit Cards
+  - [ ] Understanding Groww
+  - [ ] SIP information
