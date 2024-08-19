@@ -49,4 +49,11 @@ class ProductManagementSystemTest {
         double price = system.getAveragePriceFromCategory(product, category);
         assertEquals(50000, price);
     }
+
+    @Test
+    public void testGetNamesOfAllProduct() {
+        List<String> expectedNames = List.of(product.getFirst().getName(), product.get(1).getName(), product.getLast().getName());
+        List<String> actualNames = system.getNameOfAllProducts(product);
+        assertEquals(expectedNames, actualNames);
+    }
 }
