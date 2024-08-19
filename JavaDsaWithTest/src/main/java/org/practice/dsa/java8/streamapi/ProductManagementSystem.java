@@ -32,4 +32,10 @@ public class ProductManagementSystem {
                 .average()
                 .orElse(0.0);
     }
+
+    public List<String> getNameOfAllProducts(List<Product> product) {
+        return product.stream()
+                .map(Product::getName)
+                .toList();
+    }
 }
