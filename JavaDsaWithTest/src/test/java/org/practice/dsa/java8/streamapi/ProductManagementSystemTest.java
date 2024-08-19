@@ -56,4 +56,13 @@ class ProductManagementSystemTest {
         List<String> actualNames = system.getNameOfAllProducts(product);
         assertEquals(expectedNames, actualNames);
     }
+
+    @Test
+    public void testProductUnderSpecificPrice() {
+        double price = 51000;
+        boolean isProductUnderPrice = system.isProductUnderSpecificPrice(product, price);
+        assertTrue(isProductUnderPrice);
+        price = 19000;
+        assertFalse(system.isProductUnderSpecificPrice(product, price));
+    }
 }
