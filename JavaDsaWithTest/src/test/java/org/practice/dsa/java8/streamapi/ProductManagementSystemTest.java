@@ -36,4 +36,10 @@ class ProductManagementSystemTest {
         assertEquals("Table", productList.getFirst().getName());
         assertEquals(20000, productList.getFirst().getPrice());
     }
+
+    @Test
+    public void testMostExpensiveProduct() {
+        List<Product> expensiveProducts = system.mostExpensiveProduct(product);
+        assertEquals(50000, expensiveProducts.getFirst().getPrice());
+    }
 }
