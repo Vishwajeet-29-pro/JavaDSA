@@ -24,4 +24,12 @@ public class ProductManagementSystem {
                 .max(Comparator.comparingDouble(Product::getPrice))
                 .stream().toList();
     }
+
+    public double getAveragePriceFromCategory(List<Product> product, String category) {
+        return product.stream()
+                .filter(p -> p.getCategory().equals(category))
+                .mapToDouble(Product::getPrice)
+                .average()
+                .orElse(0.0);
+    }
 }
