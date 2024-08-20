@@ -165,16 +165,30 @@
   - [x] SIP searching
 
 #### 19 Aug 2024
-- [ ] Job Apply
-- [ ] Java 8 related.
+- [x] Job Apply
+- [x] Java 8 related . Stream API with example and using test cases.
 - [ ] Java related things.
-- [ ] TDD with Cucumber
+- [x] TDD with Cucumber
 - [ ] TDD for controller layer (PiTest)
-- [ ] Finding more assertion
-- [ ] Reactive WebFlux notes
+- [x] Finding more assertion
+- [x] Reactive WebFlux notes
 - [ ] GitHub action implementation (Gather requirement and understand basic commands/ setup)
-- [ ] Basic overview on Kubernetes, Jenkins
+- [x] Basic overview on Kubernetes, Jenkins
+- [x] Financial Awareness
+  - [x] Credit Cards
+  - [x] Understanding Groww
+  - [x] SIP information
+
+##### 20 Aug 2024
+- [ ] Notes Reading/ Revision
+- [ ] Job Apply (not much found in morning...)
+- [ ] Principle Revision/ code revision
+- [ ] Java Questions Reading. (At least 10 Questions)
+- [ ] Java 8 Stream API methods information.
+- [ ] TDD
+- [ ] Reactive WebFlux Notes
+- [ ] GitHub Action
+- [ ] Short videos on Kubernetes and Jenkins
 - [ ] Financial Awareness
   - [ ] Credit Cards
-  - [ ] Understanding Groww
-  - [ ] SIP information
+  - [ ] SIP details.
