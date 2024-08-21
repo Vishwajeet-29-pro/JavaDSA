@@ -179,16 +179,31 @@
   - [x] Understanding Groww
   - [x] SIP information
 
-##### 20 Aug 2024
-- [ ] Notes Reading/ Revision
-- [ ] Job Apply (not much found in morning...)
-- [ ] Principle Revision/ code revision
-- [ ] Java Questions Reading. (At least 10 Questions)
-- [ ] Java 8 Stream API methods information.
+0 Aug 2024
+- [x] Notes Reading/ Revision
+- [x] Job Apply (not much found in morning...)
+- [x] Principle Revision/ code revision (Open-closed principle)
+- [x] Java Questions Reading. (At least 10 Questions)
+- [x] Java 8 Stream API methods information.
+- [x] TDD Cucumber
+- [x] Reactive WebFlux Notes
+- [x] GitHub Action
+- [x] Short videos on Kubernetes and Jenkins
+- [x] Financial Awareness
+  - [x] Credit Cards
+  - [x] SIP details.
+
+##### 21 Aug 2024
+- [x] Job Apply
+- [ ] Notes Revision
+- [ ] Principle Revision ~ Liskov Substitution Principle
+- [ ] Java Question Reading
+- [ ] Java 8 revision (notes reading) + code practice.
 - [ ] TDD
-- [ ] Reactive WebFlux Notes
-- [ ] GitHub Action
-- [ ] Short videos on Kubernetes and Jenkins
+- [ ] Reactive WebFlux (Some more addition in existing project)
+- [ ] GitHub Action (Let's try Kunal Kushwaha )
+- [ ] One Long Video on Jenkins (Let's try Kunal again)
+- [ ] Practice and Focus as much possible.
 - [ ] Financial Awareness
-  - [ ] Credit Cards
-  - [ ] SIP details.
+  - [ ] Apply for credit card.
+    - [ ] More about SIP.
