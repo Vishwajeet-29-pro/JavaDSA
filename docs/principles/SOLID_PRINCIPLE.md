@@ -3,11 +3,11 @@ by Robert C. Martin (Uncle Bob). These five principles have changed the world of
 the way of writing software. It also ensures that the software is modular, easy to understand, debug, and refactor. In this 
 section, we will discuss SOLID Principles in java with proper examples.`
 ##### The word SOLID acronym for:
-- Single Responsibility Principle (SRP)
-- Open-Closed Principle (OCP)
-- Liskov Substitution Principle (LSP)
-- Interface Segregation Principle (ISP)
-- Dependency Inversion Principle (DIP)
+- [Single Responsibility Principle (SRP)](#single-responsibility-principle)
+- [Open-Closed Principle (OCP)](#open-closed-principle-ocp)
+- [Liskov Substitution Principle (LSP)](#liskov-substitution-principle-lsp)
+- [Interface Segregation Principle (ISP)](#interface-segregation-principle)
+- [Dependency Inversion Principle (DIP)](#dependency-inversion-principle)
 
 ![SOLID principle](https://static.javatpoint.com/core/images/solid-principles-java.png)
 
