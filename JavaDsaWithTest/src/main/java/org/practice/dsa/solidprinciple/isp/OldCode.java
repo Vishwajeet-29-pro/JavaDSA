@@ -5,7 +5,7 @@ interface Worker {
     void eat();
 }
 
-class HumanWorker implements Worker {
+class OldHumanWorker implements Worker {
 
     @Override
     public void work() {
@@ -18,7 +18,7 @@ class HumanWorker implements Worker {
     }
 }
 
-class RobotWorker implements Worker {
+class OldRobotWorker implements Worker {
 
     @Override
     public void work() {
@@ -33,11 +33,11 @@ class RobotWorker implements Worker {
 
 public class OldCode {
     public static void main(String[] args) {
-        HumanWorker hw = new HumanWorker();
+        OldHumanWorker hw = new OldHumanWorker();
         hw.work();
         hw.eat();
 
-        RobotWorker rw = new RobotWorker();
+        OldRobotWorker rw = new OldRobotWorker();
         rw.work();
         rw.eat();
     }
