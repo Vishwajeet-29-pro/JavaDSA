@@ -195,15 +195,29 @@
 
 ##### 21 Aug 2024
 - [x] Job Apply
-- [ ] Notes Revision
-- [ ] Principle Revision ~ Liskov Substitution Principle
+- [x] Notes Revision
+- [x] Principle Revision ~ Liskov Substitution Principle
 - [ ] Java Question Reading
-- [ ] Java 8 revision (notes reading) + code practice.
+- [x] Java 8 revision (notes reading) + code practice.
 - [ ] TDD
-- [ ] Reactive WebFlux (Some more addition in existing project)
-- [ ] GitHub Action (Let's try Kunal Kushwaha )
-- [ ] One Long Video on Jenkins (Let's try Kunal again)
-- [ ] Practice and Focus as much possible.
+- [x] Reactive WebFlux (Some more addition in existing project) Collecting information on Database Mappings
+- [x] GitHub Action (Let's try Kunal Kushwaha ) It is average like documentation stuff. I will try to integrate by myself.
+- [x] One Long Video on Jenkins (Let's try Kunal again) Kunal has not its own video.
+- [x] Practice and Focus as much possible.
+- [x] Financial Awareness
+  - [x] Apply for credit card. but not able to.
+  - [x] More about SIP.
+
+##### 22 Aug 2024
+- [x] Job Apply
+- [ ] Notes Reading
+- [ ] Java: At-Least 2 problems with Test Driven. Use of assertions (not equal something like)
+- [ ] Java 8: Notes on Method reference and practical Example
+- [ ] TDD: Cucumber or Junit5 or PiTest
+- [ ] Principle Revision - Interface Segregation Principle
+- [ ] Reactive WebFlux - Including Instructor with One To Many Mapping.
+- [ ] GitHub Actions - Try to implement on simple project.
+- [ ] Kubernetes and Docker relation and Java Developer - Short videos 
 - [ ] Financial Awareness
-  - [ ] Apply for credit card.
-    - [ ] More about SIP.
+  - [ ] More Information on Credit Cards.
+  - [ ] How to choose Good SIP in Groww.
