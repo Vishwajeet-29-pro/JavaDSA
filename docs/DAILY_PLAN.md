@@ -210,14 +210,26 @@
 
 ##### 22 Aug 2024
 - [x] Job Apply
-- [ ] Notes Reading
+- [x] Notes Reading
 - [ ] Java: At-Least 2 problems with Test Driven. Use of assertions (not equal something like)
 - [ ] Java 8: Notes on Method reference and practical Example
 - [ ] TDD: Cucumber or Junit5 or PiTest
-- [ ] Principle Revision - Interface Segregation Principle
+- [x] Principle Revision - Interface Segregation Principle
 - [ ] Reactive WebFlux - Including Instructor with One To Many Mapping.
-- [ ] GitHub Actions - Try to implement on simple project.
+- [x] GitHub Actions - Try to implement on simple project.
 - [ ] Kubernetes and Docker relation and Java Developer - Short videos 
 - [ ] Financial Awareness
   - [ ] More Information on Credit Cards.
   - [ ] How to choose Good SIP in Groww.
+
+##### 27 Aug 2024
+- [ ] Revise Everything start from scratch
+- [ ] In office status of the TPS project
+- [ ] Job Apply
+- [ ] Java and Java 8
+- [ ] Some TDD
+- [ ] Some Reactive WebFlux
+- [ ] GitHub Actions
+- [ ] Docker
+- [ ] Kotlin - Revision. Basic syntax at least.
+- [ ] Financial Awareness 
