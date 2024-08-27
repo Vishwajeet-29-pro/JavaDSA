@@ -26,11 +26,7 @@ public class BubbleSortTest {
     @Test
     public void testIfArrayLengthIsZero() {
         int[] arr = {};
-
-        Exception exception = assertThrows(RuntimeException.class,() -> {
-            sort.bubbleSort(arr);
-        });
-
+        Exception exception = assertThrows(RuntimeException.class,() -> sort.bubbleSort(arr));
         assertEquals("Empty array passed", exception.getMessage());
     }
 }
