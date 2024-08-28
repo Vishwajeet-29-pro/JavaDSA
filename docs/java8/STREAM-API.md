@@ -63,3 +63,36 @@ There are a few Intermediate Operations mentioned below:
    `Stream<T> distinct()`
 6. `peek()`: perform an action on each element without modifying the stream. It returns a stream consisting of the elements of this stream, additionally performing the provided action on each elements as elements are consumed from the resulting stream.
    `Stream<T> peek(Consumer<? super T> action)`
+
+### Terminal Operations:
+Terminal Operations are the type of Operations that return the result. These Operations are not processed further just return a final result value.
+###### Important Terminal Operations
+There are a few Terminal Operations mentioned below:
+1. `collect()` : The collect method is used to return the result of the intermediate operations performed on the stream.
+   Syntax:
+   ```
+   <R, A> R collect(Collector<? super T, A, R> collector) 	
+   ```
+2. `forEach()`: The forEach method is used to iterate through every element of the stream.
+   ```
+   void forEach(Consumer<? super T> action)
+	```
+3. `reduce()`: The reduce method is used to reduce the elements of a stream to a single value. The reduce method takes a `BinaryOperator` as a parameter.
+   ```
+   T reduce(T identity, BinaryOperator<T> accumulator)
+   Optional<T> reduce(BinaryOperator<T> accumulator)
+	```
+4. `count()`: Returns the count of element in the stream.
+   `long count()`
+5. `findFirst()`: Returns the first element of the stream, if present.
+   `Optional<T> findFirst()`
+6. `allMatch()`: Checks if all elements of the stream match a given predicate.
+   `boolean allMatch(Predicate<? super T> predicate)`
+7. `anyMatch()`: Checks if any element of the stream matches a given predicate.
+   ```
+   boolean anyMatch(Predicate<? super T> predicate)
+   ```
+
+### Important Points/Observation of Java Stream
+1. A stream consists of a source followed by zero or more intermediate methods combined together (pipelined) and a terminal method to process the objects obtained from the source as per the methods described.
+2. Stream is used to compute elements as per the pipelined methods without altering the original value of the object.
