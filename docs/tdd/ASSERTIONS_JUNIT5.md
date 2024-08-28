@@ -320,3 +320,39 @@ This test will pas because both sets contain the same elements. However, note th
 - Order Matters: When using `assertIterableEquals()` on ordered collections like `List`, the order of elements is crucial. If the order of elements differs between the `expected` and `actual` iterable, the test will fail.
 - Null Handling: If either the `expected` or `actual` iterable is `null`, as `AssertionError` will be thrown unless both are `null`.
 - Custom Object Equality: When testing collection of custom objects, ensure that the `equals()` and `hashcode()` methods are properly overridden to reflect equality based on the relevant fields.
+
+### `assertTimeout()`
+`assertTimeout()` checks whether a piece of code completes within a specified duration. If the code takes longer than the specified timeout, the test fails. However, it waits for the code to finish execution, even if the timeout has been exceeded. This can be useful if you want to analyze the result or behavior of the code even if it took too long.
+Syntax:
+```
+<T> T assertTimeout(Duration timeout, Executable executable);
+```
+- `timeout`: The maximum duration that the executable code is allowed to take.
+- `executable`: The code you want to test, typically passed as a lambda expression.
+  Example:
+```
+import org.junit.jupiter.api.Test;
+
+import java.time.Duration;
+
+import static org.junit.jupiter.api.Assertions.assertTimeout;
+
+public class TimeoutTest {
+
+	@Test
+	public void testSlowOperation() {
+		assertTimeout(Duration.ofSeconds(5), () -> {
+			Thread.sleep(2000);
+		});
+	}
+	
+	@Test
+	public void testOperationExceedsTimeout() {
+		assertTimeout(Duration.ofSeconds(2), () -> {
+			Thread.sleep(3000);
+		})
+	}
+}
+```
+In the first test, the `assertTimeout` assertion passes because the code block completes within the specified 5 seconds. 
+In the seconds test, the assertion fails because the code takes longer than the 2 seconds timeout.
