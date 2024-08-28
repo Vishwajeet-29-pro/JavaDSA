@@ -1,4 +1,4 @@
-package org.practice.dsa.generics.entity;
+package org.practice.dsa.generics.crud.entity;
 
 public class Product {
     private final int productId;
