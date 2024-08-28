@@ -18,7 +18,7 @@ Sometimes, a lambda expression only calls an existing method. In those cases, it
 3. Shorthand to print all elements in a list: To make the code clear and compact, In the above example, one can turn lambda expression into a method reference:
    `list.forEach(System.out::println);`
 
-The method references can only be used to to replace a single method of the lambda expression. A code is more clear and short if one uses a lambda expression rather than using an anonymous class and one can use method reference rather using a single function lambda expression to achieve the same. In general, one doesn't have to pass arguments to method references.
+The method references can only be used to replace a single method of the lambda expression. A code is more clear and short if one uses a lambda expression rather than using an anonymous class and one can use method reference rather using a single function lambda expression to achieve the same. In general, one doesn't have to pass arguments to method references.
 The following example is about performing some operations on elements in the list and adding them. The operation to be performed on elements is a function argument and the caller can pass accordingly.
 
 #### Illustration:
@@ -62,3 +62,72 @@ transformAndAdd(list, OpsUtil::doHalf);
 ```
 
 ## Types of Method References
+There are four type method references that are as follows:
+1. Static Method Reference.
+2. Instance Method Reference of a particular object.
+3. Instance Method Reference of an arbitrary object of a particular type.
+4. Constructor Reference.
+   To look into all these types we will consider a common example of sorting with a comparator.
+###### Type 1. Reference to a static method
+If a Lambda expression is like:
+```
+// If a lambda expression just call a static method of a class
+(args) -> Class.staticMethod(args)
+```
+Then method reference is like:
+```
+// Shorthand if a Lambda expression just call a static method of a class
+Class::staticMethod
+```
+Example:
+```
+import java.io.*;
+import java.util.*;
+
+class Person {
+	private String name;
+	private Integer age;
+
+	public Person(String name, Integer age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public Integer getAge() { return age; }
+	public String getName() { return name; }
+}
+
+public class Test {
+
+	public static int compareByName(Person a, Person b) {
+		return a.getName().compareTo(b.getName());
+	}
+
+	public static int compareByAge(Person a, Person b) {
+		return a.getAge().compareTo(b.getAge());
+	}
+
+	public static void main(String[] args) {
+		List<Person> personList = new ArrayList<>();
+		personList.add(new Person("Vicky", 24));
+		personList.add(new Person("Sunny", 28));
+		personList.add(new Person("Rani", 27));
+		
+		Collections.sort(personList, Test::compareByName);
+		
+		System.out.println("Sort by name:");
+		
+		personList.stream()
+			.map(x -> x.getName())
+			.forEach(System.out::println);
+		
+		Collections.sort(personList, Test::compareByAge);
+		
+		System.out.println("Sort by age:");
+		
+		personList.stream()
+			.map(x -> x.getName())
+			.forEach(System.out::println);
+	}
+}
+```
