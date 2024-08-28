@@ -223,13 +223,25 @@
   - [ ] How to choose Good SIP in Groww.
 
 ##### 27 Aug 2024
-- [ ] Revise Everything start from scratch
-- [ ] In office status of the TPS project
+- [x] Revise Everything start from scratch
+- [x] In office status of the TPS project (created GitLab account)
+- [x] Job Apply
+- [x] Java and Java 8
+- [x] Some TDD
+- [x] Some Reactive WebFlux
+- [x] GitHub Actions
+- [x] Docker
+- [x] Kotlin - Revision. Basic syntax at least.
+- [x] Financial Awareness
+
+##### 28 Aug 2024
 - [ ] Job Apply
 - [ ] Java and Java 8
-- [ ] Some TDD
-- [ ] Some Reactive WebFlux
+- [ ] Kotlin - Basic syntax, data type, variable, function declaration
+- [ ] TDD (try to create test with Kotlin)
+- [ ] Service layer for Instructor (Reactive WebFlux)
 - [ ] GitHub Actions
 - [ ] Docker
-- [ ] Kotlin - Revision. Basic syntax at least.
-- [ ] Financial Awareness 
+- [ ] Notes-covering Stream API
+- [ ] Notes-covering assertion methods.
+- [ ] Financial Awareness
