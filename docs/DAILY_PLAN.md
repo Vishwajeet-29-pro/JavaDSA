@@ -80,7 +80,7 @@
 - [x] Revision.
 - [x] Add openApi to micronaut
 
-9 Aug 2024:
+##### 9 Aug 2024:
 - [x] Job Apply
 - [x] SOLID Principle (ISP)
 - [x] Practice Java and Java 8
@@ -150,6 +150,7 @@
   - [x] Credit cards with Low salary.
   - [ ] SIP related stuff.
   - [ ] Account on Grow.
+
 #### 18 Aug 2024
 - [x] Java 8 `DateTimeApi`
 - [x] GitHub actions documentation reading. may be creating notes on it.
@@ -179,7 +180,7 @@
   - [x] Understanding Groww
   - [x] SIP information
 
-0 Aug 2024
+##### 20 Aug 2024
 - [x] Notes Reading/ Revision
 - [x] Job Apply (not much found in morning...)
 - [x] Principle Revision/ code revision (Open-closed principle)
