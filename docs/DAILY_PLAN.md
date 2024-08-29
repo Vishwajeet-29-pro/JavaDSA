@@ -69,7 +69,7 @@
 - [x] Converting .txt files from repo to .md files. 
 ##### Not able to complete the yesterday's and day before yesterday's plan totally.
 
-##### 8 Aug 2024
+###### 8 Aug 2024
 - [x] Job Apply
 - [x] SOLID principles (LSP)
 - [x] JVM Notes
@@ -80,7 +80,7 @@
 - [x] Revision.
 - [x] Add openApi to micronaut
 
-##### 9 Aug 2024:
+###### 9 Aug 2024:
 - [x] Job Apply
 - [x] SOLID Principle (ISP)
 - [x] Practice Java and Java 8
@@ -89,7 +89,7 @@
 - [ ] Interview Questions.
 - [x] TDD
 
-##### 13 Aug 2024
+###### 13 Aug 2024
 - [x] Job Apply
 - [x] JVM Notes
 - [x] Practice Java and Java 8
@@ -99,7 +99,7 @@
 - [x] TDD (Junit5 also some cucumber documentation)
 - [x] Mocking (One video tutorial)
 
-#### 14 Aug 2024
+###### 14 Aug 2024
 - [x] Job Apply
 - [x] JVM Notes (commonly asked interview questions)
 - [x] Practice on Java and Java 8 (Algorithms)
@@ -109,7 +109,7 @@
 - [x] TDD (Junit5 and cucumber documentation)
 - [ ] Mocking (One or many YouTube tutorial)
 
-#### 15 Aug 2024
+###### 15 Aug 2024
 - [x] Job Apply
 - [x] Notes
   - [x] KISS
@@ -125,7 +125,7 @@
   - [x] Benefits of Credit Card
   - [x] SIP details.
 
-##### 16 Aug 2024
+###### 16 Aug 2024
 - [x] Job Apply
 - [ ] Core Java related stuff
 - [ ] Java 8 related stuff
@@ -136,7 +136,7 @@
   - [x] How to get Credit card if salary less than 20,000 possibilities are not good but let's see.
   - [x] SIP related stuff.
 
-#### 17 Aug 2024
+###### 17 Aug 2024
 - [x] Job Apply
 - [x] Core Java related stuff
 - [x] Java 8 related stuff
@@ -151,7 +151,7 @@
   - [ ] SIP related stuff.
   - [ ] Account on Grow.
 
-#### 18 Aug 2024
+###### 18 Aug 2024
 - [x] Java 8 `DateTimeApi`
 - [x] GitHub actions documentation reading. may be creating notes on it.
 - [x] Collecting information on Make file. Certainly make file is mostly used for the C CPP based on internet community, but we will understand basics of GNU make to handle java projects.
@@ -165,7 +165,7 @@
   - [x] Grow Account
   - [x] SIP searching
 
-#### 19 Aug 2024
+###### 19 Aug 2024
 - [x] Job Apply
 - [x] Java 8 related . Stream API with example and using test cases.
 - [ ] Java related things.
@@ -180,7 +180,7 @@
   - [x] Understanding Groww
   - [x] SIP information
 
-##### 20 Aug 2024
+###### 20 Aug 2024
 - [x] Notes Reading/ Revision
 - [x] Job Apply (not much found in morning...)
 - [x] Principle Revision/ code revision (Open-closed principle)
@@ -194,7 +194,7 @@
   - [x] Credit Cards
   - [x] SIP details.
 
-##### 21 Aug 2024
+###### 21 Aug 2024
 - [x] Job Apply
 - [x] Notes Revision
 - [x] Principle Revision ~ Liskov Substitution Principle
@@ -209,7 +209,7 @@
   - [x] Apply for credit card. but not able to.
   - [x] More about SIP.
 
-##### 22 Aug 2024
+###### 22 Aug 2024
 - [x] Job Apply
 - [x] Notes Reading
 - [ ] Java: At-Least 2 problems with Test Driven. Use of assertions (not equal something like)
@@ -223,7 +223,7 @@
   - [ ] More Information on Credit Cards.
   - [ ] How to choose Good SIP in Groww.
 
-##### 27 Aug 2024
+###### 27 Aug 2024
 - [x] Revise Everything start from scratch
 - [x] In office status of the TPS project (created GitLab account)
 - [x] Job Apply
@@ -235,7 +235,7 @@
 - [x] Kotlin - Revision. Basic syntax at least.
 - [x] Financial Awareness
 
-##### 28 Aug 2024
+###### 28 Aug 2024
 - [x] Job Apply
 - [x] Java and Java 8
 - [x] Kotlin - Basic syntax, data type, variable, function declaration
@@ -248,14 +248,14 @@
 - [x] Notes-covered assertion methods (`assertTimeout()`).
 - [x] Financial Awareness
 
-##### 29 Aug 2024
+###### 29 Aug 2024
 - [x] Job Apply
-- [ ] Java and Java 8
+- [X] Java and Java 8
 - [ ] TDD
-- [ ] Kotlin and try to create test with Kotlin
+- [X] Kotlin and try to create test with Kotlin
 - [ ] Reactive WebFlux
 - [ ] GitHub Actions for Kotlin project
 - [ ] Docker and Docker Registry
-- [ ] Notes - Method Reference
+- [X] Notes - Method Reference
 - [ ] Notes - Assertion
 - [ ] Financial Awareness
