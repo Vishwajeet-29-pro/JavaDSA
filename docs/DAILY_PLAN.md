@@ -236,13 +236,26 @@
 - [x] Financial Awareness
 
 ##### 28 Aug 2024
-- [ ] Job Apply
-- [ ] Java and Java 8
-- [ ] Kotlin - Basic syntax, data type, variable, function declaration
+- [x] Job Apply
+- [x] Java and Java 8
+- [x] Kotlin - Basic syntax, data type, variable, function declaration
 - [ ] TDD (try to create test with Kotlin)
 - [ ] Service layer for Instructor (Reactive WebFlux)
-- [ ] GitHub Actions
-- [ ] Docker
-- [ ] Notes-covering Stream API
-- [ ] Notes-covering assertion methods.
+- [x] GitHub Actions (Watched tutorial and also implement for JavaDsa project)
+- [x] Docker
+- [x] Notes-covered Stream API
+- [x] Notes-Method Reference
+- [x] Notes-covered assertion methods (`assertTimeout()`).
+- [x] Financial Awareness
+
+##### 29 Aug 2024
+- [x] Job Apply
+- [ ] Java and Java 8
+- [ ] TDD
+- [ ] Kotlin and try to create test with Kotlin
+- [ ] Reactive WebFlux
+- [ ] GitHub Actions for Kotlin project
+- [ ] Docker and Docker Registry
+- [ ] Notes - Method Reference
+- [ ] Notes - Assertion
 - [ ] Financial Awareness
