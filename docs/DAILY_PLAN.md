@@ -67,7 +67,7 @@
 - [ ] Spring boot revision.
 - [ ] Java interview questions (basic to advance).
 - [x] Converting .txt files from repo to .md files. 
-##### Not able to complete the yesterday's and day before yesterday's plan totally.
+###### Not able to complete the yesterday's and day before yesterday's plan totally.
 
 ###### 8 Aug 2024
 - [x] Job Apply
