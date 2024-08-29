@@ -356,3 +356,46 @@ public class TimeoutTest {
 ```
 In the first test, the `assertTimeout` assertion passes because the code block completes within the specified 5 seconds. 
 In the seconds test, the assertion fails because the code takes longer than the 2 seconds timeout.
+
+### `assertTimeoutPreemptively()`
+`assertTimeoutPreemptively()` is similar to `assertTimeout()`, but with a key difference: it preemptively aborts the execution of the code block as soon as the timeout is reached. If the code does not complete within the specified, it throws an exception and stops further execution immediately. This is useful when you don't care about the result if the execution exceeds the timeout and want to fail the test immediately.
+`<T> T assertTimeoutPreemptively(Duration duration, Executable executable);`
+- `timeout`: The maximum duration that the executable code is allowed to take.
+- `executable`: The code want to test, typically passed as a lambda expression.
+  Example:
+```
+import org.junit.jupiter.api.Test;
+
+import java.time.Duration;
+
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
+
+public class PreemptiveTimeoutTest {
+	
+	@Test
+	public void testSlowOperationPreemptively() {
+		assertTimeoutPreemptively(Duration.ofSeconds(5), () -> {
+			Thread.sleep(2000);
+		});
+	}
+	
+	@Test
+	public void testOperationExceedsTimeoutPreemptively() {
+		assertTimeoutPreemptively(Duration.ofSeconds(5), () -> {
+			Thread.sleep(3000);
+		})
+	}
+}
+```
+In the first test `assertTimeoutPreemptively` allows the code to run since it completes within the specified 5 seconds. In the seconds test, however, the code is aborted immediately after 2 seconds, and the test fails.
+#### Key Difference Between `assertTimeout()` & `assertTimeoutPreemptively()`:
+- Execution Behavior:
+   - `assertTimeout()`: waits for the code to complete, even if it exceeds the timeout, and then fails the test.
+   - `assertTimeoutPreemptively()`: Aborts the code execution as soon as the timeout is reached and fails the test immediately.
+- Use cases:
+   -  Use `assertTimeout()` if you still want to inspect the result or state of the code after it completes, even if it exceeded the allowed time.
+   - Use `assertTimeoutPreemptively()` if you want to ensure strict adherence to the time limit and don't case about the result if the timeout is breached.
+##### Best Practices:
+- Timeout Duration: Always choose a timeout duration that makes sense for the operation you are testing, Setting a timeout that is too short may result in false positives(failures), while setting it too long might defeat the purpose of the test.
+- Resource Usage: `assertTimeoutPreemptively()` can be resource-intensive as it may use a separate thread to manage the timeout. Use it judiciously, especially in tests where performance is critical.
+- Timeout Testing: Timeout assertions are especially useful in performance test, integration tests, or when testing third-party API calls where delays might occur.
