@@ -131,3 +131,86 @@ public class Test {
 	}
 }
 ```
+###### Type 2. Reference to an instance method of a particular object
+If a Lambda expression is like:
+```
+// If a lambda expression just call a default method of an object
+(args) -> obj.instanceMethod(args)
+```
+Then method reference is like:
+```
+// Shorthand if a lambda expression just call a default method of an object
+obj::instanceMethod
+```
+Example:
+```
+import java.io.*;
+import java.util.*;
+// we are using previous Person class for data.
+// Person(String name, int age)
+
+class ComparisonProvider {
+	public int compareByName(Person a, Person b) {
+		return a.getName().compareTo(b.getName());
+	}
+	
+	public int compareByAge(Person a, Person b) {
+		return a.getAge().compareTo(b.getAge());
+	}
+}
+
+class Test {
+	public static void main(String[] args) {
+		List<Person> personList = new ArrayList<>();
+		
+		personList.add(new Person("vicky", 24));
+		personList.add(new Person("Sachin", 25));
+		personList.add(new Person("Poonam", 19));
+		
+		ComparisonProvider comparator = new ComparisonProvider();
+		
+		Collection.sort(personList, comparator::compareByName);
+		
+		System.out.println("Sort by name :");
+		
+		personList.stream().map(x -> x.getName())
+				  .forEach(System.out::println);
+				  
+		Collection.sort(personList, comparator::compareByAge);
+		
+		System.out.println("Sort by age: ");
+		
+		personList.stream().map(x -> x.getName())
+				  .forEach(System.out::println); 
+	}
+}
+```
+###### Type 3. Reference to an instance method of an arbitrary object of a particular type
+If a Lambda expression is like:
+```
+// If a lambda expression just call an instance method of a ObjectType
+(obj, args) -> obj.instanceMethod(args)
+```
+Then method reference is like:
+```
+// Shorthand if a lambda expression just call an instance method of a objectType
+ObjectType::instanceMethod
+```
+Example:
+```
+import java.io.*;
+import java.util.*;
+
+public class Test {
+	public static void main(String[] args) {
+		List<String> personList = new ArrayList<>();
+		personList.add("vicky");
+		personList.add("pooman");
+		personList.add("sachin");
+		
+		Collection.sort(personList, String::compareToIgnoreCase);
+		
+		personList.forEach(System.out::println);
+	}
+}
+```
