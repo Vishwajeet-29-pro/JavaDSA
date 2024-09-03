@@ -410,7 +410,7 @@ public static void assertSame(Object expected, Object actual)
 - `expected`: The expected object reference.
 - `actual`: The actual object reference.
 - `message`: (Optional) A custom message that will be displayed if the assertion fails.
-  If the expected and actual references do not point to the same object, the assertion will fail.
+  If the expected and actual references, do not point to the same object, the assertion will fail.
   Example Usage
 ```
 import org.junit.jupiter.api.Test;
@@ -441,7 +441,7 @@ public class AssertSameTest {
 - Use `assertSame()` sparingly, as most tests should focus on the logical equality of objects (`assertEquals()`). However, in cases where object identity is crucial (like in certain design pattern or when testing references), `assertSame()` is invaluable.
 
 ##### `assertNotSame()`
-The `assertNotSame()` method in JUnit 5 is used to verify that two object references do not print to the same object in memory. Unlike `assertSame()`, which checks if two references are identical(pointing to the same object), `assertNotSame()` ensures that the references are not identical, even if their contents are equal.
+The `assertNotSame()` method in JUnit 5 is used to verify that two object references, do not print to the same object in memory. Unlike `assertSame()`, which checks if two references are identical(pointing to the same object), `assertNotSame()` ensures that the references are not identical, even if their contents are equal.
 **Syntax**
 `assertNotSame(unexpected, actual, message);`
 - `unexpected`: The reference that the `actual` reference should not point to.
@@ -467,7 +467,7 @@ public class AssertNotSameTest {
 }
 ```
 ###### Difference between `assertNotSame()` and `assertNotEqual()`
-- `assertNotSame()`: Checks if two references do not point to the same object in memory.
+- `assertNotSame()`: Checks if two references, do not point to the same object in memory.
 - `assertNotEquals()`: Checks if two objects are not equal in terms of their content or logical equality (via the `equals()` method)
 
 ###### When to Use `assertNotSame()`:
@@ -476,3 +476,78 @@ public class AssertNotSameTest {
 - Verifying Copy Operations: In scenarios where you're copying objects, `assertNotSame()` can be used to ensure that the copy is a distinct object, not just another reference to the same object.
 ###### Best Practices
 - Use `assertNotSame()` in situations where it's important that two references point to different objects, even if their contents are identical. This can help catch bugs where objects are incorrectly shared or reused.
+
+### `assertNull() and assertNotNull()`:
+#### `assertNull()`:
+The `assertNull()` method in JUnit 5 is used to verify that a given object references is `null`. If the references is not `null`, the assertion fails.
+**Syntax**:
+`assertNull(actual, message);`
+- `actual`: The object references that is expected to be null.
+- `message:` (Optional) A custom message that will be displayed if the assertion fails.
+
+**Usage**: `assertNull()` is commonly used in tests to ensure that a method returns `null` when expected or that an object is not initialized yet.
+
+Example
+```
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertion.assertNull;
+
+public class AssertNullTest {
+	@Test
+	public void testObjectNull() {
+		String str = null;
+		assertNull(str, "str should be null"); //pass
+	}
+	
+	@Test
+	public void testObjectIsNull() {
+		String str = "Hello, World!";
+		assertNull(str, "str should be null"); //fail
+	}
+}
+```
+
+##### When to Use `assertNull()`:
+- Checking Initialization: When you want to ensure that an object references is not yet initialized or is supposed to be `null` after certain operations.
+- Testing API Return Values: When testing method that should return null under certain conditions. (e.g. When an element is not found.)
+- Ensuing Cleanup: To verify that a resource or reference has been properly cleaned up or set to null after an operation.
+###### Best Practices
+- **Clear Messages**: When using `assertNull()`, it's a good practice to provide a clear message that explains why the reference is expected to be `null`. This will help when debugging failed tests.
+- **Logical Tests**: Use `assertNull()` only when it logically makes sense for an object to be `null`. In other cases, consider using `assertNotNull()` to ensure that an object is properly instantiated or initialized.
+
+#### `assertNotNull()`
+The `assertNotNull()` method in JUnit 5 is used to verify that a given object reference is not `null`. If the reference is null, the assertion fails.
+**Syntax:**
+`assertNotNull(actual, message)`;
+- `actual:` The object references that is expected to be non-null.
+- `message`(optional): A custom message that will be displayed if the assertion fails.
+  **Usage**
+  `assertNotNull()` is typically used in tests to ensure that an object or method return value has been properly instantiated or initialized.
+  **Example:**
+```
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+public class AssertNotNullTest {
+	@Test
+	public void testObjectIsNotNull() {
+		String str = "Hello, World!";
+		
+		assertNotNull(str, "str should not be null");
+	}
+	
+	@Test
+	public void testObjectIsNull() {
+		String str = null;
+		assertNotNull(str, "str should not be null"); //fail
+	}
+}
+```
+
+###### When to Use `assertNotNull()`
+- Checking Initialization: Use `assertNotNull()` to ensure that an object references has been properly initialized.
+- Testing API Return values: Use it when testing methods that should always return a non-null value under normal conditions.
+- Validating Results: Ensure that certain operations or methods have produced a valid object or result.
+###### Best Practices
+- **Clear Messages**: Providing a clear message when using `assertNotNull()` can be helpful for understanding why a particular object is expected to be non-null, especially when a test fails.
+- **Logical Tests**: Ensure that the use of `assertNotNull()` is logical and appropriate for the context. It should be used in scenarios where it is crucial that the object is never `null`.
