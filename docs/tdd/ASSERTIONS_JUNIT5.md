@@ -399,3 +399,80 @@ In the first test `assertTimeoutPreemptively` allows the code to run since it co
 - Timeout Duration: Always choose a timeout duration that makes sense for the operation you are testing, Setting a timeout that is too short may result in false positives(failures), while setting it too long might defeat the purpose of the test.
 - Resource Usage: `assertTimeoutPreemptively()` can be resource-intensive as it may use a separate thread to manage the timeout. Use it judiciously, especially in tests where performance is critical.
 - Timeout Testing: Timeout assertions are especially useful in performance test, integration tests, or when testing third-party API calls where delays might occur.
+
+### `assertSame() and assertNotSame()`
+##### `assertSame()`:
+`assertSame()` is an assertion method in Junit 5 that checks whether two references points to the same object instance. This is different from `assertEquals()`, which checks whether two objects are logically equivalent (i.e. their `equals()` method returns `true`). `assertSame()` ensures that the references are identical, meaning they refer to the exact same object in memory.
+```
+public static void assertSame(Object expected, Object actual, String message)
+public static void assertSame(Object expected, Object actual)
+```
+- `expected`: The expected object reference.
+- `actual`: The actual object reference.
+- `message`: (Optional) A custom message that will be displayed if the assertion fails.
+  If the expected and actual references do not point to the same object, the assertion will fail.
+  Example Usage
+```
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertSame;
+
+public class AssertSameTest {
+	@Test
+	public void testAssertSame() {
+		String originalString = "Hello, World";
+		String sameReference = orginalString;
+		String differentReference = new String("Hello, World");
+		
+		// This will pass becuase both references points to the same object.
+		assertSame(orginalString, sameReference, "Both should references the same object");
+		// This will fail because they are different objects, even though they are logically equal.
+		assertSame(originalString, differentReference, "These should be the same object reference);
+	}
+}
+```
+##### Difference between `assertSame()` and `assertEquals()`:
+- `assertSame()`: Checks if both references point to the exact same object.
+- `assertEquals()`: Checks if the objects referred to by the references are equal based on their content or logical equality (via the `equals()` method).
+##### When to Use `assertSame()`
+- Object Identity: Use `assertSame()` when you need to verify that two variables or fields refer to the exact same instance of an object.
+- Singleton or Caching Patterns: When testing singleton patterns or caching mechanisms where you expect the same instance to be returned.
+- Ensuring Correct References: When you want to ensure that an object passed around or returned by a method is exactly the same object as you expect.
+##### Best Practices:
+- Use `assertSame()` sparingly, as most tests should focus on the logical equality of objects (`assertEquals()`). However, in cases where object identity is crucial (like in certain design pattern or when testing references), `assertSame()` is invaluable.
+
+##### `assertNotSame()`
+The `assertNotSame()` method in JUnit 5 is used to verify that two object references do not print to the same object in memory. Unlike `assertSame()`, which checks if two references are identical(pointing to the same object), `assertNotSame()` ensures that the references are not identical, even if their contents are equal.
+**Syntax**
+`assertNotSame(unexpected, actual, message);`
+- `unexpected`: The reference that the `actual` reference should not point to.
+- `actual`: The actual reference that you are testing.
+- `message`: (Optional): A custom message to display if the assertion fails.
+  **Usage:**
+  `assertNotSame()` is useful when you want to ensure that two references point to different objects even if the objects themselves might be logically equal (in terms of their contents).
+```
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertion.assertNotSame;
+
+public class AssertNotSameTest {
+	@Test
+	public void testNotSameReferences() {
+		String str1 = new String("Hello");
+		String str2 = new string("Hello");
+		String str3 = str1;
+		//pass
+		assertNotSame(str1, str2, "str1 and str2 should not refer to the same object);
+		//fail
+		assertNotSame(str1, str3, "str1 and str3 should not refer tot he same object");
+	}
+}
+```
+###### Difference between `assertNotSame()` and `assertNotEqual()`
+- `assertNotSame()`: Checks if two references do not point to the same object in memory.
+- `assertNotEquals()`: Checks if two objects are not equal in terms of their content or logical equality (via the `equals()` method)
+
+###### When to Use `assertNotSame()`:
+- Object Identity: Use `assertNotSame()` when you need to verify that two variables or fields refer to different instances of an object.
+- Ensuring Correct Instantiation: When testing object creation to ensure that new instances are being created instead of reusing the same instance.
+- Verifying Copy Operations: In scenarios where you're copying objects, `assertNotSame()` can be used to ensure that the copy is a distinct object, not just another reference to the same object.
+###### Best Practices
+- Use `assertNotSame()` in situations where it's important that two references point to different objects, even if their contents are identical. This can help catch bugs where objects are incorrectly shared or reused.
