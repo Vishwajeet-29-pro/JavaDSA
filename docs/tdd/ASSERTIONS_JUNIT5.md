@@ -551,3 +551,70 @@ public class AssertNotNullTest {
 ###### Best Practices
 - **Clear Messages**: Providing a clear message when using `assertNotNull()` can be helpful for understanding why a particular object is expected to be non-null, especially when a test fails.
 - **Logical Tests**: Ensure that the use of `assertNotNull()` is logical and appropriate for the context. It should be used in scenarios where it is crucial that the object is never `null`.
+
+### `assertAll()`:
+The `assertAll()` method in JUnit 5 is used to group multiple assertions together in a single test. This allows you to execute all the assertions, even if one or more of them fail. If any of the grouped assertions fail, `assertAll()` reports all failures at once, instead stopping at the first failure.
+**Syntax**:
+```
+assertAll(executableGroup);
+assertAll("heading",executableGroup);
+```
+- `executableGroup`: This is a series of lambda expressions or method references that contain the assertions you want to group together.
+- `heading`(Optional): A string that acts as a heading for the group of assertions, making the test output easier to understand.
+  **Usage**:
+  `assertAll()` is particularly useful when you want to validate multiple conditions in a test and don't want the test to stop at the first failed assertion.
+  **Example**
+```
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions.*;
+
+public class AssertAllTest {
+	@Test
+	public void testMultipleAssertions() {
+		String str = "Hello, World!";
+		
+		assertAll("String Tests",
+			() -> assertEquals("Hello, World!", str, "The string should match exactly."),
+			() -> assertTrue(str.startsWith("Hello"), "The string should start with 'Hello'"),
+			() -> assertTrue(str.endsWith("World!"), "The string should end with 'world!'"),
+			() -> assertEquals(13, str.length(), "The length of the string should be 13")
+		);
+	}
+}
+```
+###### When to Use `assertAll()`
+- Multiple Validations: When you need to validate several conditions in a single test, and you want to see the result of each assertions, use `assertAll()` to group them together.
+- Comprehensive Testing: It's particularly useful when testing complex objects, where multiple fields or properties need to be validated.
+- Reducing Noise: Instead of writing separate tests for each assertion, you can group them into one, reducing the overall number of test methods while still covering all necessary checks.
+##### Best Practices:
+- Descriptive Messages: Always provide descriptive messages for each assertion within `assertAll()` to make it easier to understand the context when a test fails.
+- Avoid Overuse: While `assertAll()` is powerful, avoid grouping too many unrelated assertions together, as it can make the test header to understand.
+- Logical Grouping: Use `assertAll()` to group logically related assertions, such as all checks on a single object's properties.
+###### Example with failure:
+```
+import org.junit.jupiter.api.Test; 
+import static org.junit.jupiter.api.Assertions.*; 
+
+public class AssertAllFailureTest {
+
+	@Test
+	public void testMultipleAssertionsWithFailures() {
+		String str = "Hello, World!";
+		
+		assertAll("String Tests,
+		() -> assertEquals("Hi, World!", str, "Expected string to be 'Hi, World!'" ),
+		() -> assertTrue(str.startsWith("Hi"), "Expected string to start with 'Hi'"),
+		() -> assertTrue(str.endWith("Earth"), "Expected string to end with 'Earth'")
+		);
+	}
+}
+
+
+
+Output:
+Multiple Failures (3 failures)
+    Expected string to be 'Hi, World!' ==> expected: <Hi, World!> but was: <Hello, World!>
+    Expected string to start with 'Hi' ==> expected: <true> but was: <false>
+    Expected string to end with 'Earth!' ==> expected: <true> but was: <false>
+
+```
