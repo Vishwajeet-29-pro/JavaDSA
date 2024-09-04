@@ -21,4 +21,10 @@ public class Library {
                 .filter(book -> book.getTitle().equalsIgnoreCase(title))
                 .findFirst();
     }
+
+    public List<Book> filterBooksByGenre(String genre) {
+        return books.stream()
+                .filter(book -> book.getGenre().equalsIgnoreCase(genre))
+                .toList();
+    }
 }
