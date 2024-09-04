@@ -2,7 +2,7 @@ package org.practice.dsa.generics.crud;
 
 import org.practice.dsa.generics.crud.entity.Product;
 import org.practice.dsa.generics.crud.entity.User;
-import org.practice.dsa.generics.crud.entity.repo.Repository;
+import org.practice.dsa.generics.crud.repo.Repository;
 
 public class CrudApp {
     public static void main(String[] args) {

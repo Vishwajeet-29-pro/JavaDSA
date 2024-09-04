@@ -1,4 +1,4 @@
-package org.practice.dsa.generics.crud.entity.repo;
+package org.practice.dsa.generics.crud.repo;
 
 import org.practice.dsa.generics.crud.entity.Product;
 import org.practice.dsa.generics.crud.entity.User;
