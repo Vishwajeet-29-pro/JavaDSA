@@ -3,6 +3,7 @@ package org.practice.dsa.java8.exercise.library;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,6 +33,14 @@ public class LibraryTest {
         String title = "Java: zero to advance";
         Optional<Book> expected = Optional.ofNullable(b1);
         var actual = library.findBookByTitle(title);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFilterBookByGenre() {
+        String genre = "IT";
+        List<Book> expected = List.of(b3, b5);
+        List<Book> actual = library.filterBooksByGenre(genre);
         assertEquals(expected, actual);
     }
 }
