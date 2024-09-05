@@ -57,4 +57,12 @@ public class LibraryTest {
         int actual = library.calculateTotalNumberOfPages();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetListOfAuthors() {
+        String genre = "Science";
+        List<String> expected = List.of(b1.getAuthor(),b6.getAuthor());
+        List<String> actual = library.getListOfAuthors(genre);
+        assertEquals(expected, actual);
+    }
 }
