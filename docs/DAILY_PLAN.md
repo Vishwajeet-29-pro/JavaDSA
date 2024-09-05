@@ -259,3 +259,15 @@
 - [X] Notes - Method Reference
 - [ ] Notes - Assertion
 - [ ] Financial Awareness
+
+###### 5 Sept 2024
+- [ ] Job Apply
+- [ ] Java
+- [ ] Kotlin
+- [ ] TDD on both
+- [ ] Reactive programming.
+- [ ] Docker Registry. (Evening topic)
+- [ ] Reading Important concepts.
+- [ ] Revision.
+- [ ] React JS (Revision/ notes/ interview questions/ basic understanding.)
+- [ ] System Design understanding.
