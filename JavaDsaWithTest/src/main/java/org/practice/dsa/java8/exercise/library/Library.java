@@ -1,6 +1,7 @@
 package org.practice.dsa.java8.exercise.library;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,6 +26,12 @@ public class Library {
     public List<Book> filterBooksByGenre(String genre) {
         return books.stream()
                 .filter(book -> book.getGenre().equalsIgnoreCase(genre))
+                .toList();
+    }
+
+    public List<Book> sortBooksByPublishingYear() {
+        return books.stream()
+                .sorted(Comparator.comparingInt(Book::getPublicationYear))
                 .toList();
     }
 }
