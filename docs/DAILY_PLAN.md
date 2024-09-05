@@ -262,12 +262,12 @@
 
 ###### 5 Sept 2024
 - [ ] Job Apply
-- [ ] Java
-- [ ] Kotlin
-- [ ] TDD on both
+- [x] Java
+- [x] Kotlin
+- [x] TDD on both
 - [ ] Reactive programming.
 - [ ] Docker Registry. (Evening topic)
-- [ ] Reading Important concepts.
+- [x] Reading Important concepts (On Blackbox testing).
 - [ ] Revision.
 - [ ] React JS (Revision/ notes/ interview questions/ basic understanding.)
 - [ ] System Design understanding.
