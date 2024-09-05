@@ -34,4 +34,10 @@ public class Library {
                 .sorted(Comparator.comparingInt(Book::getPublicationYear))
                 .toList();
     }
+
+    public int calculateTotalNumberOfPages() {
+        return books.stream()
+                .mapToInt(Book::getPages)
+                .sum();
+    }
 }
