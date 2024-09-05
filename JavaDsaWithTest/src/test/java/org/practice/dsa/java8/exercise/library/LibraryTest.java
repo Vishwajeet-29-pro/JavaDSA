@@ -43,4 +43,11 @@ public class LibraryTest {
         List<Book> actual = library.filterBooksByGenre(genre);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSortBookByPublishingYear() {
+        List<Book> expected = List.of(b3, b4, b2, b5, b1, b6);
+        List<Book> actual = library.sortBooksByPublishingYear();
+        assertEquals(expected, actual);
+    }
 }
