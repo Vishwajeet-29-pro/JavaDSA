@@ -50,4 +50,11 @@ public class LibraryTest {
         List<Book> actual = library.sortBooksByPublishingYear();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testCalculateTotalPages() {
+        int expected = 2400;
+        int actual = library.calculateTotalNumberOfPages();
+        assertEquals(expected, actual);
+    }
 }
