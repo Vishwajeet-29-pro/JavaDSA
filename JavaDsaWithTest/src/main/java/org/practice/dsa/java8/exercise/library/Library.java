@@ -40,4 +40,12 @@ public class Library {
                 .mapToInt(Book::getPages)
                 .sum();
     }
+
+    public List<String> getListOfAuthors(String genre) {
+        return books.stream()
+                .filter(b -> b.getGenre().equalsIgnoreCase(genre))
+                .map(Book::getAuthor)
+                .distinct()
+                .toList();
+    }
 }
