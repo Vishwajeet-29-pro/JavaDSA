@@ -260,14 +260,26 @@
 - [ ] Notes - Assertion
 - [ ] Financial Awareness
 
-###### 5 Sept 2024
-- [ ] Job Apply
+##### 5 Sept 2024
+- [x] Job Apply
 - [x] Java
 - [x] Kotlin
 - [x] TDD on both
-- [ ] Reactive programming.
+- [x] Reactive programming.
 - [ ] Docker Registry. (Evening topic)
-- [x] Reading Important concepts (On Blackbox testing).
-- [ ] Revision.
+- [x] Reading Important concepts.
+- [x] Revision.
 - [ ] React JS (Revision/ notes/ interview questions/ basic understanding.)
-- [ ] System Design understanding.
+- [x] System Design understanding.
+- 
+##### 6 Sept 2024
+- [ ] Job Apply
+- [ ] Java practice
+- [ ] Kotlin
+- [ ] TDD on Both
+- [ ] Reactive programming understand for relationship.
+- [ ] Docker Registry
+- [ ] React JS.
+- [ ] Information on Testing Type
+- [ ] Create a Repo for Ktor project and give access to VT account.
+- [ ] Revision.
