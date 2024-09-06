@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -32,6 +33,14 @@ public class CustomerManagementTest {
     public void testTotalValueOfOrder() {
         double expected = 2200.0;
         double actual = customerManagement.getAllOrderForCustomer(customer);
+        assertEquals(expected, actual);
+    }
+
+    // Find the most expensive item across all orders for a customer.
+    @Test
+    public void testFindExpensiveItem() {
+        Optional<Item> expected = Optional.of(order1.getItems().get(1));
+        Optional<Item> actual = customerManagement.findExpensiveItem(customer);
         assertEquals(expected, actual);
     }
 }
