@@ -16,10 +16,10 @@ public class CustomerManagementTest {
 
     @BeforeEach
     public void setup() {
-        Item item1 = new Item("Monitor",200.0);
-        Item item2 = new Item("CPU",200.0);
-        Item item3 = new Item("Mouse",200.0);
-        Item item4 = new Item("Keyboard",200.0);
+        Item item1 = new Item("Monitor",700.0);
+        Item item2 = new Item("CPU",800.0);
+        Item item3 = new Item("Mouse",300.0);
+        Item item4 = new Item("Keyboard",400.0);
 
         order1 = new Order(101, List.of(item1, item2));
         order2 = new Order(102, List.of(item3, item4));
@@ -30,7 +30,7 @@ public class CustomerManagementTest {
 
     @Test
     public void testTotalValueOfOrder() {
-        double expected = 800.0;
+        double expected = 2200.0;
         double actual = customerManagement.getAllOrderForCustomer(customer);
         assertEquals(expected, actual);
     }
