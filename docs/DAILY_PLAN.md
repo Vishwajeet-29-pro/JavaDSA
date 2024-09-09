@@ -271,15 +271,25 @@
 - [x] Revision.
 - [ ] React JS (Revision/ notes/ interview questions/ basic understanding.)
 - [x] System Design understanding.
-- 
+
 ##### 6 Sept 2024
-- [ ] Job Apply
-- [ ] Java practice
-- [ ] Kotlin
-- [ ] TDD on Both
-- [ ] Reactive programming understand for relationship.
-- [ ] Docker Registry
+- [x] Job Apply
+- [x] Java practice
+- [x] Kotlin
+- [x] TDD on Both
+- [x] Reactive programming understand for relationship.
+- [x] Docker Registry
 - [ ] React JS.
 - [ ] Information on Testing Type
-- [ ] Create a Repo for Ktor project and give access to VT account.
-- [ ] Revision.
+- [x] Create a Repo for Ktor project and give access to VT account.
+- [x] Revision.
+
+##### 9 Sept 2024
+- [ ] Job Apply
+- [ ] Java/ Java 8 practice
+- [ ] TDD practice
+- [ ] Reactive programming practice.
+- [ ] GitHub actions with Ktor project.
+- [ ] Try to create a multi-module Ktor project (not on priority)
+- [ ] Configuring one project with GitHub actions to docker registry
+- [ ] React JS.
