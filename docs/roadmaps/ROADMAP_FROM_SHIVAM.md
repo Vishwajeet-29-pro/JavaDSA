@@ -63,6 +63,7 @@ Java 8 geeks for geeks [top 30](https://www.geeksforgeeks.org/java-8-interview-q
 gittutorial documentation: [gittutorial](https://git-scm.com/docs/gittutoriali) <br>
 Java DSA with Kunal Kushwaha Github Repo [javadsa bootcamp](https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main) <br>
 Git Kraken [git kraken documentation](https://www.gitkraken.com/learn/git)
+Useful youtube video [CI/CD with github action and docker](https://www.youtube.com/watch?v=R8_veQiYBjI)
 
 #### Job Search links
 Top MNC's [MNC](https://www.sapopenings.com/top-companies-career-page-links/) </br>
