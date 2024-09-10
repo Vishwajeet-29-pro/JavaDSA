@@ -285,11 +285,22 @@
 - [x] Revision.
 
 ##### 9 Sept 2024
-- [ ] Job Apply
+- [x] Job Apply
 - [ ] Java/ Java 8 practice
-- [ ] TDD practice
-- [ ] Reactive programming practice.
-- [ ] GitHub actions with Ktor project.
-- [ ] Try to create a multi-module Ktor project (not on priority)
-- [ ] Configuring one project with GitHub actions to docker registry
-- [ ] React JS.
+- [x] TDD practice
+- [x] Reactive programming practice.
+- [x] GitHub actions with Ktor project.
+- [x] Try to create a multi module Ktor project (not on priority)
+- [x] Configuring one project with GitHub actions to docker registry
+- [x] React JS.
+
+##### 10 Sept 2024
+- [ ] Job Apply/ LinkedIn post
+- [ ] Java practice
+- [ ] Kotlin practice
+- [ ] TDD
+- [ ] Reactive programming practice
+- [ ] GitHub Actions. Additional things
+- [ ] CI/CD related. Docker and GitHub actions
+- [ ] Completing controller layer of Todo app.
+- [ ] React JS
