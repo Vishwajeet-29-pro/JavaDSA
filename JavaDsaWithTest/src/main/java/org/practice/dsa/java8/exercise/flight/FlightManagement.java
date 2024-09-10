@@ -11,4 +11,13 @@ public class FlightManagement {
                 .flatMap(flight -> flight.getPassengers().stream())
                 .toList();
     }
+
+    public double findWeightOfLuggageForPassenger(List<Flight> flights, String name) {
+        return flights.stream()
+                .flatMap(flight -> flight.getPassengers().stream())
+                .filter(passenger -> passenger.getName().equalsIgnoreCase(name))
+                .flatMap(passenger -> passenger.getLuggage().stream())
+                .mapToDouble(Luggage::getWeight)
+                .sum();
+    }
 }
