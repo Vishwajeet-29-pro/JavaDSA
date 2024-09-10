@@ -295,9 +295,9 @@
 - [x] React JS.
 
 ##### 10 Sept 2024
-- [ ] Job Apply/ LinkedIn post
+- [x] Job Apply/ LinkedIn post
 - [ ] Java practice
-- [ ] Kotlin practice
+- [x] Kotlin practice
 - [ ] TDD
 - [ ] Reactive programming practice
 - [ ] GitHub Actions. Additional things
