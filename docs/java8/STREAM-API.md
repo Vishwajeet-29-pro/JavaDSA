@@ -96,3 +96,50 @@ There are a few Terminal Operations mentioned below:
 ### Important Points/Observation of Java Stream
 1. A stream consists of a source followed by zero or more intermediate methods combined together (pipelined) and a terminal method to process the objects obtained from the source as per the methods described.
 2. Stream is used to compute elements as per the pipelined methods without altering the original value of the object.
+
+## Difference between `flatMap()` and `map()` in Java 8
+In Java 8 streams, both map and flatmap are used to transform elements of a stream, but they differ in the way they handle transformations and deal with nested data structures.
+1. `map()`: The `map()` function is used to transform each element of the stream individually. It applies a function to each element and returns a stream of transformed elements.
+   It doesn't flatten or merge the structure of streams; it simply transforms one element to another.
+   - Input: A stream of elements.
+   - Output: A stream where each element is transformed based on the applied function.
+
+   ###### Example:
+   ```
+   List<Integer> numbers = Arrays.asList(1,2 3,4,5);
+   List<Integer> squares = numbers.stream()
+                              .map(n -> n * n)
+                              .collect(Collectors.toList());
+   System.out.println(squares);
+   ```
+2. `flatMap()`: The `flatMap()` function is used when you have a stream of streams or a collection of conditions, and you want to "flatten" or merge the nested structure into a single stream.
+   It first applies the transformation and then flatten the result into a single stream.
+   - Input: A stream of streams or collections.
+   - Output: A flattened stream of elements after applying the transformation.
+   
+   ###### Example:
+   ```
+   List<List<String>> nestedList = Arrays.asList(
+      Arrays.asList("Java", "Python"),
+      Arrays.asList("C++", "Go"),
+      Arrays.asList("Kotlin", "Scala")
+   );
+   List<String> flatList = nestedList.stream()
+                              .flatMap(List::stream)
+                              .collect(Collectors.toList());
+   System.out.println(flatList);
+   ```
+   
+#### Key Differences:
+| Feature        | map()                                            | flatMap()                                      |
+|----------------|--------------------------------------------------|------------------------------------------------|
+| Input          | A stream of elements                             | A stream of streams (or nested collections)    |
+| Output         | A stream where each element is transformed       | A single flattened stream transformed elements |
+| Transformation | Transform each element one by one                | Transform and flattens the result              |
+| Use Case       | When you need to transform elements individually | When you need to flatten nested structures.    |
+
+#### Why flatMap?
+- `flatMap()` is useful when dealing with nested collections or Optional Objects. Instead of getting a stream of streams ( or Optionals of Optionals)
+   it helps flatten them into a single, usable structure.
+- It simplifies handling cases where the transformation results in a stream or collection and merging all the elements into a flat structure.
+
