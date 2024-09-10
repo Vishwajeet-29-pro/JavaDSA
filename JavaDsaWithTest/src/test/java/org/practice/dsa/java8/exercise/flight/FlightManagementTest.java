@@ -48,4 +48,13 @@ public class FlightManagementTest {
         List<Passenger> actual = flightMs.findAllPassengersByDestination(flights, destination);
         assertEquals(expected, actual);
     }
+
+    // Task 2: Find the total weight of luggage for a specific passenger across all flights
+    @Test
+    public void testFindWeightOfLuggageForPassenger() {
+        String name = "Vishwajeet";
+        double expectedWeight = 75;
+        double actual = flightMs.findWeightOfLuggageForPassenger(flights, name);
+        assertEquals(expectedWeight, actual);
+    }
 }
