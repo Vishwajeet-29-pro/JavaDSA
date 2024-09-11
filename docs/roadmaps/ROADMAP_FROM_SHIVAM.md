@@ -62,8 +62,9 @@ Reactive webflux: [webflux](https://medium.com/pictet-technologies-blog/reactive
 Java 8 geeks for geeks [top 30](https://www.geeksforgeeks.org/java-8-interview-questions-and-answers/) <br>
 gittutorial documentation: [gittutorial](https://git-scm.com/docs/gittutoriali) <br>
 Java DSA with Kunal Kushwaha Github Repo [javadsa bootcamp](https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main) <br>
-Git Kraken [git kraken documentation](https://www.gitkraken.com/learn/git)
+Git Kraken [git kraken documentation](https://www.gitkraken.com/learn/git) <br>
 Useful youtube video [CI/CD with github action and docker](https://www.youtube.com/watch?v=R8_veQiYBjI)
+Personal Access token for docker [Personal access token](https://docs.docker.com/security/for-developers/access-tokens/#create-an-access-token)
 
 #### Job Search links
 Top MNC's [MNC](https://www.sapopenings.com/top-companies-career-page-links/) </br>
