@@ -57,4 +57,20 @@ public class FlightManagementTest {
         double actual = flightMs.findWeightOfLuggageForPassenger(flights, name);
         assertEquals(expectedWeight, actual);
     }
+
+    // Task 3: Get a list of unique luggage items for all passengers across all flights
+    @Test
+    public void testFindUniqueLuggageForAll() {
+        List<String> expected = List.of("Suitcase", "Backpack", "Briefcase");
+        List<String> actual = flightMs.findUniqueListOfLuggageForAll(flights);
+        assertEquals(expected, actual);
+    }
+
+    // Task 4: Find the most frequent destination
+    @Test
+    public void testFindMostFrequentDestination() {
+        String expected = "New York";
+        String actual = flightMs.findMostFrequentDestination(flights);
+        assertEquals(expected, actual);
+    }
 }
