@@ -304,3 +304,17 @@
 - [ ] CI/CD related. Docker and GitHub actions
 - [ ] Completing controller layer of Todo app.
 - [ ] React JS
+
+##### 12 Sept 2024
+- [ ] Job Apply
+- [ ] Java 8 Practice
+- [ ] One problem from letcode
+- [ ] Kotlin practice (above problem should be converted into Kotlin code)
+- [ ] TDD (test driven approach for solving the problem.)
+- [ ] Notes reading. 
+	- [ ] GitHub Actions
+	- [ ] Docker important notes - writing docker file
+	- [ ] CICD details
+- [ ] Try finish up things from Todo app
+- [ ] Reactive programming related. (Revision most important)
+- [ ] React JS
