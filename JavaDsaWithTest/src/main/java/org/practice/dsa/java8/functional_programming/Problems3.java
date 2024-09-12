@@ -15,6 +15,8 @@ public class Problems3 {
                 .toList();
     }
 
+    /* Given an integer array nums, return true if any value appears at least twice in the array, and return false if
+    every element is distinct */
     public boolean validateArray(int[] arr) {
         List<Integer> list = Arrays.stream(arr)
                 .boxed().toList();
