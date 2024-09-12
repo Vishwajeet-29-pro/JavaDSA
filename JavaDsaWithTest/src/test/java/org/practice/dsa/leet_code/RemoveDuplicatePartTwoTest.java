@@ -1,7 +1,6 @@
-package org.practice.dsa.leet_code_test;
+package org.practice.dsa.leet_code;
 
 import org.junit.jupiter.api.Test;
-import org.practice.dsa.leet_code.QuestionRemoveDuplicatePartTwo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
