@@ -29,7 +29,8 @@ public class Problems2 {
 
     /*Given a list of integers, find the total number of elements present in the list using Stream functions*/
     public long findTotalNumber(List<Integer> integers) {
-        return integers.stream().count();
+        // return integers.stream().count();
+        return integers.size();
     }
 
     /*Given a list of integers, find the maximum value element present in it using Stream functions?*/
