@@ -65,16 +65,26 @@ public class QuestionAtoIAlgorithm {
     */
 
     public int myAtoi(String s) {
+        s = s.trim();  // Step 1: Trim leading/trailing spaces
+        if (s.isEmpty()) return 0;  // Return 0 if string is empty
 
-        s = s.trim();
+        int i = 0, sign = 1, result = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            int result = 0;
-            if (s.charAt(i) == '-') {
-                result = -1;
-            } else result = 1;
-
+        // Step 2: Handle sign
+        if (s.charAt(i) == '-' || s.charAt(i) == '+') {
+            sign = (s.charAt(i++) == '-') ? -1 : 1;
         }
-        return 0;
+        // Step 3: Convert digits to integer
+        while (i < s.length() && Character.isDigit(s.charAt(i))) {
+            int digit = s.charAt(i++) - '0';
+
+            // Step 4: Check for overflow/underflow
+            if (result > (Integer.MAX_VALUE - digit) / 10) {
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            result = result * 10 + digit;
+        }
+        // Step 5: Return final result with the correct sign
+        return result * sign;
     }
 }
