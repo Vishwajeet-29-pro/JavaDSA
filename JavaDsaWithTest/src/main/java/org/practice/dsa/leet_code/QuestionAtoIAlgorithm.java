@@ -66,6 +66,15 @@ public class QuestionAtoIAlgorithm {
 
     public int myAtoi(String s) {
 
+        s = s.trim();
+
+        for (int i = 0; i < s.length(); i++) {
+            int result = 0;
+            if (s.charAt(i) == '-') {
+                result = -1;
+            } else result = 1;
+
+        }
         return 0;
     }
 }
