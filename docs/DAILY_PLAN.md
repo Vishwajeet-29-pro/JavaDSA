@@ -305,16 +305,29 @@
 - [ ] Completing controller layer of Todo app.
 - [ ] React JS
 
-##### 12 Sept 2024
-- [ ] Job Apply
-- [ ] Java 8 Practice
-- [ ] One problem from letcode
-- [ ] Kotlin practice (above problem should be converted into Kotlin code)
-- [ ] TDD (test driven approach for solving the problem.)
-- [ ] Notes reading. 
-	- [ ] GitHub Actions
-	- [ ] Docker important notes - writing docker file
-	- [ ] CICD details
+12 Sept 2024
+- [x] Job Apply
+- [x] Java 8 Practice
+- [x] One problem from letcode
+- [x] Kotlin practice (above problem should be converted into Kotlin code)
+- [x] TDD (test driven approach for solving the problem.)
+- [x] Notes reading. 
+	- [x] GitHub Actions
+	- [x] Docker important notes - writing docker file
+	- [x] CICD details
 - [ ] Try finish up things from Todo app
 - [ ] Reactive programming related. (Revision most important)
 - [ ] React JS
+
+##### 13 Sept 2024
+- [ ] Job Apply
+- [ ] Java 8 & Java practice
+- [ ] Kotlin practice
+- [ ] TDD
+- [ ] Notes reading:
+	- [ ] GitHub Actions
+	- [ ] Docker
+	- [ ] CICD
+- [ ] React JS
+- [ ] Todo App
+- [ ] Reactive programming related. 
