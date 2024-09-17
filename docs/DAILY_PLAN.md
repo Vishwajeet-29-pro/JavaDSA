@@ -330,4 +330,6 @@
 	- [ ] CICD
 - [ ] React JS
 - [ ] Todo App
-- [ ] Reactive programming related. 
+- [ ] Reactive programming related.
+
+###### Need Restart. Keep working. NO plan for today and tomorrow. From 19 Sept will restart and make it happen.
