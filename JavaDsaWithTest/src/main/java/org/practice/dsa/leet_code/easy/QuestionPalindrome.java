@@ -25,17 +25,18 @@ public class QuestionPalindrome {
 * */
 
     public boolean isPalindrome(int x) {
-
-        if (x < 0 || (x % 10 == 0 && x != 0)) {
+        if (x < 0) {
             return false;
         }
 
-        int reverseHalf = 0;
-        while (x > reverseHalf) {
-            reverseHalf = reverseHalf * 10 + reverseHalf % 10;
-            x /= 10;
+        int reverse = 0;
+        int xcopy = x;
+
+        while (x > 0) {
+            reverse = (reverse * 10) + (x % 10);
+                x /= 10;
+            }
+
+            return reverse == xcopy;
         }
-        // For odd number of digits, we discard the middle digit by dividing reversedHalf by 10
-        return x == reverseHalf || x == reverseHalf / 10;
     }
-}
