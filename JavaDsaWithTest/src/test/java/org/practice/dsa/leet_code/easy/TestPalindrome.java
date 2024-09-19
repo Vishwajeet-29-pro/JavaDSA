@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestPalindrome {
-    private QuestionPalindrome palindrome = new QuestionPalindrome();
+    private final QuestionPalindrome palindrome = new QuestionPalindrome();
 
     @Test
     public void testNumberIsPalindrome() {
@@ -28,5 +28,10 @@ public class TestPalindrome {
     public void testPalindromeNumber() {
         assertFalse(palindrome.isPalindrome(10));
         assertFalse(palindrome.isPalindrome(550));
+    }
+
+    @Test
+    public void testPalindromeFor123(){
+        assertFalse(palindrome.isPalindrome(123));
     }
 }
