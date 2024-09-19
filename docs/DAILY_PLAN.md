@@ -260,7 +260,7 @@
 - [ ] Notes - Assertion
 - [ ] Financial Awareness
 
-##### 5 Sept 2024
+###### 5 Sept 2024
 - [x] Job Apply
 - [x] Java
 - [x] Kotlin
@@ -272,7 +272,7 @@
 - [ ] React JS (Revision/ notes/ interview questions/ basic understanding.)
 - [x] System Design understanding.
 
-##### 6 Sept 2024
+###### 6 Sept 2024
 - [x] Job Apply
 - [x] Java practice
 - [x] Kotlin
@@ -284,7 +284,7 @@
 - [x] Create a Repo for Ktor project and give access to VT account.
 - [x] Revision.
 
-##### 9 Sept 2024
+###### 9 Sept 2024
 - [x] Job Apply
 - [ ] Java/ Java 8 practice
 - [x] TDD practice
@@ -294,7 +294,7 @@
 - [x] Configuring one project with GitHub actions to docker registry
 - [x] React JS.
 
-##### 10 Sept 2024
+###### 10 Sept 2024
 - [x] Job Apply/ LinkedIn post
 - [ ] Java practice
 - [x] Kotlin practice
@@ -305,7 +305,7 @@
 - [ ] Completing controller layer of Todo app.
 - [ ] React JS
 
-12 Sept 2024
+###### 12 Sept 2024
 - [x] Job Apply
 - [x] Java 8 Practice
 - [x] One problem from letcode
@@ -319,7 +319,7 @@
 - [ ] Reactive programming related. (Revision most important)
 - [ ] React JS
 
-##### 13 Sept 2024
+###### 13 Sept 2024
 - [ ] Job Apply
 - [ ] Java 8 & Java practice
 - [ ] Kotlin practice
@@ -333,3 +333,16 @@
 - [ ] Reactive programming related.
 
 ###### Need Restart. Keep working. NO plan for today and tomorrow. From 19 Sept will restart and make it happen.
+
+##### 19 Sept 2024
+- [x] Kotlin Practice
+- [x] Java and Java 8 practice
+- [x] Try to solve one leetcode problem
+- [x] TDD
+- [x] Notes Reading:
+    - [ ] Revision of spring boot
+    - [x] CI/CD GitHub action and docker
+    - [x] Kubernetes video lecture
+- [x] React JS
+- [ ] TODO APP
+- [ ] Reactive programming
