@@ -334,7 +334,7 @@
 
 ###### Need Restart. Keep working. NO plan for today and tomorrow. From 19 Sept will restart and make it happen.
 
-##### 19 Sept 2024
+###### 19 Sept 2024
 - [x] Kotlin Practice
 - [x] Java and Java 8 practice
 - [x] Try to solve one leetcode problem
@@ -349,14 +349,14 @@
 
 ###### 20 Sept 2024
 - [ ] Job Apply
-- [ ] Java and Java 8 practice
-- [ ] Kotlin practice
-- [ ] Leet code problem
-- [ ] TDD
+- [X] Java and Java 8 practice
+- [X] Kotlin practice
+- [X] Leet code problem
+- [X] TDD
 - [ ] Notes Reading or watching
   - [ ] Revision of spring boot
   - [ ] CI/CD GitHub actions and docker
   - [ ] Kubernetes video lectures and notes.
-- [ ] React JS tutorial
+- [X] React JS tutorial
 - [ ] TODO APP, select correct tests to complete controller layer.
 - [ ] Reactive programming.
