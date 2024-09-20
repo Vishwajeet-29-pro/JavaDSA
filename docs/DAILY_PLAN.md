@@ -340,9 +340,23 @@
 - [x] Try to solve one leetcode problem
 - [x] TDD
 - [x] Notes Reading:
-    - [ ] Revision of spring boot
-    - [x] CI/CD GitHub action and docker
-    - [x] Kubernetes video lecture
+  - [x] Revision of spring boot
+  - [x] CI/CD GitHub action and docker
+  - [x] Kubernetes video lecture
 - [x] React JS
-- [ ] TODO APP
-- [ ] Reactive programming
+- [x] TODO APP tried to handle test cases but still failing
+- [x] Reactive programming
+
+###### 20 Sept 2024
+- [ ] Job Apply
+- [ ] Java and Java 8 practice
+- [ ] Kotlin practice
+- [ ] Leet code problem
+- [ ] TDD
+- [ ] Notes Reading or watching
+  - [ ] Revision of spring boot
+  - [ ] CI/CD GitHub actions and docker
+  - [ ] Kubernetes video lectures and notes.
+- [ ] React JS tutorial
+- [ ] TODO APP, select correct tests to complete controller layer.
+- [ ] Reactive programming.
