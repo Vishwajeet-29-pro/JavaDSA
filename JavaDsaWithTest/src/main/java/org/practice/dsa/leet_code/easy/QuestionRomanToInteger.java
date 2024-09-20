@@ -1,5 +1,7 @@
 package org.practice.dsa.leet_code.easy;
 
+import java.util.*;
+
 public class QuestionRomanToInteger {
     /*
     * Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -45,6 +47,70 @@ public class QuestionRomanToInteger {
 
     public int romanToInt(String s) {
 
-        return 0;
+        Map<Character, Integer> romanNumbers = new HashMap<>();
+        romanNumbers.put('I', 1);
+        romanNumbers.put('V', 5);
+        romanNumbers.put('X', 10);
+        romanNumbers.put('L', 50);
+        romanNumbers.put('C', 100);
+        romanNumbers.put('D', 500);
+        romanNumbers.put('M', 1000);
+
+        int result = 0;
+        if (s.length() == 1) {
+            return romanNumbers.get(s.charAt(0));
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+          if (i != s.length() -1 ) {
+              if (romanNumbers.get(s.charAt(i)) < romanNumbers.get(s.charAt(i+1))) {
+                  result += romanNumbers.get(s.charAt(i+1)) - romanNumbers.get(s.charAt(i));
+                  i++;
+              } else if (romanNumbers.get(s.charAt(i)) >= romanNumbers.get(s.charAt(i+1))) {
+                  result += romanNumbers.get(s.charAt(i));
+                  System.out.println("Result in else if block after calc: "+result);
+              }
+          } else {
+              result += romanNumbers.get(s.charAt(s.length()-1));
+              System.out.println("Result in else block after calc: "+result);
+          }
+        }
+        System.out.println("Final Result "+result);
+        return result;
+    }
+
+    public int optimizedRomanToInt(String s) {
+        Map<Character, Integer> romanNumbers = new HashMap<>();
+        romanNumbers.put('I', 1);
+        romanNumbers.put('V', 5);
+        romanNumbers.put('X', 10);
+        romanNumbers.put('L', 50);
+        romanNumbers.put('C', 100);
+        romanNumbers.put('D', 500);
+        romanNumbers.put('M', 1000);
+
+        int result = 0;
+
+//        for (int i = 0; i < s.length() -1; i++) {
+//            int currentValue = romanNumbers.get(s.charAt(i));
+//
+//            if (i < s.length() - 1 && currentValue < romanNumbers.get(s.charAt(i+1))) {
+//                result -= currentValue;
+//            } else {
+//                result += currentValue;
+//            }
+//        }
+        int i = 0;
+        while (i < s.length()) {
+            int currentValue = romanNumbers.get(s.charAt(i));
+            if (i < s.length() - 1 && currentValue < romanNumbers.get(s.charAt(i+1))) {
+                result -= currentValue;
+                i++;
+            } else {
+                result += currentValue;
+                i++;
+            }
+        }
+    return result;
     }
 }
