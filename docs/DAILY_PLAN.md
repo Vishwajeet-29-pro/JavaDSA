@@ -348,15 +348,31 @@
 - [x] Reactive programming
 
 ###### 20 Sept 2024
-- [ ] Job Apply
-- [X] Java and Java 8 practice
-- [X] Kotlin practice
-- [X] Leet code problem
-- [X] TDD
+- [x] Job Apply
+- [x] Java and Java 8 practice
+- [x] Kotlin practice
+- [x] Leet code problem
+- [x] TDD
 - [ ] Notes Reading or watching
   - [ ] Revision of spring boot
   - [ ] CI/CD GitHub actions and docker
   - [ ] Kubernetes video lectures and notes.
-- [X] React JS tutorial
+- [x] React JS tutorial
 - [ ] TODO APP, select correct tests to complete controller layer.
 - [ ] Reactive programming.
+- [x] Topic handled in evening was GitHub profile update.
+
+###### 21 Sept 2024
+- [ ] Job Apply
+- [ ] Java and Java 8 practice
+- [ ] Kotlin practice
+- [ ] Leet code problem
+- [ ] TDD
+- [ ] Notes Reading or watching
+  - [ ] Revision of Spring boot
+  - [ ] CI/CD GitHub actions and docker
+  - [ ] Kubernetes video lecture and notes.
+- [ ] React JS Tutorial
+- [ ] TODO APP controller layer
+- [ ] Reactive programming
+- [ ] Resume update.
