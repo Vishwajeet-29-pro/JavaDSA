@@ -364,15 +364,15 @@
 
 ###### 21 Sept 2024
 - [ ] Job Apply
-- [ ] Java and Java 8 practice
-- [ ] Kotlin practice
-- [ ] Leet code problem
-- [ ] TDD
+- [x] Java and Java 8 practice
+- [x] Kotlin practice
+- [x] Leet code problem
+- [x] TDD
 - [ ] Notes Reading or watching
   - [ ] Revision of Spring boot
-  - [ ] CI/CD GitHub actions and docker
-  - [ ] Kubernetes video lecture and notes.
-- [ ] React JS Tutorial
+  - [x] CI/CD GitHub actions and docker
+  - [x] Kubernetes video lecture and notes.
+- [x] React JS Tutorial
 - [ ] TODO APP controller layer
 - [ ] Reactive programming
 - [ ] Resume update.
