@@ -3,9 +3,19 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/JavaDsaWithTest/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaDsaWithTest/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaDsaWithTest/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaDsaWithTest/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaDsaWithTest/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaDsaWithTest/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/JavaDsaWithTest/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.10.3" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-java:7.0.0" level="project" />
   </component>
 </module>
