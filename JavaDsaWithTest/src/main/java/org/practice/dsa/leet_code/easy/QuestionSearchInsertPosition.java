@@ -7,7 +7,6 @@ public class QuestionSearchInsertPosition {
         int start = 0;
         int end = nums.length - 1;
         if (target < nums[start]) return 0;
-        if (target >= nums[end]) return nums.length;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
