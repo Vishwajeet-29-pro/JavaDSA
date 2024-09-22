@@ -32,4 +32,11 @@ public class SearchInsertPositionTest {
         int expected = 4;
         assertEquals(expected, insertPosition.searchInsert(arr, target));
     }
+
+    @Test
+    public void testSearchInsertForZeroIndex() {
+        int target = 0;
+        int expected = 0;
+        assertEquals(expected, insertPosition.searchInsert(arr, target));
+    }
 }
