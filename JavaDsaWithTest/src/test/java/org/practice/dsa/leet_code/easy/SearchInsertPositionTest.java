@@ -25,4 +25,11 @@ public class SearchInsertPositionTest {
         int actual = insertPosition.searchInsert(arr, target);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSearchInsertForBiggerNumber() {
+        int target = 7;
+        int expected = 4;
+        assertEquals(expected, insertPosition.searchInsert(arr, target));
+    }
 }
