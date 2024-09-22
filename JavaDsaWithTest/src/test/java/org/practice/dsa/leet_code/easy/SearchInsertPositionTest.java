@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SearchInsertPositionTest {
     private final QuestionSearchInsertPosition insertPosition = new QuestionSearchInsertPosition();
 
-    int[] arr = {1,3,5,7};
+    int[] arr = {1,3,5,6};
 
     @Test
     public void testSearchInsert() {
