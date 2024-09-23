@@ -346,33 +346,41 @@
 - [x] React JS
 - [x] TODO APP tried to handle test cases but still failing
 - [x] Reactive programming
-
-###### 20 Sept 2024
+###### 21 Sept 2024
 - [x] Job Apply
 - [x] Java and Java 8 practice
 - [x] Kotlin practice
 - [x] Leet code problem
 - [x] TDD
-- [ ] Notes Reading or watching
-  - [ ] Revision of spring boot
-  - [ ] CI/CD GitHub actions and docker
-  - [ ] Kubernetes video lectures and notes.
-- [x] React JS tutorial
-- [ ] TODO APP, select correct tests to complete controller layer.
-- [ ] Reactive programming.
-- [x] Topic handled in evening was GitHub profile update.
-
-###### 21 Sept 2024
-- [ ] Job Apply
-- [x] Java and Java 8 practice
-- [x] Kotlin practice
-- [x] Leet code problem
-- [x] TDD
-- [ ] Notes Reading or watching
+- [x] Notes Reading or watching
   - [ ] Revision of Spring boot
   - [x] CI/CD GitHub actions and docker
   - [x] Kubernetes video lecture and notes.
 - [x] React JS Tutorial
 - [ ] TODO APP controller layer
 - [ ] Reactive programming
-- [ ] Resume update.
+- [x] Resume update.
+
+###### 22 Sept 2024 No plan was made but finished some these tasks.
+- [x] Kotlin practice
+- [x] Java code for Leetcode problem
+- [x] Solved problem of leetcode in Kotlin and post solution on leetcode
+- [x] TDD, added test cases for Leetcode problem. (It is good way to get hands dirty with TDD)
+- [x] How to write on medium, added diff. between HashMap and ConcurrentHashMap.
+- [x] Some information related to Job Apply collected.
+
+###### 23 Sept 2024
+- [ ] Job Apply
+- [ ] Java and Java 8 practice
+- [ ] Kotlin practice
+- [ ] LeetCode problem
+- [ ] TDD
+- [ ] Notes Reading or tutorial watching
+  - [ ] React JS
+  - [ ] Kubernetes
+  - [ ] CICD GitHub actions & pipeline.
+  - [ ] Docker compose
+- [ ] Finding the Consultancy Service related information.
+- [ ] Try to finish TODO app.
+- [ ] Revise Reactive programming.
+- [ ] Write some post on the Medium.com
