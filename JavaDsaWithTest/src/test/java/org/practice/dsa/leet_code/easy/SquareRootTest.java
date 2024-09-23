@@ -14,5 +14,20 @@ public class SquareRootTest {
         int result = squareRoot.mySqrt(input);
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testSquareRootForEight() {
+        int input = 8;
+        int expected = 2;
+        assertEquals(expected, squareRoot.mySqrt(input));
+    }
+
+    @Test
+    public void testMultipleSquareRoots() {
+        assertEquals(3, squareRoot.mySqrt(9));
+        assertEquals(3, squareRoot.mySqrt(10));
+        assertEquals(6, squareRoot.mySqrt(36));
+        assertEquals(6, squareRoot.mySqrt(37));
+    }
 }
 
