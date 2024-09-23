@@ -29,5 +29,11 @@ public class SquareRootTest {
         assertEquals(6, squareRoot.mySqrt(36));
         assertEquals(6, squareRoot.mySqrt(37));
     }
+
+    @Test
+    public void testLeetCodeTests() {
+        System.out.println(squareRoot.mySqrt(2147395599));
+        assertEquals(46339,squareRoot.mySqrt(2147395599));
+    }
 }
 
