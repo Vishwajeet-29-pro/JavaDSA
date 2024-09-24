@@ -346,6 +346,7 @@
 - [x] React JS
 - [x] TODO APP tried to handle test cases but still failing
 - [x] Reactive programming
+
 ###### 21 Sept 2024
 - [x] Job Apply
 - [x] Java and Java 8 practice
@@ -370,17 +371,31 @@
 - [x] Some information related to Job Apply collected.
 
 ###### 23 Sept 2024
-- [ ] Job Apply
-- [ ] Java and Java 8 practice
-- [ ] Kotlin practice
-- [ ] LeetCode problem
-- [ ] TDD
-- [ ] Notes Reading or tutorial watching
-  - [ ] React JS
-  - [ ] Kubernetes
-  - [ ] CICD GitHub actions & pipeline.
-  - [ ] Docker compose
+- [x] Job Apply
+- [x] Java and Java 8 practice
+- [x] Kotlin practice
+- [x] LeetCode problem
+- [x] TDD
+- [x] Notes Reading or tutorial watching
+  - [x] React JS
+  - [x] Kubernetes
+  - [x] CICD GitHub actions & pipeline.
+  - [x] Docker YouTube videos
 - [ ] Finding the Consultancy Service related information.
 - [ ] Try to finish TODO app.
-- [ ] Revise Reactive programming.
-- [ ] Write some post on the Medium.com
+- [x] Revise Reactive programming.
+- [x] Write some post on the Medium.com
+
+###### 24 Sept 2024
+- [ ] Job Apply
+- [ ] Java and Java 8 Practice
+- [ ] Kotlin practice
+- [ ] LeetCode problem in Java and in Kotlin with solution submission.
+- [ ] Notes & Tutorials
+  - [ ] React JS
+  - [ ] Kubernetes
+  - [ ] CICD GitHub action
+  - [ ] Docker YouTube Tutorial
+- [ ] Revise Reactive programming more.
+- [ ] Post on Medium.com
+- [ ] Consultancy Service Info.
