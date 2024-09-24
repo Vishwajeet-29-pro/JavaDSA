@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,5 +36,16 @@ class OrderProcessingSystemTest {
         double expected = 93400;
         double actual = orderProcessing.findTotalPriceOfAllCompleteOrder(orders);
         assertEquals(expected, actual);
+    }
+
+    // Find the most expensive product across all orders.
+    @Test
+    public void testFindMostExpensiveProduct() {
+        Optional<Product> expected = Optional.of(new Product("CPU", 25000));
+        Optional<Product> actual = orderProcessing.findMostExpensiveProduct(orders);
+
+        assertTrue(actual.isPresent());
+        assertEquals(expected.get().getName(), actual.get().getName());
+        assertEquals(expected.get().getPrice(), actual.get().getPrice());
     }
 }
