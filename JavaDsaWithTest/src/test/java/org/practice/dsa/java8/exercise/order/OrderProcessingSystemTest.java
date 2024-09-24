@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OrderProcessingSystemTest {
 
-    private OrderProcessingSystem orderProcessing;
+    private final OrderProcessingSystem orderProcessing = new OrderProcessingSystem();
     private List<Order> orders;
 
     @BeforeEach
@@ -32,8 +32,8 @@ class OrderProcessingSystemTest {
     // Find the total price of all completed orders.
     @Test
     public void testFindTotalPriceOfAllCompleteOrders() {
-        int expected = 93400;
-        int actual = orderProcessing.findTotalPriceOfAllCompleteOrder(orders);
+        double expected = 93400;
+        double actual = orderProcessing.findTotalPriceOfAllCompleteOrder(orders);
         assertEquals(expected, actual);
     }
 }
