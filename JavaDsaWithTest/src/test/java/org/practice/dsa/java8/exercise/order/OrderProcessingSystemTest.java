@@ -52,4 +52,13 @@ class OrderProcessingSystemTest {
         assertEquals(expected.get().getName(), actual.get().getName());
         assertEquals(expected.get().getPrice(), actual.get().getPrice());
     }
+
+    // Create a list of all unique products bought across all orders
+    @Test
+    public void testFindUniqueProductsFromAllOrders() {
+        List<Product> expected = List.of(p1, p2, p3, p4);
+        List<Product> actual = orderProcessing.findUniqueProductsAcrossAllOrder(orders);
+        assertEquals(expected, actual);
+        actual.stream().map(Product::getName).forEach(System.out::println);
+    }
 }
