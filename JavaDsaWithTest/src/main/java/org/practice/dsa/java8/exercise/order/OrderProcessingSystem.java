@@ -29,4 +29,14 @@ public class OrderProcessingSystem {
                 .distinct()
                 .toList();
     }
+
+    // Get the average price of all products across completed orders
+    public double findAveragePriceOfProducts(List<Order> orders) {
+        return orders.stream()
+                .filter(order -> "COMPLETED".equalsIgnoreCase(order.getStatus()))
+                .flatMap(order -> order.getProducts().stream())
+                .mapToDouble(Product::getPrice)
+                .average()
+                .orElse(0.0);
+    }
 }
