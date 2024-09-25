@@ -14,13 +14,17 @@ class OrderProcessingSystemTest {
 
     private final OrderProcessingSystem orderProcessing = new OrderProcessingSystem();
     private List<Order> orders;
+    Product p1;
+    Product p2;
+    Product p3;
+    Product p4;
 
     @BeforeEach
     public void setup() {
-        Product p1 = new Product("CPU", 25000);
-        Product p2 = new Product("Monitor", 20000);
-        Product p3 = new Product("Mouse", 1000);
-        Product p4 = new Product("Keyboard", 1400);
+        p1 = new Product("CPU", 25000);
+        p2 = new Product("Monitor", 20000);
+        p3 = new Product("Mouse", 1000);
+        p4 = new Product("Keyboard", 1400);
 
         Order o1 = new Order("COMPLETED", List.of(p1, p2, p3));
         Order o2 = new Order("PENDING", List.of(p1, p2, p4));
@@ -41,7 +45,7 @@ class OrderProcessingSystemTest {
     // Find the most expensive product across all orders.
     @Test
     public void testFindMostExpensiveProduct() {
-        Optional<Product> expected = Optional.of(new Product("CPU", 25000));
+        Optional<Product> expected = Optional.of(p1);
         Optional<Product> actual = orderProcessing.findMostExpensiveProduct(orders);
 
         assertTrue(actual.isPresent());
