@@ -61,4 +61,13 @@ class OrderProcessingSystemTest {
         assertEquals(expected, actual);
         actual.stream().map(Product::getName).forEach(System.out::println);
     }
+
+    // Get the average price of all products across completed orders
+    @Test
+    public void testAveragePriceOfProductThatCompletedOrders() {
+        double expected = 13342.857142857143;
+        double actual = orderProcessing.findAveragePriceOfProducts(orders);
+
+        assertEquals(expected, actual);
+    }
 }
