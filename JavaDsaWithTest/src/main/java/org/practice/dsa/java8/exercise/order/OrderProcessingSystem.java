@@ -21,4 +21,12 @@ public class OrderProcessingSystem {
                 .flatMap(order -> order.getProducts().stream())
                 .max(Comparator.comparingDouble(Product::getPrice));
     }
+
+    // Create a list of all unique products bought across all orders
+    public List<Product> findUniqueProductsAcrossAllOrder(List<Order> orders) {
+        return orders.stream()
+                .flatMap(order -> order.getProducts().stream())
+                .distinct()
+                .toList();
+    }
 }
