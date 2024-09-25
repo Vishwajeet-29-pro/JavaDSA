@@ -387,15 +387,29 @@
 - [x] Write some post on the Medium.com
 
 ###### 24 Sept 2024
+- [x] Job Apply
+- [x] Java and Java 8 Practice
+- [x] Kotlin practice
+- [x] LeetCode problem in Java and in Kotlin with solution submission.
+- [x] Notes & Tutorials
+  - [x] React JS
+  - [x] Kubernetes
+  - [x] CICD GitHub action
+  - [x] Docker YouTube Tutorial
+- [ ] Revise Reactive programming more.
+- [x] Post on Medium.com
+- [x] Consultancy Service Info.
+
+###### 25 Sept 2024
 - [ ] Job Apply
 - [ ] Java and Java 8 Practice
-- [ ] Kotlin practice
+- [ ] Kotlin Practice
 - [ ] LeetCode problem in Java and in Kotlin with solution submission.
-- [ ] Notes & Tutorials
+- [ ] May be one video lecture on DSA
+- [ ] Notes & Tutorial
   - [ ] React JS
-  - [ ] Kubernetes
-  - [ ] CICD GitHub action
+  - [ ] CI/CD GitHub Action
   - [ ] Docker YouTube Tutorial
-- [ ] Revise Reactive programming more.
+- [ ] Revise Reactive programming.
 - [ ] Post on Medium.com
-- [ ] Consultancy Service Info.
+- [ ] Consultancy Service info and more details.
