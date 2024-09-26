@@ -401,15 +401,40 @@
 - [x] Consultancy Service Info.
 
 ###### 25 Sept 2024
-- [ ] Job Apply
-- [ ] Java and Java 8 Practice
-- [ ] Kotlin Practice
-- [ ] LeetCode problem in Java and in Kotlin with solution submission.
+- [x] Job Apply
+- [x] Java and Java 8 Practice
+- [x] Kotlin Practice
+- [x] LeetCode problem in Java and in Kotlin with solution submission.
 - [ ] May be one video lecture on DSA
-- [ ] Notes & Tutorial
-  - [ ] React JS
-  - [ ] CI/CD GitHub Action
-  - [ ] Docker YouTube Tutorial
+- [x] Notes & Tutorial
+  - [x] React JS
+  - [x] CI/CD GitHub Action
+  - [x] Docker YouTube Tutorial
 - [ ] Revise Reactive programming.
-- [ ] Post on Medium.com
+- [x] Post on Medium.com
 - [ ] Consultancy Service info and more details.
+
+###### 26 Sept 2024:
+- [ ] Job Apply
+  - [ ] LinkedIn
+  - [ ] Naukri.com
+  - [ ] Career sites of MNC's
+- [ ] Java practice
+  - [ ] Read Interview Questions
+  - [ ] Revise Concepts from GitHub Repository
+- [ ] Java 8 Problem-solving to more idea on which methods needs to use.
+- [ ] Kotlin Practice
+  - [ ] Write down the theory part much faster as possible
+  - [ ] Revise the already done things.
+- [ ] LeetCode problem
+  - [ ] One on Binary Search in both Java and Kotlin
+  - [ ] Other on Array or may be on sorting in both Java and Kotlin.
+- [ ] Tutorials
+  - [ ] React JS related
+  - [ ] Kubernetes
+  - [ ] CI/CD Development
+- [ ] Revise Reactive programming
+- [ ] Optional Things
+  - [ ] Medium.com post
+  - [ ] Showcase Repository work
+  - [ ] Other time-consuming things.
