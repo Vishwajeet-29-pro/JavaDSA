@@ -415,26 +415,34 @@
 - [ ] Consultancy Service info and more details.
 
 ###### 26 Sept 2024:
-- [ ] Job Apply
-  - [ ] LinkedIn
-  - [ ] Naukri.com
-  - [ ] Career sites of MNC's
-- [ ] Java practice
-  - [ ] Read Interview Questions
-  - [ ] Revise Concepts from GitHub Repository
-- [ ] Java 8 Problem-solving to more idea on which methods needs to use.
-- [ ] Kotlin Practice
-  - [ ] Write down the theory part much faster as possible
-  - [ ] Revise the already done things.
+- [x] Job Apply
+	- [x] LinkedIn
+	- [x] Naukri.com
+	- [x] Career sites of MNC's
+- [x] Java practice
+	- [x] Read Interview Questions
+	- [x] Revise Concepts from GitHub Repository
+- [ ] Java 8 Problem solving to more idea on which methods needs to use.
+- [x] Kotlin Practice
+	- [x] Write down the theory part much faster as possible
+	- [ ] Revise the already done things.
 - [ ] LeetCode problem
-  - [ ] One on Binary Search in both Java and Kotlin
-  - [ ] Other on Array or may be on sorting in both Java and Kotlin.
-- [ ] Tutorials
-  - [ ] React JS related
-  - [ ] Kubernetes
-  - [ ] CI/CD Development
+	- [x] One on Binary Search in both Java and Kotlin
+	- [ ] Other on Array or may be on sorting in both Java and Kotlin.
+- [ ] Tutorials 
+	- [x] React JS related
+	- [x] Kubernetes
+	- [x] CICD Development
 - [ ] Revise Reactive programming
-- [ ] Optional Things
-  - [ ] Medium.com post
-  - [ ] Showcase Repository work
-  - [ ] Other time-consuming things.
+- [ ] Optional Things 
+	- [ ] Medium.com post
+	- [ ] Showcase Repository work
+	- [ ] Other time consuming things.
+
+###### 27 Sept 2024
+- [ ] Job Apply
+- [ ] Kotlin Theory
+- [ ] LeetCode Problem
+- [ ] TDD
+- [ ] Kubernetes
+- [ ] React JS
