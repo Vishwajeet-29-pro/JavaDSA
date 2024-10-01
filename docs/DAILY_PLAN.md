@@ -440,9 +440,15 @@
 	- [ ] Other time consuming things.
 
 ###### 27 Sept 2024
-- [ ] Job Apply
-- [ ] Kotlin Theory
-- [ ] LeetCode Problem
-- [ ] TDD
-- [ ] Kubernetes
+- [x] Job Apply
+- [x] Kotlin Theory
+- [x] LeetCode Problem
+- [x] TDD
+- [x] Kubernetes
 - [ ] React JS
+
+###### 1 Oct 2024:
+- [ ] Job Apply
+- [ ] Interview Question on spring boot reading
+- [ ] Try to solve one DSA problem before meeting
+- [ ] Find time for other things like Kubernetes, ReactJS, etc.
