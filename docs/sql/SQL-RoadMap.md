@@ -1,9 +1,9 @@
 ### SQL Roadmap for Java Developers
 1. Basics of SQL
-   - [ ] Introduction to Databases & SQL 
-   - [ ] What is a database, tables, and relationships? 
-   - [ ] SQL vs. NoSQL 
-   - [ ] Differences between PostgreSQL and MySQL
+   - [x] Introduction to Databases & SQL 
+   - [x] What is a database, tables, and relationships? 
+   - [x] SQL vs. NoSQL 
+   - [x] Differences between PostgreSQL and MySQL
 
    - Basic SQL Queries
    - [ ] SELECT statements
