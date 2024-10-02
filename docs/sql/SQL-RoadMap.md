@@ -1,0 +1,121 @@
+### SQL Roadmap for Java Developers
+1. Basics of SQL
+   - [ ] Introduction to Databases & SQL 
+   - [ ] What is a database, tables, and relationships? 
+   - [ ] SQL vs. NoSQL 
+   - [ ] Differences between PostgreSQL and MySQL
+
+   - Basic SQL Queries
+   - [ ] SELECT statements
+   - [ ] Filtering using WHERE clause
+   - [ ] Sorting results with ORDER BY
+   - [ ] Limiting results with LIMIT (MySQL) / FETCH (PostgreSQL)
+
+   - Data Manipulation Language (DML)
+   - [ ] INSERT: Inserting data into tables
+   - [ ] UPDATE: Modifying existing records
+   - [ ] DELETE: Removing data from tables
+   - [ ] Truncate: Efficiently removing all records from a table
+
+   - Data Definition Language (DDL)
+   - [ ] CREATE and ALTER: Creating/modifying tables and schema
+   - [ ] DROP: Deleting tables or databases
+   - [ ] Constraints: Primary key, foreign key, unique, not null, default
+
+2. Intermediate SQL
+   - Joins
+   - [ ] INNER JOIN: Fetching data from multiple tables where there is a match
+   - [ ] LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
+   - [ ] CROSS JOIN and SELF JOIN
+
+   - Aggregate Functions
+
+   - [ ] COUNT, SUM, AVG, MIN, MAX
+   - [ ] Grouping data using GROUP BY
+   - [ ] Filtering grouped data using HAVING
+
+   - Subqueries
+
+   - [ ] Inline (correlated) vs. independent subqueries
+   - [ ] IN, EXISTS, ANY, and ALL operators
+
+   - String Functions
+
+   - [ ] CONCAT, UPPER, LOWER, SUBSTRING, TRIM, LIKE
+
+   - Date and Time Functions
+
+   - [ ] Working with DATE, TIME, TIMESTAMP
+   - [ ] Functions like NOW(), CURRENT_DATE, DATEADD, DATEDIFF
+
+   - Indexing
+
+   - [ ] Basics of creating and using indexes
+   - [ ] Performance impact of indexes
+
+3. Advanced SQL
+   - Transactions & ACID Properties
+
+   - [ ] Atomicity, Consistency, Isolation, Durability
+   - [ ] BEGIN, COMMIT, ROLLBACK in MySQL/PostgreSQL
+   - [ ] Understanding SAVEPOINT
+
+   - Views
+
+   - [ ] Creating and managing views
+   - [ ] Advantages and limitations
+
+   - Stored Procedures & Functions
+
+   - [ ] Writing basic stored procedures and functions in MySQL/PostgreSQL
+   - [ ] Using PL/pgSQL for PostgreSQL and DELIMITER in MySQL
+
+   - Triggers
+
+   - [ ] What are triggers?
+   - [ ] Creating before and after triggers
+
+   - CTE (Common Table Expressions)
+
+   - [ ] Recursive queries using WITH
+
+   - Window Functions
+
+   - [ ] ROW_NUMBER(), RANK(), DENSE_RANK(), LEAD(), LAG()
+
+   - Optimization & Query Tuning
+
+   - [ ] Understanding execution plans with EXPLAIN
+   - [ ] Optimizing joins, subqueries, and complex queries
+   - [ ] Avoiding full table scans, using indexes effectively
+
+4. Database Design and Normalization
+   - Normalization
+
+   - [ ] 1st, 2nd, and 3rd Normal Forms
+   - [ ] Denormalization and when to use it
+
+   - Relationships
+
+   - [ ] One-to-One, One-to-Many, Many-to-Many
+   - [ ] How to implement these relationships in MySQL/PostgreSQL
+
+   - ER Diagram Basics
+
+   - [ ] Entities, attributes, and relationships
+   - [ ] Converting ER diagrams to SQL tables
+
+5. Integration with Java (Bonus)
+   - Using JDBC
+
+   - [ ] Basics of connecting to MySQL/PostgreSQL with JDBC
+   - [ ] Running queries and handling result sets
+   - [ ] Prepared statements to prevent SQL injection
+
+   - ORM (Object-Relational Mapping)
+
+   - [ ] Working with Hibernate, JPA, and Spring Data
+   - [ ] Writing JPQL (Java Persistence Query Language)
+
+- Write and execute queries on sample datasets. Use sites like LeetCode, HackerRank, or SQLZoo for practice.
+
