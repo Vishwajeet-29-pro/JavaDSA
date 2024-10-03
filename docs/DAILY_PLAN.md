@@ -448,7 +448,18 @@
 - [ ] React JS
 
 ###### 1 Oct 2024:
+- [x] Job Apply
+- [x] Interview Question on spring boot reading
+- [x] Try to solve one DSA problem before meeting (in meeting solved one)
+- [ ] Find time for other things like Kubernetes, ReactJS, etc. not able to.
+
+###### 2 Oct 2024:
 - [ ] Job Apply
-- [ ] Interview Question on spring boot reading
-- [ ] Try to solve one DSA problem before meeting
-- [ ] Find time for other things like Kubernetes, ReactJS, etc.
+- [ ] Java and related practice
+- [ ] Kotlin and related theory + practice
+- [ ] Theory of SQL
+- [ ] Problem solving
+- [ ] Video Tutorials
+    - [ ] Kubernetes
+    - [ ] ReactJS
+- [ ] Other incoming things
