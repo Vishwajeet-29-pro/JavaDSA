@@ -6,10 +6,10 @@
    - [x] Differences between PostgreSQL and MySQL
 
    - Basic SQL Queries
-   - [ ] SELECT statements
-   - [ ] Filtering using WHERE clause
-   - [ ] Sorting results with ORDER BY
-   - [ ] Limiting results with LIMIT (MySQL) / FETCH (PostgreSQL)
+   - [x] SELECT statements
+   - [x] Filtering using WHERE clause
+   - [x] Sorting results with ORDER BY
+   - [x] Limiting results with LIMIT (MySQL) / FETCH (PostgreSQL)
 
    - Data Manipulation Language (DML)
    - [ ] INSERT: Inserting data into tables
