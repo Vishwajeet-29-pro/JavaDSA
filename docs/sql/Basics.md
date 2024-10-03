@@ -22,12 +22,12 @@ SQL is a domain-specific language used to communicate with relational databases.
 - Creating and modifying tables or structures
   SQL is essential for interacting with databases like MySQL and PostgreSQL which follows the relational model.
 ### SQL vs. NoSQL
-Understanding the differences between SQL and NoSQL is crucial for modern applications development:
+Understanding the differences between SQL and NoSQL is crucial for modern applications' development:
 
 | Feature           | SQL (Relational DB)                                                                | NoSQL (Non-relational DB)                                     |
 |-------------------|------------------------------------------------------------------------------------|---------------------------------------------------------------|
 | Data Structure    | Tables (rows and columns)                                                          | Documents, key-value pairs, wide-columns, etc                 |
-| Schema            | Predefined schemas; data must follow a specific fomat                              | Dynamic Schema; data can be unstructured                      |
+| Schema            | Predefined schemas; data must follow a specific format                             | Dynamic Schema; data can be unstructured                      |
 | ACID Transactions | Strong support for ACID properties (atomicity, consistency, isolation, durability) | May support ACID, but not always enforced                     |
 | Examples          | MySQL, PostgreSQL, Oracle                                                          | MongoDB, CouchDB, Cassandra                                   |
 | Best Suited For   | Complex queries, relationships, structured data                                    | Flexible schemas, handling large volumes of unstructured data |
@@ -43,3 +43,142 @@ While both PostgreSQL and MySQL are popular open-source relational databases, th
 | Extensibility   | Highly extensible, supports custom data types and functions                        | Limited extensibility                                  |
 | Use Case        | Suitable for complex applications requiring advanced queries and data integrity.   | Suitable for simple to medium complexity applications. |
 | Community       | Strong, but smaller community compared to MySQL                                    | One of the most widely used and supported database     |
+
+### Basic SQL Queries:
+#### SELECT Query: 
+The `SELECT` statement is used to retrieve data from a database. It's one of the most frequently used SQL commands, forming the foundation for querying databases.
+1. SELECT Statements Basics
+    A `SELECT` statement retrieves data from one or more columns of a table:
+    ```
+    SELECT column1, column2, ... FROM table_name;
+    ```
+    - column1, column2, ... : The columns you want to fetch from the table.
+      - table_name: The name of the table from which you want to retrieve data.
+      **Example:** If we have a table called `Employees`:
+    
+    | EmpId | FirstName | LastName | Age | Department |
+    |-------|-----------|----------|-----|------------|
+    | 1     | John      | Doe      | 30  | HR         |
+    | 2     | Jane      | Smith    | 25  | IT         |
+    | 3     | Bob       | Brown    | 40  | Marketing  |
+  
+    ```
+    SELECT FirstName, LastName FROM Employees;
+    ```
+    This query will return:
+  
+    | FirstName | LastName |
+    |-----------|----------|
+    | John      | Doe      |
+    | Jane      | Smith    |
+    | Bob       | Brown    |
+
+2. **Filtering Data Using the WHERE Clause:**
+    The `WHERE` clause is used to filter records. It retrieves only the rows that satisfy a given condition.
+    ```
+    SELECT column1, column2, ... FROM table_name WHERE condition;
+    ```
+   Example: To get employees who are older than 30:
+   ```
+   SELECT FirstName, LastName FROM Employee WHERE Age > 30;
+   ```
+    This will return:
+    
+    | FirstName | LastName |
+    |-----------|----------| 
+    | Bob       | Brown    |
+
+3. **Sorting Results using ORDER BY:**
+    The `ORDER BY` clause is used to sort the result set in ascending or descending order based on one or more columns.
+    ```
+   SELECT column1, column2, ... FROM table_name ORDER BY column1 [ASC|DESC];
+    ```
+   - ASC: Ascending order (default)
+   - DESC: Descending order.
+    
+   **Example:** To get all employees sorted by LastName in ascending order:
+    ```
+    SELECT FirstName, LastName FROM Employee ORDER BY LastName ASCE;
+    ```
+   This will return:
+
+    | FirstName | LastName |
+    |-----------|----------|
+    | Bob       | Brown    |
+    | John	     | Doe      |
+    | Jane	     | Smith    |
+    
+    To sort by Age in descending order:
+    ```
+   SELECT FirstName, LastName, Age FROM Employees ORDER BY Age DESC;
+    ```
+   This will Return:
+
+   | FirstName | LastName | Age |
+   |-----------|----------|:---:|
+   | Bob       | Brown    | 	40 |
+   | John	     | Doe      | 	30 |
+   | Jane	     | Smith    | 	25 |
+
+4. **Limiting Results:**
+    Often, you want to limit the number of rows returned by a query. The methods for limiting rows vary between MySQL and PostgreSQL.
+    - In MySQL. you use the LIMIT clause.
+    - In PostgreSQL, you use FETCH or LIMIT.
+
+   MySQL - Using Limit
+   ```
+   SELECT column1, column2, ... FROM table_name LIMIT number_of_rows;
+   ```
+   **Example:** To get the first 2 employees from the Employees table:
+    ```
+    SELECT FirstName, LastName FROM Employees LIMIT 2;
+    ```
+   This will return:
+
+    | FirstName | LastName   |
+    |-----------|------------| 
+    | John      | 	Doe       |
+    | ane       | Smith      |   
+
+    PostgreSQL - Using FETCH
+    In PostgreSQL, FETCH is used to limit the number of rows returned:
+    ```
+    SELECT column1, column2, ... FROM table_name FETCH FIRST number_of_rows ROWS ONLY;
+    ```
+   Example: To fetch the first 2 rows:
+    ```
+    SELECT FirstName, LastName FROM Employees FETCH FIRST 2 ROWS ONLY;
+    ```
+    The result will be same as in MySQL:
+
+   | FirstName | LastName   |
+   |-----------|------------| 
+   | John      | 	Doe       |
+   | Jane      | Smith      |   
+    
+    Alternatively, in both MySQL and PostgreSQL, you can use the OFFSET clause with LIMIT or FETCH to skip a certain number of rows before retrieving the results.
+    **Using OFFSET:**
+   ``` 
+   SELECT column1, column2, ... FROM table_name LIMIT number_of_rows OFFSET number_of_rows_to_skip;
+   ```
+   or in PostgreSQL:
+   ```
+   SELECT column1, column2, ... FROM table_name OFFSET number_of_rows_to_skip FETCH FIRST number_of_rows ROWS ONLY;
+   ```
+   **Example:** To skip the first row and fetch the next two:
+    ```
+    SELECT FirstName, LastName FROM Employees LIMIT 2 OFFSET 1;
+    ```
+    This will return:
+
+   | FirstName | LastName |
+   |-----------|----------| 
+   | John      | 	Doe     |
+   | Bob       | Brown    |   
+
+##### Recap
+- SELECT: Retrieve data from a table.
+- WHERE: Filter rows based on conditions.
+- ORDER BY: Sort rows by a column in ascending or descending order.
+- LIMIT (MySQL) / FETCH (PostgreSQL): Limit the number of rows returned.
+- OFFSET: Skip a certain number of rows before starting to retrieve rows.
