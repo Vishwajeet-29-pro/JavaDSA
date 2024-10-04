@@ -15,4 +15,11 @@ class LowercaseTest {
         assertEquals(expected, lowercase.toLowerCase(input));
     }
 
+    @Test
+    public void testLowerCaseForSmallCase() {
+        String input = "here";
+        String expected = "here";
+        assertEquals(expected, lowercase.toLowerCase(input));
+    }
+
 }
