@@ -1,0 +1,18 @@
+package org.practice.dsa.leet_code.easy;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class LowercaseTest {
+
+    private final QuestionLowercase lowercase = new QuestionLowercase();
+
+    @Test
+    public void testLowerCase() {
+        String input = "STATIC";
+        String expected = "static";
+        assertEquals(expected, lowercase.toLowerCase(input));
+    }
+
+}
