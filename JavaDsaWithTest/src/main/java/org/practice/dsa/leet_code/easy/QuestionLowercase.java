@@ -6,7 +6,7 @@ public class QuestionLowercase {
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
                  result.append((char) (s.charAt(i) + 32));
-            } else return s;
+            } else result.append(s.charAt(i));
         }
 
 
