@@ -22,4 +22,11 @@ class LowercaseTest {
         assertEquals(expected, lowercase.toLowerCase(input));
     }
 
+    @Test
+    public void testLowerCaseForCamelCase() {
+        String input = "Hello";
+        String expected = "hello";
+        assertEquals(expected, lowercase.toLowerCase(input));
+    }
+
 }
