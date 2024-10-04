@@ -453,13 +453,23 @@
 - [x] Try to solve one DSA problem before meeting (in meeting solved one)
 - [ ] Find time for other things like Kubernetes, ReactJS, etc. not able to.
 
-###### 2 Oct 2024:
-- [ ] Job Apply
+###### 3 Oct 2024:
+- [x] Job Apply
 - [ ] Java and related practice
-- [ ] Kotlin and related theory + practice
-- [ ] Theory of SQL
+- [x] Kotlin and related theory + practice
+- [x] Theory of SQL
 - [ ] Problem solving
 - [ ] Video Tutorials
-    - [ ] Kubernetes
+    - [x] Kubernetes
     - [ ] ReactJS
 - [ ] Other incoming things
+
+###### 4 Oct 2024:
+- [ ] Job Apply
+- [ ] Java and related practice
+- [ ] Kotlin and related
+- [ ] Theory of SQL
+- [ ] Try to solve one problem
+- [ ] Kubernetes
+- [ ] ReactJS
+- [ ] Other things. (if completed mention them.)
