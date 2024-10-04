@@ -12,10 +12,10 @@
    - [x] Limiting results with LIMIT (MySQL) / FETCH (PostgreSQL)
 
    - Data Manipulation Language (DML)
-   - [ ] INSERT: Inserting data into tables
-   - [ ] UPDATE: Modifying existing records
-   - [ ] DELETE: Removing data from tables
-   - [ ] Truncate: Efficiently removing all records from a table
+   - [x] INSERT: Inserting data into tables
+   - [x] UPDATE: Modifying existing records
+   - [x] DELETE: Removing data from tables
+   - [x] Truncate: Efficiently removing all records from a table
 
    - Data Definition Language (DDL)
    - [ ] CREATE and ALTER: Creating/modifying tables and schema
