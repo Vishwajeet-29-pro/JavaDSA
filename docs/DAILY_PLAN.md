@@ -465,11 +465,22 @@
 - [ ] Other incoming things
 
 ###### 4 Oct 2024:
+- [x] Job Apply
+- [x] Java and related practice
+- [x] Kotlin and related
+- [x] Theory of SQL
+- [x] Try to solve one problem
+- [ ] Kubernetes
+- [ ] ReactJS
+- [ ] Other things. (if completed mention them.)
+
+###### 5 Oct 2024:
 - [ ] Job Apply
 - [ ] Java and related practice
 - [ ] Kotlin and related
 - [ ] Theory of SQL
-- [ ] Try to solve one problem
+- [ ] Problem solving
 - [ ] Kubernetes
 - [ ] ReactJS
-- [ ] Other things. (if completed mention them.)
+- [ ] Resume update
+- [ ] Interview questions.
