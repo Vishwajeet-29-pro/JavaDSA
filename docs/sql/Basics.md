@@ -316,3 +316,38 @@ alerting the actual data stored in tables.
 - UPDATE: Modifies existing records based on a condition.
 - DELETE: Removes records based on a condition (or all records if no condition is specified).
 - TRUNCATE: Efficiently removes all records from a table, resetting auto-increment counters
+
+## Data Definition Language (DDL):
+DDL refers to the SQL Commands that define or modify the structure of a database. It deals with schema creation, modification, and deletion of database objects like tables,
+indexes, views, etc. Let's get over the core DDL commands: `CREATE`, `ALTER`, `DROP`, and constraints like `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, and `DEFAULT`.
+
+1. **CREATE and ALTER: Creating/ Modifying Tables and Schema**
+   1. **CREATE TABLE: Creating a Table** The `CREATE` statement is used to create new database objects, such as tables, views, indexes, and schemas.
+        Basic Syntax (Creating a Table):
+        ```
+        CREATE TABLE table_name (
+             column1 datatype constraint,
+             column2 datatype consraint,
+             ... 
+        )
+        ```
+       - table_name: Name of the table you are creating.
+       - column1, column2, ... : The columns of the table.
+       - datatype: Specifies the type of data (e.g., `INT`, `VARCHAR`, `DATE`).
+       - constraint: Any restrictions on the column (eg. `PRIMARY KEY`, `NOT NULL`).
+    
+          Example:
+         ```
+         CREATE TABLE Employees (
+              EmployeeID INT PRIMARY KEY,
+              FirstName VARCHAR(50) NOT NULL, 
+              LastName VARCHAR(50),
+              Age INT DEFAULT 25
+         );
+         ```
+          This creates an Employees table with columns for EmployeeID, FirstName, LastName, and Age. The EmployeeID is a primary key and must be unique, and FirstName cannot be NULL.
+      
+   2. **ALTER TABLE: Modifying a Table** The ALTER statement is used to modify the structure of an existing table. You can add, delete, or modify columns, and you can also add or remove constraints.
+
+
+
