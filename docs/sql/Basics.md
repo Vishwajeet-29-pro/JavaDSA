@@ -348,6 +348,132 @@ indexes, views, etc. Let's get over the core DDL commands: `CREATE`, `ALTER`, `D
           This creates an Employees table with columns for EmployeeID, FirstName, LastName, and Age. The EmployeeID is a primary key and must be unique, and FirstName cannot be NULL.
       
    2. **ALTER TABLE: Modifying a Table** The ALTER statement is used to modify the structure of an existing table. You can add, delete, or modify columns, and you can also add or remove constraints.
+      Basic Syntax:
+        ```
+        ALTER TABLE table_name 
+        ADD column_name datatype;
+        ```
+      **Example:** Adding a column:
+        ```
+        ALTER TABLE Employees 
+        ADD Email VARCHAR(100);
+        ```
+      This adds a new `Email` column to the Employees table. 
+      
+      **Basic Syntax (Modifying a Column):**
+        ```
+        ALTER TABLE table_name
+        MODIFY column_name datatype;
+        ```
+      **Example (Modifying a Column):**
+        ```
+        ALTER TABLE Employees
+        MODIFY Age INT DEFAULT 30;
+        ```
+      This modifies the Age column to have a default value of 30.
+        
+      **Basic Syntax (Dropping a Column):**
+        ```
+        ALTER TABLE table_name DROP COLUMN column_name;
+        ```
+      Example (Dropping a column):
+        ```
+        ALTER TABLE Employees DROP COLUMN Email; 
+        ```
+      This removes the Email column from the Employees table.
 
+2. **DROP: Deleting Tables or Databases:**
+    The DROP statement is used to remove entire tables, databases, or other databases objects from the system. Once dropped, the data and structure are permanently deleted, and this action cannot be rolled back.
+    **Basic Syntax:**
+    ```
+    DROP TABLE table_name;
+    ```
+    Example:
+    ```
+    DROP TABLE Employees;
+    ```
+    This deletes the entire Employees table from the database.
 
+    **Basic Syntax (Dropping a Database):**
+    ```
+    DROP DATABASe database_name;
+    ```
+    Example:
+   ```
+    DROP DATABASE CompanyDB;
+   ```
+   This deletes the CompanyDB database and all of its contents.
+        
+3. **Constraints:**
+    Constraints are rules applied to table columns to enforce data integrity. Common constraints include `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL` and `DEFAULT`.
+   1. **PRIMARY KEY**
+      - A PRIMARY KEY is a unique identifier for a record in the table. It cannot contain NULL values and must be unique.
+      - There can only be one PRIMARY KEY per table.
+      Example:
+      ```
+       CREATE TABLE Employees {
+        EmployeeID INT PRIMARY KEY,
+        FirstNAME VARCHAR(30) NOT NULL,
+        LastName VARCHAR(50)
+      ); 
+      ```
+   2. **Foreign Key:** 
+      - A `FOREIGN KEY` establishes a relationship between two tables. It enforces referential integrity by ensuring that the value in a column matches the value in a primary key column
+        of another table.
+      Example:
+      - Let's assume we have another table `Departments:`
+      ```
+       CREATE TABLE Departments (
+       DepartmentID INT PRIMARY KEY,
+       DepartmentName VARCHAR(50)
+       );
+      ```
+      To Create a `FOREIGN KEY` relationship between Employees and Department:
+      ```
+       CREATE TABLE Employees (
+       EmployeeID INT PRIMARY KEY,
+       FirstName VARCHAR(50) NOT NULL,
+       DepartmentID INT,
+       FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+      );
+      ```
+      Here, DepartmentID in the Employees table is a foreign key that references the DepartmentID in the Departments table.
 
+   3. **Unique:**
+        - A `UNQIUE` constraint ensures that all values in a column are distinct (no duplicates).
+       Example:
+      ```
+        CREATE TABLE Employees (
+        EmployeeID INT PRIMARY KEY,
+        Email VARCHAR(100) UNIQUE
+        );
+      ```
+       This ensures that no two employees can have the same email address.
+
+   4. **Not Null**
+      - The NOT NULL constraints prevents NULL values from being inserted into the column.
+        Example:
+        ```
+         CREATE TABLE Employees (
+         EmployeeID INT PRIMARY KEY,
+         FirstName VARCHAR(50) NOT NULL
+         );
+        ```
+        Here, the FirstName column cannot contain NULL values.
+
+   5. **Default:** 
+        - The `DEFAULT` constraint sets a default values for a column if no values is provided during an INSERT.
+         ```
+          CREATE TABLE Employees (
+          EmployeeID INT PRIMARY KEY,
+          FirstName VARCHAR(50),
+          Age INT DEFAULT 25
+          );
+         ```
+      In this example, if no age is provided when inserting a new employee, the Age column will default to 25.
+
+### Recap
+- CREATE: Used to create new tables and define their structure.
+- ALTER: Used to modify the structure of existing tables (e.g., adding or removing columns).
+- DROP: Used to delete tables or databases entirely.
+- Constraints: Rules like PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and DEFAULT are used to ensure data integrity and consistency.
