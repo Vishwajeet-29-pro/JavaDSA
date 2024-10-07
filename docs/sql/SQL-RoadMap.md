@@ -18,9 +18,9 @@
    - [x] Truncate: Efficiently removing all records from a table
 
    - Data Definition Language (DDL)
-   - [ ] CREATE and ALTER: Creating/modifying tables and schema
-   - [ ] DROP: Deleting tables or databases
-   - [ ] Constraints: Primary key, foreign key, unique, not null, default
+   - [x] CREATE and ALTER: Creating/modifying tables and schema
+   - [x] DROP: Deleting tables or databases
+   - [x] Constraints: Primary key, foreign key, unique, not null, default
 
 2. Intermediate SQL
    - Joins
