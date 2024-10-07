@@ -475,12 +475,25 @@
 - [ ] Other things. (if completed mention them.)
 
 ###### 5 Oct 2024:
+- [x] Job Apply
+- [x] Java and related practice
+- [x] Kotlin and related
+- [x] Theory of SQL
+- [x] Problem solving
+- [x] Kubernetes
+- [ ] ReactJS
+- [x] Resume update
+- [ ] Interview questions.
+
+###### 7 Oct 2024:
 - [ ] Job Apply
 - [ ] Java and related practice
-- [ ] Kotlin and related
-- [ ] Theory of SQL
-- [ ] Problem solving
+- [ ] Kotlin and related practice
+- [ ] SQL (threory)
+- [ ] One problem leetcode
 - [ ] Kubernetes
-- [ ] ReactJS
-- [ ] Resume update
-- [ ] Interview questions.
+- [ ] React JS - at least notes
+- [ ] Focus on LinkedIn and Naukri profile.
+- [ ] Interview Question
+- [ ] Book Reading
+
