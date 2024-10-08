@@ -188,3 +188,125 @@ Here we're joining the Employees table with itself to match each employee with t
 - CROSS JOIN: Returns the Cartesian product of the two tables.
 - SELF JOIN: Joins a table to itself to compare or relate rows within the same table.
 
+## Aggregate Functions in SQL:
+1. **Aggregate Functions:** Aggregate functions perform a calculation on a set of values and returns a single value. The common aggregate functions are `COUNT`, `SUM`, `AVG`, `MIN` and `MAX`.
+    1. **COUNT:** The `COUNT` function returns the number of rows that match a specified condition.
+        Syntax:
+        ```
+            SELECT COUNT(column)
+            FROM table WHERE condition; 
+        ```
+       Example: If we want to count the number of employees in the Employees table:
+       ``` 
+          SELECT COUNT(Employees) FROM Employees;
+       ```
+       Result: `COUNT(EmployeesID)  3`
+
+   2. **SUM**: The `SUM` function calculates the total sum of a numeric column. 
+        Syntax:
+        ``` 
+            SELECT SUM(column)
+            FROM table WHERE condition;
+        ```
+        Example: If we want to calculate the total salary of all employees:
+        ```
+            SELECT SUM(Salary) FROM Employees;
+        ```
+        Result:
+        SUM(Salary)
+        150000
+   
+   3. **AVG**: The AVG function returns the value of a numeric column.
+        Syntax:
+        ```  
+            SELECT AVG(column) 
+            FROM table WHERE condition;
+        ```
+        Example: To calculate the average salary of employees:
+        ```
+            SELECT AVG(Salary) FROM Employees;
+        ```
+        Result:
+        AVG(Salary)
+        50000
+
+   4. **MIN**: The `MIN` function returns the smallest value from a specified column.
+        Syntax:
+        ``` 
+            SELECT MIN(column)
+            FROM table WHERE condition;
+        ```
+        Example: To find the lowest salary:
+        ```
+            SELECT MIN(Salary) FROM Employees;
+        ```
+        Result:
+        MIN(Salary)
+        30000
+   
+   5. **MAX**: The `MAX` function returns the largest value from a specified column.
+        Syntax:
+        ``` 
+            SELECT MAX(column)
+            FROM table
+            WHERE condition;
+        ```
+        Example: To find the highest salary:
+        ```
+            SELECT MAX(Salary) FROM Employees;
+        ```
+        Result:
+        MAX(Salary)
+        70000
+
+2. **Grouping Data Using `GROUP BY`**
+    The `GROUP BY` clause is used to group rows that have the same values in specified columns into summary rows, like grouping by department or age, then applying aggregate functions.
+    Syntax:
+   ``` 
+        SELECT column, AGGREGATE_FUNCTION(column) 
+        FROM table
+        WHERE condition
+        GROUP BY column;
+   ```
+   Example: If we want to calculate the total salary for each department:
+   ``` 
+        SELECT DepartmentID, SUM(Salary) AS TotalSalary 
+        FROM Employees GROUP BY DepartmentID;
+   ```
+   Result:
+   
+     | DepartmentID | TotalSalary   |
+     |--------------|---------------|
+     | 101          | 90000         |
+     | 102          | 60000         |
+    
+   This query groups employees by their DepartmentID and calculates the total salary for each department.
+
+3. **Filtering Grouped Data Using `HAVING`**:
+    The `HAVING` clause is used to filter data after the GROUP BY operation, similar to the WHERE clause but for aggregated data.
+    Syntax:
+   ``` 
+    SELECT column, AGGREGATE_FUNCTION(column)
+    FROM table
+    WHERE condition
+    GROUP BY column
+    HAVING AGGREGATE_FUNCTION(column) condition;
+   ```
+    Example:
+    ``` 
+        SELECT DepartmentID, SUM(Salary) AS TotalSalary 
+        FROM Employees
+        GROUP BY DepartmentID
+        HAVING SUM(Salary) > 50000;
+   ```
+    Result: 
+
+   | DepartmentID | TotalSalary |
+   |--------------|-------------|
+   | 101          | 90000       |
+    The `HAVING` clause filters out the groups with total salaries less than or equal to 50000.
+
+    ### Summary:
+    - COUNT, SUM, AVG, MIN, MAX: Aggregate functions that performs calculation on a set of values.
+    - GROUP BY: Used to group rows that have the same values in specified columns and then aggregate the data.
+    - HAVING: Filters the result of the GROUP BY base on the aggregate results.

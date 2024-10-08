@@ -24,15 +24,15 @@
 
 2. Intermediate SQL
    - Joins
-   - [ ] INNER JOIN: Fetching data from multiple tables where there is a match
-   - [ ] LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
-   - [ ] CROSS JOIN and SELF JOIN
+   - [x] INNER JOIN: Fetching data from multiple tables where there is a match
+   - [x] LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
+   - [x] CROSS JOIN and SELF JOIN
 
    - Aggregate Functions
 
-   - [ ] COUNT, SUM, AVG, MIN, MAX
-   - [ ] Grouping data using GROUP BY
-   - [ ] Filtering grouped data using HAVING
+   - [x] COUNT, SUM, AVG, MIN, MAX
+   - [x] Grouping data using GROUP BY
+   - [x] Filtering grouped data using HAVING
 
    - Subqueries
 
