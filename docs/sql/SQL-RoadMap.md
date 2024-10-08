@@ -24,9 +24,9 @@
 
 2. Intermediate SQL
    - Joins
-   - [ ] INNER JOIN: Fetching data from multiple tables where there is a match
-   - [ ] LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
-   - [ ] CROSS JOIN and SELF JOIN
+   - [x] INNER JOIN: Fetching data from multiple tables where there is a match
+   - [x] LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
+   - [x] CROSS JOIN and SELF JOIN
 
    - Aggregate Functions
 
