@@ -486,14 +486,25 @@
 - [ ] Interview questions.
 
 ###### 7 Oct 2024:
+- [x] Job Apply
+- [x] Java and related practice
+- [x] Kotlin and related practice
+- [x] SQL (threory)
+- [x] One problem leetcode
+- [x] Kubernetes
+- [x] React JS - at least notes
+- [x] Focus on LinkedIn and Naukri profile.
+- [ ] Interview Question
+- [x] Book Reading
+
+###### 8 Oct 2024:
 - [ ] Job Apply
 - [ ] Java and related practice
-- [ ] Kotlin and related practice
-- [ ] SQL (threory)
-- [ ] One problem leetcode
-- [ ] Kubernetes
-- [ ] React JS - at least notes
-- [ ] Focus on LinkedIn and Naukri profile.
-- [ ] Interview Question
-- [ ] Book Reading
+- [ ] Kotlin Theory and other
+- [ ] Problem Solving
+- [ ] SQL Theory
+- [ ] Kubernetes docs or video tutorial
+- [ ] React JS - Docs
+- [ ] Interview Question at least 5 Questions
+- [ ] Book Reading.
 
