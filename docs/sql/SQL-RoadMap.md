@@ -30,9 +30,9 @@
 
    - Aggregate Functions
 
-   - [ ] COUNT, SUM, AVG, MIN, MAX
-   - [ ] Grouping data using GROUP BY
-   - [ ] Filtering grouped data using HAVING
+   - [x] COUNT, SUM, AVG, MIN, MAX
+   - [x] Grouping data using GROUP BY
+   - [x] Filtering grouped data using HAVING
 
    - Subqueries
 
