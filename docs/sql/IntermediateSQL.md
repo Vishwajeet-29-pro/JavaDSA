@@ -384,3 +384,48 @@ These operators are used to perform comparisons between a column and a set of va
         WHERE EXISTS (SELECT 1 FROM Departments d WHERE e.DepartmentID = d.DepartmentID AND d.Budget > 1000000);
     ```
     In this case, the subquery checks if there is a department with a budget over 1 million, and the outer query retrieves the employees in those departments.
+
+3. **ANY Operator:** 
+    The `ANY` operator compares a value to any value in a set of values returned by the subquery. It means "if the condition is true for any of the values."
+    Syntax:
+   ``` 
+    SELECT column FROM table
+    WHERE column > ANY (SELECT column FROM another_table WHERE condition);
+   ```
+
+    Example:
+    Find all the employees who earn more than any employee in department 2:
+    ```
+        SELECT name
+        FROM Employees
+        WHERE Salary > ANY (SELECT Salary FROM Employees WHERE DepartmentID = 2);
+    ```
+    This query compares each employee's salary to the salary of any employee in department 2. It returns employees who earn more than 
+    at least one employee in that department.
+
+4. **ALL Operator:**
+    The ALL Operator compares a value to all values in the result set returned by the subquery. It means "if the condition is true for all values."
+    Syntax: 
+    ``` 
+        SELECT column
+        FROM table
+        WHERE column > ALL (SELECT column FROM another_side WHERE condition);
+    ```
+    Example:
+    Find employees who earn more than all employees in department 2:
+    ```
+        SELECT Name
+        FROM Employees
+        WHERE Salary > ALL (SELECT Salary FROM Employees WHERE DepartmentID = 2);
+    ```
+    Here, the query returns employees whose salary is greater than every employee in department 2.
+
+    ### Summary of Concepts:
+   - Inline (Correlated) Subquery: Subquery depends on the outer query.
+   - Independent Subquery: Subquery can run independently of the outer query.
+   - IN: Checks if a value matches any value in a list or subquery result.
+   - EXISTS: Return TRUE if the subquery returns any rows.
+   - ANY: Compares a value to any value returned by the subquery.
+   - ALL: Compares a value to all values returned by the subquery.
+
+
