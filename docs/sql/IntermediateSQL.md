@@ -310,3 +310,77 @@ Here we're joining the Employees table with itself to match each employee with t
     - COUNT, SUM, AVG, MIN, MAX: Aggregate functions that performs calculation on a set of values.
     - GROUP BY: Used to group rows that have the same values in specified columns and then aggregate the data.
     - HAVING: Filters the result of the GROUP BY base on the aggregate results.
+
+## Subqueries
+A subquery (also known as an inner query) is a query nested inside antoher query (outer query). They are used to return data that will be used in the outer query.
+
+**Type of Subqueries:**
+1. **Inline (Correlated) Subqueries:** Subqueries that depend on the outer query for their values.
+2. **Independent (Non-correlated) Subqueries:** Subqueries that can be executed independently and are not dependent on the outer query.
+    
+   1. **Inline (Correlated) Subqueries:** 
+        A correlated subquery is evaluated once for each row processed by the outer query. It refers to columns from the outer query, making it "correlated" or dependent on the outer query.
+        Syntax:
+        ``` 
+            SELECT column 
+            FROM table_outer t1
+            WHERE t1.column > (SELECT AVG(column) FROM table_inner t2 WHERE t2.related_column = t1.related_column);
+        ```
+        Example: Let's assume we have two tables: Employees and Departments. If you want to find employees whose salary is higher than the average salary in their department:
+        ``` 
+            SELECT EmployeeID, Name, Salary
+            FROM Employee e
+            WHERE Salary > (SELECT AVG(Salary) FROM Employees WHERE DepartmentID = e.DepartmentID);
+        ```
+        In this example, the subquery calculates the average salary for each department, and the outer query compares each employee's salary to the department's average.
+
+   2. **Independent (Non-Correlated) Subqueries:** 
+        An independent subquery (non-correlated) can run on its own and does not rely on the outer query. It is executed first, and its result is passed to the outer query.
+        Syntax:
+        ``` 
+            SELECT column
+            FROM table
+            WHERE column = (SELECT single_column FROM table WHERE condition);
+        ```
+        Example: To find all employees working in the same department as employees with `EmployeeID = 1`:
+        ``` 
+            SELECT NAME
+            FROM Employees
+            WHERE DepartmentID = (SELECT DepartmentID FROM Employees WHERE DepartmentID = 1);
+        ```
+        In this example, the subquery retrieves the DepartmentID of employee 1 and the outer query fetches the name of all employees in that department.
+
+## IN, EXISTS, ANY, and ALL Operators:
+These operators are used to perform comparisons between a column and a set of values from a subquery.
+
+1. **IN Operator:** The `IN` operator is used to check if a value exists in a list of values returned by the subquery.
+    Syntax:
+   ``` 
+    SELECT column
+    FROM table
+    WHERE column IN (SELECT column FROM another_table WHERE condition);
+   ```
+   Example:
+   Find all employees who work in the department located in New York:
+    ``` 
+        SELECT Name
+        FROM Employees
+        WHERE DepartmentID IN (SELECT DepartmentID FROM Departments WHERE Location = `New York`);
+    ```
+   Here, the subquery returns the DepartmentID of departments in New York, and the outer query fetches employees in those departments.
+
+2. **EXISTS Operator**
+    The EXISTS operator returns `TRUE` if the subquery returns any rows. It's used to test for the existence of rows in a subquery.
+    Syntax:   
+    ```
+        SELECT column
+        FROM table
+        WHERE EXISTS (SELECT 1 FROM another_table WHERE condition);
+    ```
+    Example:
+    ```
+        SELECT Name
+        FROM Employees e
+        WHERE EXISTS (SELECT 1 FROM Departments d WHERE e.DepartmentID = d.DepartmentID AND d.Budget > 1000000);
+    ```
+    In this case, the subquery checks if there is a department with a budget over 1 million, and the outer query retrieves the employees in those departments.
