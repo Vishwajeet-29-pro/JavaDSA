@@ -498,13 +498,26 @@
 - [x] Book Reading
 
 ###### 8 Oct 2024:
+- [x] Job Apply
+- [x] Java and related practice
+- [x] Kotlin Theory and other
+- [x] Problem Solving
+- [x] SQL Theory
+- [x] Kubernetes docs or video tutorial
+- [x] React JS - Docs
+- [x] Interview Question at least 5 Questions
+- [x] Book Reading.
+
+###### 9 Oct 2024:
 - [ ] Job Apply
+- [ ] Attend Recruiter's calls
 - [ ] Java and related practice
 - [ ] Kotlin Theory and other
 - [ ] Problem Solving
 - [ ] SQL Theory
-- [ ] Kubernetes docs or video tutorial
-- [ ] React JS - Docs
-- [ ] Interview Question at least 5 Questions
-- [ ] Book Reading.
+- [ ] GitHub Action Important points and Interview Question on it.
+- [ ] Kubernetes either docs or video (based time)
+- [ ] React JS Documentation
+- [ ] Interview Questions from Note-Book
+- [ ] Book Reading
 
