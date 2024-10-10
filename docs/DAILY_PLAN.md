@@ -509,15 +509,26 @@
 - [x] Book Reading.
 
 ###### 9 Oct 2024:
-- [ ] Job Apply
-- [ ] Attend Recruiter's calls
+- [x] Job Apply
+- [x] Attend Recruiter's calls Not got any call's got few mails.
 - [ ] Java and related practice
-- [ ] Kotlin Theory and other
+- [x] Kotlin Theory and other
 - [ ] Problem Solving
+- [x] SQL Theory
+- [x] GitHub Action Important points and Interview Question on it.
+- [x] Kubernetes either docs or video (based time)
+- [x] React JS Documentation
+- [ ] Interview Questions from Note-Book
+- [x] Book Reading page 17
+
+###### 10 Oct 2024
+- [ ] Job Apply
+- [ ] Java and related practice
+- [ ] Kotlin Theory
 - [ ] SQL Theory
-- [ ] GitHub Action Important points and Interview Question on it.
-- [ ] Kubernetes either docs or video (based time)
-- [ ] React JS Documentation
+- [ ] GitHub Actions Theory
+- [ ] For problem-solving try to find some time and watch tutorial
+- [ ] Kubernetes Documentation
+- [ ] React JS Docs / Kiran's pdf
 - [ ] Interview Questions from Note-Book
 - [ ] Book Reading
-
