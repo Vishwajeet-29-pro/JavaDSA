@@ -428,4 +428,123 @@ These operators are used to perform comparisons between a column and a set of va
    - ANY: Compares a value to any value returned by the subquery.
    - ALL: Compares a value to all values returned by the subquery.
 
+## String Functions:
+1. **CONCAT Function:**
+    The CONCAT function is used to combine two or more strings into a single string.
+    Syntax:
+    ```
+        CONCAT(string1, string2, ...);
+    ```
+    Example:
+    ``` SELECT CONCAT('Hello', 'World') AS Greeting; ```
+    Output:
+    ```
+        Greeting 
+        ---------
+        Hello World
+    ```
+    You can also concatenate values from columns:
+   ``` SELECT CONCAT(FirstName, ' ',LastName) AS FullName FROM Employees; ```
+    This query combines the first name and last name of employees into a single FullName.
 
+2. **UPPER Function:**
+    The UPPER function converts all characters in a String to uppercase.
+    Syntax:
+    ``` UPPPER(string) ```
+    Example:
+    ``` SELECT UPPER('hello world') AS UpperCase; ```
+    Output:
+    ``` 
+        UpperCase
+        ---------
+        HELLO WORLD
+    ```
+    You can use it to convert column values:
+    ``` SELECT UPPER(FirstName) AS UppperCaseName FROM Employees; ```
+
+3. **LOWER Function**
+    The LOWER function converts all characters in a String to lowercase. 
+    Syntax: 
+    ``` LOWER(string) ```
+    Example:
+    ``` SELECT LOWER('HELLO WORLD')  AS LowerCase; ```
+    Output:
+    ```
+        LowerCase
+        ---------
+        hello world
+    ```
+   You can use this function in real scenarios where data might not follow proper casing conventions.
+
+4. **SUBSTRING Function**
+    The SUBSTRING function extracts a portion of a string starting from a specific position, optionally taking a length of characters to extract.
+    Syntax:
+    ``` SUBSTRING(string, start_position, length) ```
+    - start_position: The position from where to start (1-based index).
+    - length: The number of characters to extract.
+    
+    Example:
+    ``` SELECT SUBSTRING('Hello World', 1, 5) AS SubString; ```
+    
+    Output:
+    ``` 
+        SubString
+        ---------
+        Hello
+    ```
+    You can use it to extract part of a column value:
+    ``` SELECT SUBSTRING(FirstName, 1, 3) AS ShortName FROM Employees; ```
+    This Query extracts the first three characters of the FirstName.
+
+5. **TRIM Function:** 
+    The TRIM Function removes leading and trailing spaces from a string.
+    Syntax:
+    ``` TRIM([LEADING | TRAILING | BOTH] FROM string); ```
+
+    - LEADING: Removes leading (left-side) spaces.
+    - TRAILING: Removes trailing (right-side) spaces.
+    - BOTH: Removes both leading and trailing spaces (default behavior).
+    
+    Example:
+    ``` SELECT TRIM(  'Hello World  ') AS TrimmedString; ```
+    Output:
+    ```
+    TrimmedString
+    -------------
+    Hello World
+    ```
+    You can also removes spaces from column values:
+    ``` SELECT TRIM(FirstName) AS TrimmedName FROM Employees; ```
+
+6. **LIKE Operator:** 
+    The LIKE operator is used to search for a specified pattern in a string. It's commonly used with % (to match zero or more charters) and _ (to match exactly one character).
+    
+    Syntax:
+    ```
+    SELECT column
+    FROM table
+    WHERE column LIKE pattern;
+    ```
+    **Example 1: Matching pattern:** Find all employees whose name start with the letter 'A':
+    ```
+    SELECT Name
+    FROM Employees
+    WHERE Name LIKE 'A%';
+    ```
+    This query returns names that start with the letter "A".
+
+    **Example 2: Using an underscore to match one character:**
+    ```
+    SELECT Name 
+    FROM Employees
+    WHERE Name LIKE 'J_n%';
+    ```
+    This will match names like "Jon", "Jen", etc., where the second letter is "n".
+    
+    **Example 3: Combining with NOT LIKE**
+    Find employees whose names don't start with 'S':
+    ``` 
+        SELECT Name
+        FROM Employees
+        WHERE Name NOT LIKE 's%';
+    ```
