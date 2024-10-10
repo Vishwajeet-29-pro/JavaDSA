@@ -36,12 +36,12 @@
 
    - Subqueries
 
-   - [ ] Inline (correlated) vs. independent subqueries
-   - [ ] IN, EXISTS, ANY, and ALL operators
+   - [x] Inline (correlated) vs. independent subqueries
+   - [x] IN, EXISTS, ANY, and ALL operators
 
    - String Functions
 
-   - [ ] CONCAT, UPPER, LOWER, SUBSTRING, TRIM, LIKE
+   - [x] CONCAT, UPPER, LOWER, SUBSTRING, TRIM, LIKE
 
    - Date and Time Functions
 
