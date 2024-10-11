@@ -522,13 +522,24 @@
 - [x] Book Reading page 17
 
 ###### 10 Oct 2024
+- [x] Job Apply
+- [x] Java and related practice
+- [x] Kotlin Theory
+- [x] SQL Theory
+- [x] GitHub Actions Theory
+- [x] For problem-solving try to find some time and watch tutorial
+- [x] Kubernetes Documentation
+- [x] React JS Docs / Kiran's pdf (now start from building the board)
+- [ ] Interview Questions from Note-Book
+- [x] Book Reading
+
+###### 11 Oct 2024
 - [ ] Job Apply
 - [ ] Java and related practice
 - [ ] Kotlin Theory
 - [ ] SQL Theory
 - [ ] GitHub Actions Theory
-- [ ] For problem-solving try to find some time and watch tutorial
+- [ ] Recursion Video + problems
 - [ ] Kubernetes Documentation
-- [ ] React JS Docs / Kiran's pdf
-- [ ] Interview Questions from Note-Book
-- [ ] Book Reading
+- [ ] React JS Docs
+- [ ] Book Reading. (start on page 18)
