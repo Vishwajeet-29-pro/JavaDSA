@@ -548,3 +548,101 @@ These operators are used to perform comparisons between a column and a set of va
         FROM Employees
         WHERE Name NOT LIKE 's%';
     ```
+
+# DATE and Time Functions
+1. Working with DATE, TIME and TIMESTAMP
+    - DATE: Represents only the date in `YYYY-MM-DD` format.
+    - TIME: Represents in the time in `HH:MI:SS` format.
+    - TIMESTAMP: Represents both date and time (`YYYY-MM-DD HH:MI:SS`)
+
+    Example:
+    Creating a table with DATE, TIME and TIMESTAMP fields:
+    ```
+    CREATE TABLE EventDetails(
+        EventName VARCHAR(50),
+        EventDate DATE,
+        EventTime TIME,
+        EventTimeStamp TIMESTAMP
+    );
+    ```
+    Inserting Data:
+    ```
+    INSERT INTO EventDetails (EventName, EventDate, EventTime, EventTimestamp)
+    VALUES ('Conference', '2024-10-03', '14:30:00', '2024-10-03 14:30:00');
+    ```
+    Querying Data:
+    ``` 
+     SELECT EventName, EventDate, EventTime, EventTimestamp FROM EventDetails;
+    ```
+    This query will return:
+    ```
+    EventTime   EventDate   EventTime EventTimeStamp
+    ------------------------------------------------
+    Conference  2024-10-03  14:30:00    2024-10-03 14:30:00
+    ```
+   
+2. `NOW()` Function: The `NOW()` function returns the current date and time as a TIMESTAMP.
+    Example:
+    ``` SELECT NOW() AS CurrentDateTime; ```
+    Output:
+    ```
+    CurrentDateTime
+    ---------------
+    2024-10-03 10:45:23
+    ```
+3. `CURRENT_DATE` Function
+    The `CURRENT_DATE` function returns the current date.
+    Example:
+    ``` SELECT CURRENT_DATE AS TodayDate; ```
+    Output:
+   ```
+     TodayDate
+    -----------
+      2024-10-03
+   ```
+   
+4. `DATEADD()` Function
+    The `DATEADD()` function is used to add a specific interval (like days, months, years) to a date. It's available in MySQL as `DATE_ADD()`
+    and in PostgreSQL as `+ INTERVAL`.
+
+    MySQL Syntax:
+    ``` SELECT DATE_ADD('2024-10-03', INTERVAL 10 DAY) AS NewDate; ```
+
+    PostgreSQL Syntax:
+    ``` SELECT '2024-10-03' ::DATE + INTERVAL '10 days' AS NewDate; ```
+
+    Output:
+    ``` 
+    NewDate
+    -------
+    2024-10-13
+    ```
+    You can also add months, years, etc., by changing the INTERVAL type:
+    ``` SELECT DATE_ADD('2024-10-03', INTERVAL 2 MONTH) AS NewDate; ```
+    or
+    ``` SELECT '2024-10-03'::DATE + INTERVAL '2 months' AS NewDate; ```
+
+5. `DATEDIFF()` Function:
+    The `DATEDIFF()` function calculates the difference between two dates, returning the number of days between them.
+    MySQL Syntax:
+    ``` SELECT DATEDIFF('2024-12-25', '2024-10-03') AS DaysDifference; ```
+
+    PostgreSQL Alternative:
+    ``` SELECT EXTRACT(DAY FROM '2024-12-25'::DATE - '2024-10-03'::DATE) AS DaysDifference; ```
+
+    Output:
+    ```
+    DaysDiffernce
+    -------------
+        83
+    ```
+    This function is useful when you want to calculate age, duration of events, or time differences between dates.
+
+### Summary of Key Date and Time Functions:
+- `NOW()`: Returns the current timestamp (date and time).
+- `CURRENT_DATE`: Returns today's date.
+- `DATEADD()` (MySQL) / `+ INTERVAL` (PostgreSQL): Adds a specified time interval to a date.
+- `DATEDIFF()`: Calculates the difference between two dates in days.
+
+
+
