@@ -17,4 +17,11 @@ class ReverseNumberRecursionTest {
         assertEquals(expected, recursion.sum);
     }
 
+    @Test
+    public void testReverseNumberWithOtherWay() {
+        int expected = 4281;
+        int actual = recursion.reverseNumberUsingRecursionWithHelperMethod(1824);
+
+        assertEquals(expected, actual);
+    }
 }
