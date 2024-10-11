@@ -269,3 +269,190 @@ jobs:
     - Scheduled Tasks: Use the schedule event to trigger automated maintenance tasks,, suc as cleaning up old branches, refreshing a cache, or updating dependencies.
     - Manual Deployment: Use `workflow_dispatch` to trigger deployments or maintenance tasks manually from the GitHub UI.
     - Release Automation: Automate versioning and deployment tasks using the release event when a new release is published. 
+
+#### 3. Jobs
+1. What Are Jobs?
+   In GitHub Actions, jobs represent a series of steps that are executed in a workflow. A job defines what actions need to be taken and on
+   which environment. Each workflow can consist of multiple jobs, and these jobs can run either in parallel or in sequence depending on how they are configured.
+   Jobs are isolated from one another, meaning each job runs in a separate virtual environment and doesn't share data unless explicitly configured to do so.
+
+2. Structure of a Job:
+   A job typically has the following components:
+   1. Name: A label that describes what the job does.
+   2. Run-on: Specifies the operating system or runner where the job will execute (e.g., `ubuntu-latest`).
+   3. Steps: The individual task or commands that make up the job. Steps are executed in sequence.
+
+   Example of a Simple Job:
+   ```yaml
+   jobs:
+    build:
+      runs-on: ubuntu-latest    # Specify the OS
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2   # Check out the code from the repository
+        - name: Set up Node.js
+          uses: actions/setup-node@v2 # Set up Node.js environment
+          with:
+            node-version: '14'
+        - name: Install dependencies
+          run: npm install     # Install project dependencies
+        - name: Run tests
+          run: npm test        # Run test commands
+     ```
+3. Key Components of a Job
+   1. runs-on
+      - Defines the environment (runner) on which the job runs.
+      - Option include:
+        - `ubuntu-latest`: Ubuntu environment.
+        - `windows-latest`: Windows environment.
+        - `macos-latest`: macOS environment.
+      - You can also specify a specific version, such as `ubuntu-20.04` or `windows-2019`.
+      Example:
+        ```yaml
+         runs-on: ubuntu-latest
+        ```
+   2. steps
+      - A list of commands or actions that execute in sequence within a job.
+      - Steps can:
+        - Run shell commands.
+        - Use prebuilt GitHub Actions from the marketplace (use keyword).
+        - Call custom actions on run script.
+      - Each step can have its own name and run command.
+      Example:
+      ```yaml
+      steps:
+        - name: Install dependencies
+          run: npm install    # Run a shell command to install dependencies
+        - name: Run tests
+          run: npm test       # Run the test script
+      ```
+   3. uses
+      - Indicates the use of a third-party or pre-built action from GitHub's Actions MarketPlace or a repository.
+      - Predefined actions can perform common tasks such as checking out code, setting up a language environment, or deploying code.
+      Example:
+      ```yaml
+        - name: Checkout code
+          uses: actions/checkout@V2  
+      ```
+   4. run
+      - Specifies a shell command or script to execute.
+      - You can run any command you would normally run in the specified environment (e.g., Linux, macOS, or Windows shell commands).
+      Example:
+      ```yaml
+      run: npm install   # Run the 'npm install' command
+      ```
+4. Multiple Jobs in a Workflow
+   You can define multiple jobs in a single workflow. By default, these jobs run concurrently, but you can control their execution order using job dependencies.
+   Example:
+   ```yaml
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+       - name: Build the project
+         run: ./gradlew build
+
+     test:
+       runs-on: ubuntu-latest
+       steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+       - name: Run tests
+         run: ./gradlew test
+   ```
+   In this example:
+   - The build job builds the project.
+   - The test job runs the tests, both on the ubuntu-latest runner.
+
+5. Job Dependencies
+   You can make jobs dependent on each other by specifying the needs keyword. This ensures that certain jobs will not start until other finish.
+   Example:
+   ```yaml
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Build the project
+            run: ./gradlew build
+
+      test:
+        runs-on: ubuntu-latest
+        needs: build    # This job will only run after the 'build' job completes
+        steps:
+          - name: Run tests
+            run: ./gradlew test
+   ```
+   In this example:
+   - The test job runs after the build job, due to the needs: build dependency.
+
+6. Matrix Jobs:
+   A matrix job allows you to run the same job across multiple environment, configurations, or language versions in parallel. This is useful for testing across different platforms, such as multiple Node.js version or different operating systems.
+   Example of a Matrix Job:
+   ```yaml
+   jobs:
+     test:
+       runs-on: ubuntu-latest
+       strategy:
+         matrix:
+           node-version: [12, 14, 16]    # Test on Node.js versions 12, 14, and 16
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v2
+         - name: Set up Node.js
+           uses: actions/setup-node@v2
+           with:
+             node-version: ${{ matrix.node-version }}   # Use each Node.js version from the matrix
+         - name: Install dependencies
+           run: npm install
+         - name: Run tests
+           run: npm test
+   ```
+   In this example :
+   - The workflow tests the project on Node.js versions 12, 14, and 16, running them in parallel.
+
+7. Sharing Data Between Jobs:
+   By default, jobs do not share data, but you can use artifacts or caches to share files between jobs. 
+   - Artifacts: Used to upload and share files (e.g., build outputs, test results) between jobs or download them later.
+   
+     Example:
+     ```yaml
+     - name: Upload artifact
+       uses: actions/upload-artifact@v2
+       with:
+         name: build-output
+         path: build/
+     ```
+   - Cache: Used to cache dependencies like npm or Gradle files between jobs to speed up subsequent runs.
+      Example:
+      ```yaml
+        - name: Cache npm dependencies
+          uses: actions/cache@v2
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
+      ```
+8. Common Use Cases for Jobs
+   1. CI/CD Pipelines: 
+      - Jobs can be used to build, test, and deploy applications across different environments or configurations.
+      Example: Running build jobs in parallel for multiple platforms (e.g., Linux, Windows, macOS).
+   2. Testing Across Versions:
+      - Use matrix jobs to test the same code on different language or platform versions.
+   3. Conditional Jobs: 
+      - You can define conditions for jobs to run, such as running deployment jobs only on the main branch.
+
+
+
+
+
+
+
+
+
+
+
