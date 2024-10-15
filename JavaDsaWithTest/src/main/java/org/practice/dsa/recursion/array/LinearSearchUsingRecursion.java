@@ -3,6 +3,10 @@ package org.practice.dsa.recursion.array;
 public class LinearSearchUsingRecursion {
 
     public boolean findElement(int[] arr, int target, int index) {
-        return false;
+        if (index == arr.length) {
+            return false;
+        }
+
+        return arr[index] == target || findElement(arr, target, index + 1);
     }
 }
