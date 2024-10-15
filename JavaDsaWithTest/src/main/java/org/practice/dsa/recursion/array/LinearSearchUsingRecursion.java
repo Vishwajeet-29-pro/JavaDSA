@@ -11,7 +11,13 @@ public class LinearSearchUsingRecursion {
     }
 
     public int findElementAndReturnIndex(int[] arr, int target, int index) {
+        if (index == arr.length) {
+            return -1; // not found should return -1
+        }
 
-        return 0;
+        if (arr[index] == target) {
+            return index;
+        }
+        return findElementAndReturnIndex(arr, target, index + 1);
     }
 }
