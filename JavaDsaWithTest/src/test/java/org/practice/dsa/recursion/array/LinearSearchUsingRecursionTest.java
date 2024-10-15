@@ -24,4 +24,12 @@ class LinearSearchUsingRecursionTest {
 
         assertFalse(search.findElement(arr, target, 0));
     }
+
+    @Test
+    public void test_when_target_not_found_should_return_minus_one() {
+        int[] arr = {1, 3, 6, 2, 4};
+        int target = 9;
+
+        assertEquals(-1, search.findElementAndReturnIndex(arr, target, 0));
+    }
 }

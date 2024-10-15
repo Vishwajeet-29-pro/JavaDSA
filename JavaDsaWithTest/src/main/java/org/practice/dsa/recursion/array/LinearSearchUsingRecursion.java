@@ -9,4 +9,9 @@ public class LinearSearchUsingRecursion {
 
         return arr[index] == target || findElement(arr, target, index + 1);
     }
+
+    public int findElementAndReturnIndex(int[] arr, int target, int index) {
+
+        return 0;
+    }
 }
