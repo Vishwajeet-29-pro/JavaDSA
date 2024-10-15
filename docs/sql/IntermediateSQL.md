@@ -549,7 +549,7 @@ These operators are used to perform comparisons between a column and a set of va
         WHERE Name NOT LIKE 's%';
     ```
 
-# DATE and Time Functions
+## DATE and Time Functions
 1. Working with DATE, TIME and TIMESTAMP
     - DATE: Represents only the date in `YYYY-MM-DD` format.
     - TIME: Represents in the time in `HH:MI:SS` format.
@@ -644,5 +644,89 @@ These operators are used to perform comparisons between a column and a set of va
 - `DATEADD()` (MySQL) / `+ INTERVAL` (PostgreSQL): Adds a specified time interval to a date.
 - `DATEDIFF()`: Calculates the difference between two dates in days.
 
+
+
+
+
+## Indexing
+### 1. Basics of Creating and Using Indexes
+An index in SQL is a database object that speeds up the retrieval of rows by creating a quick lookup mechanism for specific columns in a table.
+Indexes are created based on one or more columns of a table, and they function like an index in book, helping to locate data faster.
+
+**Creating an Index:**
+To crate an index on a column, you use the `CREATE INDEX` statement. You can create different types of indexes, such as single-column, multi-column, or unique indexes.
+
+Syntax:
+``` CREATE INDEX index_name ON table_name (column1, column2, ...);```
+
+Example 1: Single-column Index
+``` CREATE INDEX idx_employee_name ON Employees (LastName); ```
+
+This creates an index on the LastName column of the Employees table. The database will use this index to quickly find rows where LastName
+is queried, e.g., in SELECT statement.
+
+Example 2: Multi-column Index:
+``` CREATE INDEX idx_employee_fullname ON Employees (FirstName, LastName); ```
+
+A multi-column index helps optimize queries that search on both FirstName and LastName. It improves performance in queries where both columns are used in the 
+WHERE clause or ORDER BY.
+
+**Using an Index:**
+Once an index is created, the database automatically decides when to use it during queries, like:
+``` SELCT * FROM Employees WHERE LastName = 'Smith'; ```
+
+If LastName is indexed, the database will refer to the index instead of scanning the entire table, leading to faster retrieval.
+
+### 2. Performance Impact of Indexes:
+While indexes can significantly improve query performance, they come with trade-offs. Let's break down both the positive and negative impacts:
+**Positive Impact of Indexes:**
+- Fast Query Performance: Indexes allow the database to find rows faster, especially for large datasets. Queries that filter or sort by the index 
+    column(s) are much quicker because the database doesn't have to perform a full table scan.
+    For example, without an index:
+    ``` SELECT * FROM Orders WHERE CustomerID = 12345; ```
+  If there's no index on CustomerID, the database will scan the entire Orders table. With an index on CustomerID, it directly jumps to the relevant rows, improving performance.
+- Optimizing JOIN Queries: Indexes are beneficial in queries that involve joins between multiple tables. For instance, if you have two tables Orders and Customers, having an index on the
+    CustomerID column in both tables speeds up join operations:
+    ``` 
+        SELECT * FROM Orders O
+        JOIN Customers C ON O.CustomerID = C.CustomerID; 
+    ```
+- Better Sorting: Indexes help in sorting data efficiently when using ORDER BY in queries. For example:
+    ``` SELCT *  FROM Employees ORDER BY LastName; ```
+
+**Negative Impact of Indexes:**
+- Slower Data Modification (INSERT, UPDATE, DELETE): While indexes make reading data faster, they slow down data modification operations (like INSERT, UPDATE, DELETE) because the index needs to be updated every time the data in the table is modified.
+
+    For example:
+    ``` INSERT INTO Orders (CustomerID, OrderDate) VALEUES (12345, '2024-10-03'); ```
+
+    If there is an index on CustomerID, this INSERT will also update the index, adding extra overhead.
+
+- Storage Overhead: Indexes consumes disk space, especially for large tables with multiple columns indexed. The more indexes a table has, the more space is needed to store them.
+- Choosing the Right Indexes: Creating too many indexes can hurt performance due to the overhead of maintaining them. It's important to strategically index columns based on usage pattern in queries.
+
+#### When to Use Indexes:
+Indexes should be used:
+- On columns that are frequently queried (e.g., in WHERE or JOIN clauses).
+- On columns involved in sorting (ORDER BY) or grouping (GROUP BY).
+- For large tables where performance gains from indexing outweigh the maintenance cost.
+
+#### When Not to Use Indexes:
+- On Small tables (full table scans may be fast enough).
+- On columns with a small range of values (e.g., boolean columns).
+- If the table undergoes frequently inserts/updates, as it can slow down these operations.
+
+#### Best Practices for Indexing:
+1. Index Selective Columns: Choose columns with a wide range of distinct values (e.g., CustomerID or Email)
+2. Avoid Over-Indexing: More indexes don't necessarily mean better performance. Each index requires maintenance during write operations.
+3. Use Composite Indexes Wisely: Composite (multi-column) indexes can be beneficial, but they should be designed based on query patterns. For example, an index on (LastName, FirstName)
+    is useful only if queries involve both columns.
+4. Monitor Index Usage: Use tool like EXPLAIN (in MySQL) or EXPLAIN ANALYZE (in PostgreSQL) to understand how indexes are used in your queries.
+
+#### Example: Monitoring Index Usage with EXPLAIN
+You can use the EXPLAIN command to see if the database is using an index in your query:
+``` EXPLAIN SELECT * Employees WHERE LastName = 'Smith'; ```
+
+The output will show if the query is using an index or performing a full table scan.
 
 
