@@ -50,8 +50,8 @@
 
    - Indexing
 
-   - [ ] Basics of creating and using indexes
-   - [ ] Performance impact of indexes
+   - [x] Basics of creating and using indexes
+   - [x] Performance impact of indexes
 
 3. Advanced SQL
    - Transactions & ACID Properties
