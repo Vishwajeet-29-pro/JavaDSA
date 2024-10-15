@@ -534,12 +534,31 @@
 - [x] Book Reading
 
 ###### 11 Oct 2024
-- [ ] Job Apply
-- [ ] Java and related practice
-- [ ] Kotlin Theory
-- [ ] SQL Theory
-- [ ] GitHub Actions Theory
-- [ ] Recursion Video + problems
+- [x] Job Apply
+- [x] Java and related practice
+- [x] Kotlin Theory
+- [x] SQL Theory
+- [x] GitHub Actions Theory
+- [x] Recursion Video + problems
 - [ ] Kubernetes Documentation
 - [ ] React JS Docs
-- [ ] Book Reading. (start on page 18)
+- [x] Book Reading. (start on page 18) tomorrow start from page 22
+
+
+###### 13 Oct 2024
+- [x] Book Reading done (next start from page 25)
+
+###### 15 Oct 2024
+- [ ] Job Apply
+- [ ] Communication Tips
+- [ ] Problem Solving
+    - [ ] Video lecture
+    - [ ] Problems from lecture into code.
+- [ ] Cover OOPS related in Kotlin
+- [ ] Cover few things SQL Notes. We are dropping extensive theory.
+- [ ] Kubernetes (Whatever documentation or lecture)
+- [ ] React JS Docs
+- [ ] Spring Boot, Spring WebFlux
+- [ ] Micronaut.
+- [ ] Interview Questions from Note-Book.
+- [ ] Book Reading. (Today's start page 25)
