@@ -45,8 +45,8 @@
 
    - Date and Time Functions
 
-   - [ ] Working with DATE, TIME, TIMESTAMP
-   - [ ] Functions like NOW(), CURRENT_DATE, DATEADD, DATEDIFF
+   - [x] Working with DATE, TIME, TIMESTAMP
+   - [x] Functions like NOW(), CURRENT_DATE, DATEADD, DATEDIFF
 
    - Indexing
 
