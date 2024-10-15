@@ -32,4 +32,12 @@ class LinearSearchUsingRecursionTest {
 
         assertEquals(-1, search.findElementAndReturnIndex(arr, target, 0));
     }
+
+    @Test
+    public void test_when_target_found_return_index() {
+        int[] arr = {1, 3, 2, 5, 6};
+        int target = 3;
+
+        assertEquals(1, search.findElementAndReturnIndex(arr, target, 0));
+    }
 }
