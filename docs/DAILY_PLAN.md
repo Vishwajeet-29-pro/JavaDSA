@@ -549,16 +549,30 @@
 - [x] Book Reading done (next start from page 25)
 
 ###### 15 Oct 2024
-- [ ] Job Apply
-- [ ] Communication Tips
-- [ ] Problem Solving
-    - [ ] Video lecture
-    - [ ] Problems from lecture into code.
-- [ ] Cover OOPS related in Kotlin
-- [ ] Cover few things SQL Notes. We are dropping extensive theory.
+- [x] Job Apply
+- [x] Communication Tips
+- [x] Problem Solving
+    - [x] Video lecture
+    - [x] Problems from lecture into code.
+- [x] Cover OOPS related in Kotlin
+- [x] Cover few things SQL Notes. We are dropping extensive theory.
 - [ ] Kubernetes (Whatever documentation or lecture)
-- [ ] React JS Docs
+- [x] React JS Docs
 - [ ] Spring Boot, Spring WebFlux
-- [ ] Micronaut.
-- [ ] Interview Questions from Note-Book.
-- [ ] Book Reading. (Today's start page 25)
+- [x] Micronaut.
+- [x] Interview Questions from Note-Book.
+- [x] Book Reading. (Today's start page 25) tomorrow start 26
+
+###### 16 Oct 2024
+- [ ] Job Apply
+- [ ] Communication Tips and Tricks along with one new word.
+- [ ] Problem Solving
+    - [ ] Video Lecture
+    - [ ] Problem's code
+- [ ] Kotlin OOPS related
+- [ ] Interview Questions from Note-Book
+- [ ] Micronaut
+- [ ] Spring Boot
+- [ ] React JS
+- [ ] Kubernetes
+- [ ] Book Reading. (page 26)
