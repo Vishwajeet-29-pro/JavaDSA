@@ -564,15 +564,29 @@
 - [x] Book Reading. (Today's start page 25) tomorrow start 26
 
 ###### 16 Oct 2024
+- [x] Job Apply
+- [x] Communication Tips and Tricks along with one new word.
+- [x] Problem Solving
+    - [x] Video Lecture
+    - [x] Problem's code
+- [x] Kotlin OOPS related
+- [x] Interview Questions from Note-Book
+- [x] Micronaut
+- [x] Spring Boot - database connection with different databases. Try with single project.
+- [x] React JS
+- [x] Kubernetes
+- [x] Book Reading. (page 26) tomorrow start 27 page.
+
+###### 17 Oct 2024
 - [ ] Job Apply
 - [ ] Communication Tips and Tricks along with one new word.
 - [ ] Problem Solving
     - [ ] Video Lecture
     - [ ] Problem's code
 - [ ] Kotlin OOPS related
-- [ ] Interview Questions from Note-Book
+- [ ] Interview Question from Note-book
 - [ ] Micronaut
-- [ ] Spring Boot
-- [ ] React JS
+- [ ] Spring boot - Create new Project, Take docker help to run the multiple databases.
+- [ ] React JS tic-toc game next topics after props
 - [ ] Kubernetes
-- [ ] Book Reading. (page 26)
+- [ ] Book Reading ( page 27)
