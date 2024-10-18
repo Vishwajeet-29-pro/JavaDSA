@@ -578,15 +578,24 @@
 - [x] Book Reading. (page 26) tomorrow start 27 page.
 
 ###### 17 Oct 2024
+- [x] Job Apply
+- [x] Communication Tips and Tricks along with one new word.
+- [x] Problem Solving
+    - [x] Video Lecture
+    - [x] Problem's code
+- [x] Kotlin OOPS related
+- [x] Interview Question from Note-book
+- [x] Micronaut
+- [x] Spring boot - Create new Project, Take docker help to run the multiple databases.
+- [x] React JS tic-toc game next topics after props
+- [x] Kubernetes
+- [x] Book Reading ( page 27) page 29
+
+###### 18 Oct 2024
 - [ ] Job Apply
-- [ ] Communication Tips and Tricks along with one new word.
+- [ ] Communication Tips and Tricks. New word.
 - [ ] Problem Solving
     - [ ] Video Lecture
     - [ ] Problem's code
-- [ ] Kotlin OOPS related
-- [ ] Interview Question from Note-book
-- [ ] Micronaut
-- [ ] Spring boot - Create new Project, Take docker help to run the multiple databases.
-- [ ] React JS tic-toc game next topics after props
-- [ ] Kubernetes
-- [ ] Book Reading ( page 27)
+- [ ] Interview Questions from Note-Book
+- [ ] Book Reading (page 29)
