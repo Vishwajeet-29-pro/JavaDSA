@@ -592,10 +592,24 @@
 - [x] Book Reading ( page 27) page 29
 
 ###### 18 Oct 2024
+- [x] Job Apply
+- [x] Communication Tips and Tricks. New word.
+- [x] Problem Solving
+    - [x] Video Lecture
+    - [x] Problem's code
+- [x] Interview Questions from Note-Book
+- [x] Book Reading (page 29) page 31
+
+###### 21 Oct 2024
 - [ ] Job Apply
+- [ ] Think on Naukri.com premium version
 - [ ] Communication Tips and Tricks. New word.
 - [ ] Problem Solving
     - [ ] Video Lecture
     - [ ] Problem's code
+    - [ ] If possible solve one problem on Recursion
 - [ ] Interview Questions from Note-Book
-- [ ] Book Reading (page 29)
+- [ ] Spring Boot - create new project
+- [ ] Micronaut and REST assured
+- [ ] comparatively between spring and Micronaut
+- [ ] Book Reading (page 31)
