@@ -22,4 +22,16 @@ public class InsertionSort {
         arr[first] = arr[second];
         arr[second] = temp;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {2,4,6,7,9,10};
+        int k = 6;
+        System.out.println(kLargest(arr, k));
+    }
+
+    private static int kLargest(int[] arr, int k) {
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.insertionSort(arr);
+        return arr[arr.length-k];
+    }
 }
