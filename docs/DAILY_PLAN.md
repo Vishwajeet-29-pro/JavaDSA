@@ -601,15 +601,29 @@
 - [x] Book Reading (page 29) page 31
 
 ###### 21 Oct 2024
-- [ ] Job Apply
+- [x] Job Apply
 - [ ] Think on Naukri.com premium version
-- [ ] Communication Tips and Tricks. New word.
-- [ ] Problem Solving
-    - [ ] Video Lecture
-    - [ ] Problem's code
-    - [ ] If possible solve one problem on Recursion
+- [x] Communication Tips and Tricks. New word.
+- [x] Problem Solving
+    - [x] Video Lecture
+    - [x] Problem's code
+    - [x] If possible solve one problem on Recursion
 - [ ] Interview Questions from Note-Book
 - [ ] Spring Boot - create new project
 - [ ] Micronaut and REST assured
-- [ ] comparatively between spring and Micronaut
-- [ ] Book Reading (page 31)
+- [x] comparatively between spring and Micronaut
+- [x] Book Reading (page 31) page 37
+- [x] Interview preparation for FPL (OneCard)
+
+###### 22 Oct 2024
+- [ ] Interview preparation
+    - [ ] Introduction
+    - [ ] Common Question
+    - [ ] Java Basic to advance Questions
+    - [ ] Revision of Algorithms
+- [ ] Quick Sort Lecture
+- [ ] Overview of Linked List
+- [ ] Array revision
+- [ ] String revision
+- [ ] Collection revision
+- [ ] Other incoming
