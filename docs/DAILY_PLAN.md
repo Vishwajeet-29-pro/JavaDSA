@@ -616,14 +616,30 @@
 - [x] Interview preparation for FPL (OneCard)
 
 ###### 22 Oct 2024
-- [ ] Interview preparation
-    - [ ] Introduction
-    - [ ] Common Question
-    - [ ] Java Basic to advance Questions
-    - [ ] Revision of Algorithms
-- [ ] Quick Sort Lecture
-- [ ] Overview of Linked List
-- [ ] Array revision
-- [ ] String revision
-- [ ] Collection revision
-- [ ] Other incoming
+- [x] Interview preparation
+    - [x] Introduction (It was not complete but interviewer got it. I need to refine it more and make it more impressive)
+    - [x] Common Question (there is no such common question asked by them)
+    - [x] Java Basic to advance Questions (Tried to cover many of them, but still needs more to go.) When working java look deeply into collection along with multi -threading.
+    - [x] Revision of Algorithms (did revision, but they need fully opened)
+- [x] Quick Sort Lecture
+- [x] Overview of Linked List (remains tried but not able to understand it)
+- [x] Array revision
+- [x] String revision
+- [x] Collection revision
+- [x] Other incoming
+- [x] Book Reading page 39
+
+###### 23 Oct 2024
+- [ ] Job Apply
+- [ ] Communication and one new word
+- [ ] Problem Solving
+    - [ ] One before office
+    - [ ] Video Lecture
+    - [ ] Code from lecture
+    - [ ] Two problems
+- [ ] Revision on Java. All Collections
+- [ ] Strings One Problem
+- [ ] Spring Boot next setup for multiple database configuration.
+- [ ] Micronaut and REST Assure.
+- [ ] Book Reading page 39
+- [ ] Revision
