@@ -1,6 +1,6 @@
 package org.practice.dsa.asked_in_interview;
 
-public class RemoveChars {
+public class RemoveStarAndLeftChar {
     /*
      We have given a string in which some characters are *, we need to remove the left most character from *
      for each occurrence of * and then * too.
@@ -8,12 +8,12 @@ public class RemoveChars {
     public static void main(String[] args) {
         // Test the function
         String input = "Switz**la*d";
-        String result = removeChars(input);
+        String result = removeStarAndLeftChar(input);
 
         // Expected output: "Swild"
         System.out.println("Result: " + result);
     }
-    public static String removeChars(String str) {
+    public static String removeStarAndLeftChar(String str) {
         if(str.isEmpty()) {
             return null;
         }
