@@ -16,4 +16,13 @@ class SkipStringTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSkipAppNotApple() {
+        String s= "addappnotapple";
+        String expected = "addnotapple";
+        String actual = sk.skipAppNotApple(s);
+
+        assertEquals(expected, actual);
+    }
 }
