@@ -630,16 +630,31 @@
 - [x] Book Reading page 39
 
 ###### 23 Oct 2024
-- [ ] Job Apply
-- [ ] Communication and one new word
-- [ ] Problem Solving
-    - [ ] One before office
-    - [ ] Video Lecture
-    - [ ] Code from lecture
-    - [ ] Two problems
-- [ ] Revision on Java. All Collections
-- [ ] Strings One Problem
+- [x] Job Apply
+- [x] Communication and one new word
+- [x] Problem Solving
+    - [x] One before office
+    - [x] Video Lecture
+    - [x] Code from lecture
+    - [x] Two problems
+- [x] Revision on Java. All Collections
+- [x] Strings One Problem
 - [ ] Spring Boot next setup for multiple database configuration.
 - [ ] Micronaut and REST Assure.
-- [ ] Book Reading page 39
-- [ ] Revision
+- [x] Book Reading page 39
+- [x] Revision
+
+###### 24 Oct 2024
+- [ ] Mammy mobile recharge
+- [ ] Job Apply
+- [ ] Communication and new word with one paragraph
+- [ ] Problem Solving
+    - [ ] One Problem before
+    - [ ] Tutorial
+    - [ ] Tutorial example into code
+    - [ ] Problems
+- [ ] Understand the flow of collection
+- [ ] Spring Boot
+- [ ] Micronaut
+- [ ] Other
+- [ ] Book Reading 39
