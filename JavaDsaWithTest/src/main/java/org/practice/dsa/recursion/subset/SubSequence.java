@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class SubSequence {
     public static void main(String[] args) {
-        subSequence("","abc");
-        System.out.println(subSequenceReturn("","abc"));
+//        subSequence("","abc");
+//        System.out.println(subSequenceReturn("","abc"));
+        subSequenceWithAscii("","abc");
     }
 
     public static void subSequence(String p, String up) {
@@ -31,5 +32,17 @@ public class SubSequence {
         left.addAll(right);
 
         return left;
+    }
+
+    public static void subSequenceWithAscii(String p, String up) {
+        if (up.isEmpty()) {
+            System.out.println(p);
+            return;
+        }
+
+        char ch = up.charAt(0);
+        subSequenceWithAscii(ch + p, up.substring(1));
+        subSequenceWithAscii(p, up.substring(1));
+        subSequenceWithAscii(p + (ch+0),up.substring(1));
     }
 }
