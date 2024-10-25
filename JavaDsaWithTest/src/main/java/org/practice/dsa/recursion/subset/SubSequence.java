@@ -6,8 +6,10 @@ public class SubSequence {
     public static void main(String[] args) {
 //        subSequence("","abc");
 //        System.out.println(subSequenceReturn("","abc"));
-        subSequenceWithAscii("","abc");
+//        subSequenceWithAscii("","abc");
+        System.out.println(subSequenceAsciiReturn("","abc"));;
     }
+
 
     public static void subSequence(String p, String up) {
         if (up.isEmpty()) {
@@ -44,5 +46,22 @@ public class SubSequence {
         subSequenceWithAscii(ch + p, up.substring(1));
         subSequenceWithAscii(p, up.substring(1));
         subSequenceWithAscii(p + (ch+0),up.substring(1));
+    }
+
+    public static ArrayList<String> subSequenceAsciiReturn(String p, String up) {
+        if (up.isEmpty()) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+
+        char ch = up.charAt(0);
+        ArrayList<String>  first = subSequenceReturn(ch + p, up.substring(1));
+        ArrayList<String> second = subSequenceReturn(p, up.substring(1));
+        ArrayList<String> third = subSequenceAsciiReturn(p + (ch+0), up.substring(1));
+        first.addAll(second);
+        first.addAll(third);
+
+        return first;
     }
 }
