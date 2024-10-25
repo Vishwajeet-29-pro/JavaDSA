@@ -1,10 +1,13 @@
 package org.practice.dsa.recursion.subset;
 
-public class SubSequence {
+import java.util.ArrayList;
 
+public class SubSequence {
     public static void main(String[] args) {
         subSequence("","abc");
+        System.out.println(subSequenceReturn("","abc"));
     }
+
     public static void subSequence(String p, String up) {
         if (up.isEmpty()) {
             System.out.println(p);
@@ -13,5 +16,20 @@ public class SubSequence {
         char ch = up.charAt(0);
         subSequence(p+ch, up.substring(1));
         subSequence(p, up.substring(1));
+    }
+
+    public static ArrayList<String> subSequenceReturn(String p, String up) {
+        if (up.isEmpty()) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+
+        char ch = up.charAt(0);
+        ArrayList<String>  left = subSequenceReturn(ch + p, up.substring(1));
+        ArrayList<String> right = subSequenceReturn(p, up.substring(1));
+        left.addAll(right);
+
+        return left;
     }
 }
