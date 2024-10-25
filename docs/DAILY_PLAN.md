@@ -645,16 +645,23 @@
 - [x] Revision
 
 ###### 24 Oct 2024
-- [ ] Mammy mobile recharge
-- [ ] Job Apply
-- [ ] Communication and new word with one paragraph
-- [ ] Problem Solving
-    - [ ] One Problem before
-    - [ ] Tutorial
-    - [ ] Tutorial example into code
-    - [ ] Problems
+- [x] Job Apply
+- [x] Communication and new word with one paragraph
+- [x] Problem Solving
+    - [x] One Problem before
+    - [x] Tutorial
+    - [x] Tutorial example into code
+    - [x] Problems
 - [ ] Understand the flow of collection
 - [ ] Spring Boot
 - [ ] Micronaut
 - [ ] Other
 - [ ] Book Reading 39
+
+###### 25 Oct 2024
+- [ ] Job Apply
+- [ ] Communication and new word with one paragraph
+- [ ] Problem Solving
+    - [ ] Tutorial
+    - [ ] Examples
+- [ ] Book Reading
