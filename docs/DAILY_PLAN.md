@@ -659,9 +659,23 @@
 - [ ] Book Reading 39
 
 ###### 25 Oct 2024
-- [ ] Job Apply
-- [ ] Communication and new word with one paragraph
+- [x] Job Apply
+- [x] Communication and new word with one paragraph
+- [x] Problem Solving
+    - [x] Tutorial
+    - [x] Examples
+- [x] Book Reading page 46
+- [x] Spring project created for multiple database configuration
+- [x] Created new test for post using rest assured in micronaut.
+
+###### 26 Oct 2024
+- [ ] Job Application related
+- [ ] Communication, new word and one paragraph
 - [ ] Problem Solving
     - [ ] Tutorial
-    - [ ] Examples
-- [ ] Book Reading
+    - [ ] Problems
+    - [ ] String based 1
+- [ ] Resume Update
+- [ ] Spring Boot next step to configure database
+- [ ] Micronaut Rest Assured next steps. Create another tests.
+- [ ] Book Reading page 46
