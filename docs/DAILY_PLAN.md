@@ -670,12 +670,21 @@
 
 ###### 26 Oct 2024
 - [ ] Job Application related
-- [ ] Communication, new word and one paragraph
+- [x] Communication, new word and one paragraph
+- [x] Problem Solving
+    - [x] Tutorial
+    - [x] Problems
+    - [x] String based 1
+- [ ] Resume Update
+- [x] Spring Boot next step to configure database
+- [x] Micronaut Rest Assured next steps. Create another tests.
+- [x] Book Reading page 46 next 50
+
+###### 27 Oct 2024
 - [ ] Problem Solving
     - [ ] Tutorial
     - [ ] Problems
-    - [ ] String based 1
-- [ ] Resume Update
-- [ ] Spring Boot next step to configure database
-- [ ] Micronaut Rest Assured next steps. Create another tests.
-- [ ] Book Reading page 46
+    - [ ] Recursion
+- [ ] Try to figure out issue from configure databases
+- [ ] Micronaut REST assured next steps.
+- [ ] Book reading 50
