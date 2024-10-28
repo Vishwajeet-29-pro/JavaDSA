@@ -10,6 +10,7 @@ public class PhoneNumberGoogle {
 //        phoneNumber("", "12");
 //        phoneNumber("","1");
         System.out.println(phoneNumberList("", "1"));
+        System.out.println(phoneCountCombinations("", "123"));
     }
 
     // p = processed, up = unprocessed
@@ -42,5 +43,19 @@ public class PhoneNumberGoogle {
             ans.addAll(phoneNumberList(p + ch, up.substring(1)));
         }
         return ans;
+    }
+
+    public static int phoneCountCombinations(String p, String up) {
+        if (up.isEmpty()) {
+            return 1;
+        }
+        int count = 0;
+        int digit = up.charAt(0) - '0';
+        int endIndex = (digit == 9) ? 26 : digit * 3;
+        for (int i = (digit - 1) *3; i < endIndex; i++) {
+           char ch = (char) ('a' + i);
+           count = count + phoneCountCombinations(p + ch, up.substring(1));
+        }
+        return count;
     }
 }
