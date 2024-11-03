@@ -8,6 +8,14 @@ public class MazeProblem {
         pathPrint("", 3, 3);
         System.out.println(pathReturn("", 3, 3));
         System.out.println(pathReturnDiagonal("", 4,4));
+
+        boolean[][] board = {
+                {true, true, true},
+                {true, false, true},
+                {true, true, true}
+        };
+
+        pathPrintWithRestrictions("", board, 0, 0);
     }
 
     static int countWays(int r, int c) {
@@ -71,5 +79,24 @@ public class MazeProblem {
             ans.addAll(pathReturnDiagonal(p + "H", r, c-1));
         }
         return ans;
+    }
+
+    static void pathPrintWithRestrictions(String p, boolean[][] maze, int r, int c) {
+        if (r == maze.length - 1  && c == maze[0].length - 1) {
+            System.out.println(p);
+            return;
+        }
+
+        if (!maze[r][c]) {
+            return;
+        }
+
+        if (r < maze.length - 1) {
+            pathPrintWithRestrictions(p+'D', maze, r+1, c);
+        }
+
+        if (c < maze[0].length - 1) {
+            pathPrintWithRestrictions(p+'R', maze, r, c+1);
+        }
     }
 }
