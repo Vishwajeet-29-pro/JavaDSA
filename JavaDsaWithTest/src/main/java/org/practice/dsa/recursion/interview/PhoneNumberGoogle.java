@@ -1,6 +1,7 @@
 package org.practice.dsa.recursion.interview;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PhoneNumberGoogle {
     // This question asked in the Google interview
@@ -11,7 +12,8 @@ public class PhoneNumberGoogle {
 //        phoneNumber("","1");
 //        System.out.println(phoneNumberList("", "1"));
 //        System.out.println(phoneCountCombinations("", "123"));
-        phoneNumberLeet("", "99");
+//        phoneNumberLeet("", "99");
+        System.out.println(phoneNumberLeetReturn("", "23"));
     }
 
     // p = processed, up = unprocessed
@@ -90,5 +92,40 @@ public class PhoneNumberGoogle {
             char ch = (char) ('a' + i);
             phoneNumber(p + ch, up.substring(1));
         }
+    }
+
+    public static List<String> phoneNumberLeetReturn(String p, String up) {
+        if (up.isEmpty()) {
+            ArrayList<String> ans = new ArrayList<>();
+            ans.add(p);
+            return ans;
+        }
+
+        ArrayList<String> result = new ArrayList<>();
+        int digit = up.charAt(0) - '0'; // this will convert char to int
+
+        if (digit <= 1) {
+            result.add(p);
+        }
+
+        int startIndex;
+        int endIndex;
+
+        if (digit == 7) {
+            startIndex = 15;
+            endIndex = 19;
+        } else if (digit == 9) {
+            startIndex = 22;
+            endIndex = 26;
+        } else {
+            startIndex = (digit - 2) * 3;
+            endIndex = startIndex + 3;
+        }
+
+        for (int i = startIndex; i < endIndex; i++) {
+            char ch = (char) ('a' + i);
+            result.addAll(phoneNumberLeetReturn(p + ch, up.substring(1)));
+        }
+        return result;
     }
 }
