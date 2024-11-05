@@ -9,8 +9,9 @@ public class PhoneNumberGoogle {
     public static void main(String[] args) {
 //        phoneNumber("", "12");
 //        phoneNumber("","1");
-        System.out.println(phoneNumberList("", "1"));
-        System.out.println(phoneCountCombinations("", "123"));
+//        System.out.println(phoneNumberList("", "1"));
+//        System.out.println(phoneCountCombinations("", "123"));
+        phoneNumberLeet("", "99");
     }
 
     // p = processed, up = unprocessed
@@ -57,5 +58,37 @@ public class PhoneNumberGoogle {
            count = count + phoneCountCombinations(p + ch, up.substring(1));
         }
         return count;
+    }
+
+    public static void phoneNumberLeet(String p, String up) {
+        if (up.isEmpty()) {
+            System.out.println(p);
+            return;
+        }
+
+        int digit = up.charAt(0) - '0'; // this will convert char to int
+
+        if (digit <= 1) {
+            return;
+        }
+
+        int startIndex;
+        int endIndex;
+
+        if (digit == 7) {
+            startIndex = 15;
+            endIndex = 19;
+        } else if (digit == 9) {
+            startIndex = 22;
+            endIndex = 26;
+        } else {
+            startIndex = (digit - 2) * 3;
+            endIndex = startIndex + 3;
+        }
+
+        for (int i = startIndex; i < endIndex; i++) {
+            char ch = (char) ('a' + i);
+            phoneNumber(p + ch, up.substring(1));
+        }
     }
 }
