@@ -13,7 +13,8 @@ public class PhoneNumberGoogle {
 //        System.out.println(phoneNumberList("", "1"));
 //        System.out.println(phoneCountCombinations("", "123"));
 //        phoneNumberLeet("", "99");
-        System.out.println(phoneNumberLeetReturn("", "23"));
+//        System.out.println(phoneNumberLeetReturn("", "23"));
+        System.out.println(letterCombination("23"));
     }
 
     // p = processed, up = unprocessed
@@ -94,6 +95,9 @@ public class PhoneNumberGoogle {
         }
     }
 
+    static List<String> letterCombination(String s) {
+        return phoneNumberLeetReturn("", s);
+    }
     public static List<String> phoneNumberLeetReturn(String p, String up) {
         if (up.isEmpty()) {
             ArrayList<String> ans = new ArrayList<>();
