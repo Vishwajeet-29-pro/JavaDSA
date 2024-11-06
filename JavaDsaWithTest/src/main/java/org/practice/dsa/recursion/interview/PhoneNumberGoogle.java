@@ -14,7 +14,7 @@ public class PhoneNumberGoogle {
 //        System.out.println(phoneCountCombinations("", "123"));
 //        phoneNumberLeet("", "99");
 //        System.out.println(phoneNumberLeetReturn("", "23"));
-        System.out.println(letterCombination("23"));
+        System.out.println(letterCombination("8"));
     }
 
     // p = processed, up = unprocessed
@@ -95,40 +95,48 @@ public class PhoneNumberGoogle {
         }
     }
 
-    static List<String> letterCombination(String s) {
-        return phoneNumberLeetReturn("", s);
+    private static final String[] KEYPAD = {
+            "",     // 0 (no letters)
+            "",     // 1 (no letters)
+            "abc",  // 2
+            "def",  // 3
+            "ghi",  // 4
+            "jkl",  // 5
+            "mno",  // 6
+            "pqrs", // 7
+            "tuv",  // 8
+            "wxyz"  // 9
+    };
+
+    public static List<String> letterCombination(String digits) {
+        if (digits.isEmpty()) {
+            return new ArrayList<>(); // Return empty list if no digits
+        }
+        return phoneNumberLeetReturn("", digits);
     }
-    public static List<String> phoneNumberLeetReturn(String p, String up) {
-        if (up.isEmpty()) {
-            ArrayList<String> ans = new ArrayList<>();
-            ans.add(p);
-            return ans;
+
+    public static List<String> phoneNumberLeetReturn(String prefix, String remainingDigits) {
+        // Base case: when remainingDigits is empty, return the accumulated prefix
+        if (remainingDigits.isEmpty()) {
+            ArrayList<String> result = new ArrayList<>();
+            result.add(prefix);
+            return result;
         }
 
         ArrayList<String> result = new ArrayList<>();
-        int digit = up.charAt(0) - '0'; // this will convert char to int
+        int digit = remainingDigits.charAt(0) - '0'; // Convert first character to integer
 
-        if (digit <= 1) {
-            result.add(p);
+        // Get the corresponding letters for the digit from KEYPAD array
+        String letters = KEYPAD[digit];
+
+        // Skip processing if digit has no letters (e.g., 0 or 1)
+        if (letters.isEmpty()) {
+            return phoneNumberLeetReturn(prefix, remainingDigits.substring(1));
         }
 
-        int startIndex;
-        int endIndex;
-
-        if (digit == 7) {
-            startIndex = 15;
-            endIndex = 19;
-        } else if (digit == 9) {
-            startIndex = 22;
-            endIndex = 26;
-        } else {
-            startIndex = (digit - 2) * 3;
-            endIndex = startIndex + 3;
-        }
-
-        for (int i = startIndex; i < endIndex; i++) {
-            char ch = (char) ('a' + i);
-            result.addAll(phoneNumberLeetReturn(p + ch, up.substring(1)));
+        // Recursively build combinations with each letter
+        for (char letter : letters.toCharArray()) {
+            result.addAll(phoneNumberLeetReturn(prefix + letter, remainingDigits.substring(1)));
         }
         return result;
     }
