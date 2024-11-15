@@ -1,4 +1,4 @@
-package org.practice.dsa.leet_code.easy;
+package org.practice.dsa.leet_code.easy.string;
 
 public class QuestionLowercase {
     public String toLowerCase(String s) {

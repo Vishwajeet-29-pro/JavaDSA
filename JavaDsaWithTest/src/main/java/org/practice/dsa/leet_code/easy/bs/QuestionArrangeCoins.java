@@ -1,4 +1,4 @@
-package org.practice.dsa.leet_code.easy;
+package org.practice.dsa.leet_code.easy.bs;
 
 public class QuestionArrangeCoins {
 //     You have n coins and you want to build a staircase with these coins. The staircase consists of k rows where the

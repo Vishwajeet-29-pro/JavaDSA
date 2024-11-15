@@ -1,6 +1,7 @@
 package org.practice.dsa.leet_code.easy;
 
 import org.junit.jupiter.api.Test;
+import org.practice.dsa.leet_code.easy.bs.QuestionArrangeCoins;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
