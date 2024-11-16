@@ -1,4 +1,4 @@
-package org.practice.dsa.leet_code.easy.bs;
+package org.practice.dsa.leet_code.medium.bs;
 
 import java.util.Arrays;
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/1453383644/

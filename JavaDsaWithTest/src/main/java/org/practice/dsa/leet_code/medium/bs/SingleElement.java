@@ -1,4 +1,4 @@
-package org.practice.dsa.leet_code.easy.bs;
+package org.practice.dsa.leet_code.medium.bs;
 
 // https://leetcode.com/problems/single-element-in-a-sorted-array/submissions/
 public class SingleElement {
