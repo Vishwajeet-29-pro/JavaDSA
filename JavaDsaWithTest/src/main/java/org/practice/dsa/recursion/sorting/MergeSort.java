@@ -2,6 +2,10 @@ package org.practice.dsa.recursion.sorting;
 
 import java.util.Arrays;
 
+/**
+ * Time Complexity of Merge sort is: O(n log n)
+ * Space Complexity of Merge sort is: O(n)
+ */
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = {3,5,6,2,1};

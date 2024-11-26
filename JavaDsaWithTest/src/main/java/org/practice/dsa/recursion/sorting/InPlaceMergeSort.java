@@ -2,6 +2,10 @@ package org.practice.dsa.recursion.sorting;
 
 import java.util.Arrays;
 
+/**
+ * Time Complexity of InPlace Merge Sort is O(n log n)
+ * Space Complexity of InPlace Merge Sort is O(1).
+ */
 public class InPlaceMergeSort {
 
     public static void main(String[] args) {
