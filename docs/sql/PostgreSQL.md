@@ -26,3 +26,66 @@ Now to connect to the database, let us open a new terminal window and type the f
 `docker exec -it postgres-container bash`
 This command will start an interactive terminal inside the container. Next, you can start the PostgreSQL by running the following command on the same terminal.
 `psql -h localhost -U postgres`
+
+if with above command it not worked then use following command:
+`psql -h localhost -U <username> -d <database-name> -p 5432`
+
+## Common PostgreSQL Commands:
+### 1. Basic commands:
+1. Switch Database: ``` \c database_name```
+2. List All databases: ``` \l ```
+3. List all tables in the current database: ``` \dt ```
+4. Describe table: ``` \d table_name ```
+5. Exist PostgreSQL: ``` \q ```
+
+### 2. Database Operations:
+1. Create a database: ``` CREATE DATABASE database_name; ```
+2. Drop database: ``` DROP DATABASE database_name; ```
+
+### 3. User Management:
+1. List all Users/Roles:
+    ``` \du ```
+2. Create User:
+    ```sql
+        CREATE USER username AND PASSWORD 'password';
+    ```
+3. Grant Privileges: 
+    ```sql
+        GRANT ALL PRIVILEGES ON DATABASE <database-name> TO <username>;
+    ```
+4. Revoke Privileges:
+    ```sql
+        REVOKE ALL PRIVILEGES ON DATABASE <database-name> TO <username>;
+    ```
+
+### 4. Table Operations:
+1. Create Table:
+    ```sql
+        CREATE TABLE users (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(50),
+            email VARCHAR(150)
+        );
+    ```
+2. Drop a Table:
+    ```sql 
+        DROP TABLE table-name;
+    ```
+3. Rename table:
+    ``` ALTER TABLE old_table RENAME TO new_table;```
+4. Add column:
+    ``` ALTER TABLE table-name ADD COLUMN column-name type;```
+5. Remove column:
+    ``` ALTER TABLE table-name DROP COLUMN column-name;```
+
+### 5. Query Operations:
+1. Insert Data:
+    ``` INSERT INTO users (name, email) VALUES ('Vishwajeet', 'vishwajeet@example.com');```
+2. Select Data (all data):
+    ``` SELECT * FROM users;```
+3. Select specific field from all data:
+    ```SELECT name FROM users;```
+4. Update data:
+    ```UPDATE users SET name ='Vishwajeet Kotkar' WHERE id = 1;```
+5. Delete data:
+    ```DELETE FROM users WHERE id = 1;```
