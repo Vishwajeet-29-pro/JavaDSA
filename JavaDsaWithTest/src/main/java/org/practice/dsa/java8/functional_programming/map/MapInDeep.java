@@ -20,6 +20,8 @@ public class MapInDeep {
 
         List<String> stringList = List.of("Hello World", "Welcome to Java");
         System.out.println(convertList(stringList));
+
+        System.out.println(reverseElements(list));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -57,6 +59,13 @@ public class MapInDeep {
         return list.stream()
                 .map(s -> s.split(" "))
                 .flatMap(Arrays::stream)
+                .toList();
+    }
+
+    // Reverse strings in a list
+    public static List<String> reverseElements(List<String> list) {
+        return list.stream()
+                .map(s -> new StringBuilder(s).reverse().toString())
                 .toList();
     }
 
