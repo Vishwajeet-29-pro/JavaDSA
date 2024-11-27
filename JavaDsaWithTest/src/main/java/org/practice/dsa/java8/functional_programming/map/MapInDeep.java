@@ -1,6 +1,7 @@
 package org.practice.dsa.java8.functional_programming.map;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MapInDeep {
@@ -17,6 +18,8 @@ public class MapInDeep {
 
         System.out.println(formattedList(integerList));
 
+        List<String> stringList = List.of("Hello World", "Welcome to Java");
+        System.out.println(convertList(stringList));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -48,6 +51,14 @@ public class MapInDeep {
                 .toList();
     }
 
+//    5. Flatting Data
+//      Convert a list of sentences into individual words.
+    public static List<String> convertList(List<String> list) {
+        return list.stream()
+                .map(s -> s.split(" "))
+                .flatMap(Arrays::stream)
+                .toList();
+    }
 
     private static class Employee {
         private String employeeName;
