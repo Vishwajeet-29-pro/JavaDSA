@@ -89,3 +89,35 @@ if with above command it not worked then use following command:
     ```UPDATE users SET name ='Vishwajeet Kotkar' WHERE id = 1;```
 5. Delete data:
     ```DELETE FROM users WHERE id = 1;```
+
+### 6. Filtering and Sorting:
+1. Filter Rows:
+    ``` SELECT * FROM users WHERE age > 25;```
+2. Sort Rows:
+    ``` SELECT * FROM users ORDER BY name ASC;```
+3. Limit Rows:
+    ``` SELECT * FROM users LIMIT 10 OFFSET 20;```
+
+### 7. Aggregation and Grouping:
+1. Count rows:
+    ```SELECT COUNT(*) FROM users;```
+2. Group Data:
+    ```SELECT age, COUNT(*) FROM users GROUP BY age;```
+3. Find Maximum and Minimum:
+    ``` SELECT MAX(age), MIN(age) FROM users;```
+
+### 8. Index Management:
+1. Create an Index:
+    ``` CREATE INDEX idx_name ON users(name);```
+2. Delete an Index:
+    ```DROP INDEX idx_name;```
+
+### 9. Transaction Management:
+1. Begin a Transaction: ``` BEGIN;```
+2. Commit a Transaction: ```COMMIT;```
+3. Rollback a Transaction: ```ROLLBACK;```
+
+### 10. Miscellaneous Commands:
+1. Show current user:   ``` SELECT ```
+
+

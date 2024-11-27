@@ -60,6 +60,7 @@ public class MapInDeep {
     public static List<String> convertList(List<String> list) {
         return list.stream()
                 .map(s -> s.split(" "))
+//                .flatMap(a -> Arrays.stream(a))
                 .flatMap(Arrays::stream)
                 .toList();
     }
