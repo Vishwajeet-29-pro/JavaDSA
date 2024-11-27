@@ -22,6 +22,8 @@ public class MapInDeep {
         System.out.println(convertList(stringList));
 
         System.out.println(reverseElements(list));
+
+        System.out.println(integerToBinary(integerList));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -66,6 +68,14 @@ public class MapInDeep {
     public static List<String> reverseElements(List<String> list) {
         return list.stream()
                 .map(s -> new StringBuilder(s).reverse().toString())
+                .toList();
+    }
+
+//    Convert a List of Integers to Their Binary Representation
+    public static List<String> integerToBinary(List<Integer> list) {
+        return list.stream()
+//                .map(s -> Integer.toBinaryString(s))
+                .map(Integer::toBinaryString)
                 .toList();
     }
 
