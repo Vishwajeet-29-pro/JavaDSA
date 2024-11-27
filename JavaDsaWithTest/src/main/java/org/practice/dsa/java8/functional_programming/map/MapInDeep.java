@@ -12,6 +12,11 @@ public class MapInDeep {
         List<Employee> employeeList = List.of(new Employee("Vishwajeet", 24), new Employee("Aniket", 25), new Employee("Mitesh", 22));
         System.out.println(getEmployeeName(employeeList));
 
+        List<Integer> integerList = List.of(1, 2, 3, 4, 5);
+        System.out.println(square(integerList));
+
+        System.out.println(formattedList(integerList));
+
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -28,6 +33,21 @@ public class MapInDeep {
                 .map(Employee::getEmployeeName)
                 .toList();
     }
+
+//    3. Computation or Transformation
+    public static List<Integer> square(List<Integer> list) {
+        return list.stream()
+                .map(s -> s*s)
+                .toList();
+    }
+
+//    4. Complex Transformation
+    public static List<String> formattedList(List<Integer> list) {
+        return list.stream()
+                .map(s-> "Age: " + s)
+                .toList();
+    }
+
 
     private static class Employee {
         private String employeeName;
