@@ -12,5 +12,9 @@ public class SinglyMain {
         list.display();
         list.insert(70, 3);
         list.display();
+        System.out.println(list.deleteFirst());;
+        list.display();
+        System.out.println(list.deleteLast());
+        list.display();
     }
 }

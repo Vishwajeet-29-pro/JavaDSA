@@ -53,6 +53,37 @@ public class SinglyLinkedList {
         size++;
     }
 
+    public int deleteFirst() {
+        int val = head.val;
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+        size--;
+        return val;
+    }
+
+    public int deleteLast() {
+        if (size <=1) {
+            deleteFirst();
+        }
+        Node secondLast = get(size -2);
+        int val = tail.val;
+//        secondLast.next = null;
+//        tail = secondLast;  // same logic no difference
+        tail = secondLast;
+        tail.next = null;
+        size--;
+        return val;
+    }
+
+    private Node get(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
 
 
     public void display() {
