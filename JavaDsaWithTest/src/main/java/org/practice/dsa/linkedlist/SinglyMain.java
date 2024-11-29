@@ -16,5 +16,7 @@ public class SinglyMain {
         list.display();
         System.out.println(list.deleteLast());
         list.display();
+        System.out.println(list.delete(2));
+        list.display();
     }
 }
