@@ -8,6 +8,9 @@ public class SinglyMain {
         list.insertFirst(30);
         list.insertFirst(40);
 
+        list.insertLast(100);
+        list.display();
+        list.insert(70, 3);
         list.display();
     }
 }
