@@ -24,6 +24,8 @@ public class MapInDeep {
         System.out.println(reverseElements(list));
 
         System.out.println(integerToBinary(integerList));
+
+        System.out.println(extractFirstLetter(list));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -77,6 +79,13 @@ public class MapInDeep {
         return list.stream()
 //                .map(s -> Integer.toBinaryString(s))
                 .map(Integer::toBinaryString)
+                .toList();
+    }
+
+//    Extract First Letters
+    public static List<String> extractFirstLetter(List<String> list) {
+        return list.stream()
+                .map(a -> a.substring(0, 1))
                 .toList();
     }
 
