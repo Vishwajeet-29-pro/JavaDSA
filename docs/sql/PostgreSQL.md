@@ -118,6 +118,13 @@ if with above command it not worked then use following command:
 3. Rollback a Transaction: ```ROLLBACK;```
 
 ### 10. Miscellaneous Commands:
-1. Show current user:   ``` SELECT ```
+1. Show current user:   ``` SELECT current_user; ```
+2. Show Current Database: ``` SELECT current_database(); ```
+3. Show all Running Queries: ``` SELECT * FROM pg_stat_activity; ```
+4. Cancel a Query: ``` SELECT pg_cancel_backend(pid); ```
 
-
+### 11. Import and Export:
+1. Import Data: 
+    ``` psql -U username -d database_name -f dumpfile.sql ```
+2. Export Data:
+    ``` pg_dump -U username -d database_name > dumpfile.sql ```
