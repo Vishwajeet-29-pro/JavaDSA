@@ -28,6 +28,9 @@ public class MapInDeep {
         System.out.println(extractFirstLetter(list));
 
         System.out.println(calculateLength(list));
+
+        List<String> nameList = List.of("Vishwajeet", "Anil", "John", "Robert");
+        System.out.println(addPrefix(nameList));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -95,6 +98,13 @@ public class MapInDeep {
     public static List<Integer> calculateLength(List<String> list) {
         return list.stream()
                 .map(String::length)
+                .toList();
+    }
+
+//        Add Prefix to names
+    public static List<String> addPrefix(List<String> list) {
+        return list.stream()
+                .map(s -> "Mr./Ms " +s)
                 .toList();
     }
 
