@@ -25,6 +25,12 @@ public class DoublyLinkedList {
             node = node.next;
         }
         System.out.println("END");
+
+        while (last != null) {
+            System.out.print(last.val + "->");
+            last = last.prev;
+        }
+        System.out.println("START");
     }
 
     private class Node {
