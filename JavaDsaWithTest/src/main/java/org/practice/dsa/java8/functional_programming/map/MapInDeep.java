@@ -38,6 +38,9 @@ public class MapInDeep {
 
         List<LocalDate> dates = List.of(LocalDate.of(2024, 12,2), LocalDate.of(2024,12,3));
         System.out.println(dateFormat(dates));
+
+        List<Double> price = List.of(100.0, 200.0, 400.0);
+        System.out.println(twiceThePrice(price));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -121,6 +124,13 @@ public class MapInDeep {
         return dates.stream()
 //                .map(date -> formatter.format(date))
                 .map(formatter::format)
+                .toList();
+    }
+
+//    Double the price
+    public static List<Double> twiceThePrice(List<Double> list) {
+        return list.stream()
+                .map(d -> d * 2)
                 .toList();
     }
 
