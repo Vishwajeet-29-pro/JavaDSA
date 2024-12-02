@@ -60,6 +60,19 @@ public class DoublyLinkedList {
         return null;
     }
 
+    public int deleteFirst() {
+        if (head == null) {
+            throw new RuntimeException("List is Empty");
+        }
+        int val = head.val;
+        head = head.next;
+
+        if (head != null) {
+            head.prev = null;
+        }
+        return val;
+    }
+
     public void display() {
         Node node = head;
         Node last = null;

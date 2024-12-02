@@ -11,5 +11,8 @@ public class DoublyMain {
 
         dd.insert(10, 8);
         dd.display();
+
+        System.out.println(dd.deleteFirst());
+        dd.display();
     }
 }
