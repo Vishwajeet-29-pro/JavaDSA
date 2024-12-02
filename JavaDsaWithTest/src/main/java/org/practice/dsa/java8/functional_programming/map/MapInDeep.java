@@ -1,5 +1,9 @@
 package org.practice.dsa.java8.functional_programming.map;
 
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,6 +35,9 @@ public class MapInDeep {
 
         List<String> nameList = List.of("Vishwajeet", "Anil", "John", "Robert");
         System.out.println(addPrefix(nameList));
+
+        List<LocalDate> dates = List.of(LocalDate.of(2024, 12,2), LocalDate.of(2024,12,3));
+        System.out.println(dateFormat(dates));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -105,6 +112,15 @@ public class MapInDeep {
     public static List<String> addPrefix(List<String> list) {
         return list.stream()
                 .map(s -> "Mr./Ms " +s)
+                .toList();
+    }
+
+//    Transform LocalDates to specific pattern
+    public static List<String> dateFormat(List<LocalDate> dates) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return dates.stream()
+//                .map(date -> formatter.format(date))
+                .map(formatter::format)
                 .toList();
     }
 
