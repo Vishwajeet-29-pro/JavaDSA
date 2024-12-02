@@ -9,13 +9,17 @@ public class DoublyMain {
         dd.insertFirst(7);
         dd.insertLast(11);
 
-        dd.insert(10, 8);
-        dd.display();
+//        dd.insert(10, 8);
+//        dd.display();
 
-        System.out.println(dd.deleteFirst());
-        dd.display();
+//        System.out.println(dd.deleteFirst());
+//        dd.display();
 
-        System.out.println(dd.deleteLast());
+//        System.out.println(dd.deleteLast());
+//        dd.display();
+
+        dd.display();
+        System.out.println(dd.delete(3));
         dd.display();
     }
 }

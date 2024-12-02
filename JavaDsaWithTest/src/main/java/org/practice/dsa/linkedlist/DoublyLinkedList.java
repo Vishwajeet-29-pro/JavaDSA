@@ -92,6 +92,35 @@ public class DoublyLinkedList {
         return val;
     }
 
+    public int delete(int index) {
+        if (index == 0) {
+            deleteFirst();
+        }
+
+        Node node = get(index);
+
+        int val = node.val;
+
+        if (node.next != null) {
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+        } else {
+            node.prev.next = null;
+        }
+        return val;
+    }
+
+    public Node get(int index) {
+        Node temp = head;
+        int i = 0;
+
+        while (temp != null && i < index) {
+            temp = temp.next;
+            i++;
+        }
+        return temp;
+    }
+
     public void display() {
         Node node = head;
         Node last = null;
