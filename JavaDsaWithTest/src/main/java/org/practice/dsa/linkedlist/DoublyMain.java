@@ -8,6 +8,8 @@ public class DoublyMain {
         dd.insertFirst(8);
         dd.insertFirst(7);
         dd.insertLast(11);
+
+        dd.insert(10, 8);
         dd.display();
     }
 }
