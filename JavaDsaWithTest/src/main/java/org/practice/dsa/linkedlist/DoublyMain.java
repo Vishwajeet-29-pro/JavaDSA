@@ -14,5 +14,8 @@ public class DoublyMain {
 
         System.out.println(dd.deleteFirst());
         dd.display();
+
+        System.out.println(dd.deleteLast());
+        dd.display();
     }
 }

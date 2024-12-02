@@ -73,6 +73,25 @@ public class DoublyLinkedList {
         return val;
     }
 
+    public int deleteLast() {
+        if (head == null) {
+            throw new RuntimeException("List is Empty");
+        }
+
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
+        int val = last.val;
+
+        if (last.prev != null) {
+            last.prev.next = null;
+        } else {
+            head = null;
+        }
+        return val;
+    }
+
     public void display() {
         Node node = head;
         Node last = null;
