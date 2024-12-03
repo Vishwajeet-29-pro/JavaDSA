@@ -41,6 +41,8 @@ public class MapInDeep {
 
         List<Double> price = List.of(100.0, 200.0, 400.0);
         System.out.println(twiceThePrice(price));
+
+        System.out.println(conversion(employeeList));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -133,6 +135,15 @@ public class MapInDeep {
                 .map(d -> d * 2)
                 .toList();
     }
+
+//    Convert Object List to Attribute List
+    public static List<String> conversion(List<Employee> employees) {
+        return employees.stream()
+//                .map(e -> e.getEmployeeName())
+                .map(Employee::getEmployeeName)
+                .toList();
+    }
+
 
     private static class Employee {
         private String employeeName;
