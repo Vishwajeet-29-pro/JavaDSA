@@ -43,6 +43,9 @@ public class MapInDeep {
         System.out.println(twiceThePrice(price));
 
         System.out.println(conversion(employeeList));
+
+        List<List<Integer>> nestedLists = List.of(List.of(1, 2), List.of(3, 4), List.of(5, 6));
+        System.out.println(transformNestedLists(nestedLists));
     }
 //    1. Transforming Elements
     public static List<String> upperCaseList(List<String> list) {
@@ -144,6 +147,12 @@ public class MapInDeep {
                 .toList();
     }
 
+//    Transform Nested Lists
+    public static List<List<Integer>> transformNestedLists(List<List<Integer>> list) {
+        return list.stream()
+                .map(e -> e.stream().map(s -> s*2).toList())
+                .toList();
+    }
 
     private static class Employee {
         private String employeeName;
