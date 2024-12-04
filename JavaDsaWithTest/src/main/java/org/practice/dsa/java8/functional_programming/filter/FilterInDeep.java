@@ -19,6 +19,9 @@ public class FilterInDeep {
         stringsWithNull.add("Kotlin");
         stringsWithNull.add(null);
         System.out.println(filterNullValues(stringsWithNull));
+
+        List<Student> students = List.of(new Student("V", 25), new Student("R", 15), new Student("T",19));
+        filterStudents(students).forEach(s -> System.out.print(s.getName()+" "));
     }
 
     public static List<Integer> evenNumbers(List<Integer> list) {
@@ -39,5 +42,30 @@ public class FilterInDeep {
         return list.stream()
                 .filter(Objects::nonNull)
                 .toList();
+    }
+
+    // Filter out student whose age greater than 18.
+    public static List<Student> filterStudents(List<Student> students) {
+        return students.stream()
+                .filter(student -> student.getAge() > 18)
+                .toList();
+    }
+}
+
+class Student {
+    String name;
+    int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
