@@ -35,18 +35,7 @@ public class ConvertBinary {
             power++;
         }
         return result;
-
     }
-
-    private int power(int input) {
-        int count = 0;
-        while (input > 0) {
-            input = input /10;
-            count++;
-        }
-        return count;
-    }
-
 
     ListNode head;
     ListNode tail;
