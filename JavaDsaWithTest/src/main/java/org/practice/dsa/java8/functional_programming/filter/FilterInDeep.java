@@ -1,6 +1,8 @@
 package org.practice.dsa.java8.functional_programming.filter;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class FilterInDeep {
     public static void main(String[] args) {
@@ -9,6 +11,14 @@ public class FilterInDeep {
 
         List<String> stringList = List.of("Java", "JavaScript", "Kotlin", "Python");
         System.out.println(specificLetterList(stringList, "J"));
+
+        List<String> stringsWithNull = new ArrayList<>();
+        stringsWithNull.add("Java");
+        stringsWithNull.add("JavaScript");
+        stringsWithNull.add(null);
+        stringsWithNull.add("Kotlin");
+        stringsWithNull.add(null);
+        System.out.println(filterNullValues(stringsWithNull));
     }
 
     public static List<Integer> evenNumbers(List<Integer> list) {
@@ -21,6 +31,13 @@ public class FilterInDeep {
     public static List<String> specificLetterList(List<String> list, String ch) {
         return list.stream()
                 .filter(s -> s.startsWith(ch))
+                .toList();
+    }
+
+    // Filter out null values from the list
+    public static List<String> filterNullValues(List<String> list) {
+        return list.stream()
+                .filter(Objects::nonNull)
                 .toList();
     }
 }
