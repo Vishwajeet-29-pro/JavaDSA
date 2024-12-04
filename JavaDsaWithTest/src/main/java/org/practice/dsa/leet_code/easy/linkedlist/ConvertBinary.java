@@ -9,7 +9,6 @@ public class ConvertBinary {
         binary.display();
 
         System.out.println(binary.getDecimalValue());
-        System.out.println(binary.binaryToDecimal(101));
 
     }
 
@@ -18,21 +17,8 @@ public class ConvertBinary {
         ListNode node = head;
         int result = 0;
         while (node != null) {
-            result = result * 10 + node.val;
+            result = result * 2 + node.val;
             node = node.next;
-        }
-
-        return binaryToDecimal(result);
-    }
-
-    private int binaryToDecimal(int binaryNumber) {
-        int power = 0;
-        int result = 0;
-        while (binaryNumber > 0) {
-            int lastDigit = binaryNumber % 10;
-            result += (int) (lastDigit * Math.pow(2, power));
-            binaryNumber = binaryNumber/10;
-            power++;
         }
         return result;
     }
