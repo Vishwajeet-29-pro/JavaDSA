@@ -2,7 +2,9 @@ package org.practice.dsa.java8.functional_programming.filter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class FilterInDeep {
     public static void main(String[] args) {
@@ -25,6 +27,15 @@ public class FilterInDeep {
         System.out.println();
 
         System.out.println(filterLength(stringList));
+
+        Map<String, Integer> scores = Map.of(
+                "Vishwajeet", 90,
+                "Raman", 50,
+                "Random", 45,
+                "Soren", 55
+        );
+
+        System.out.println(filterMap(scores));
     }
 
     public static List<Integer> evenNumbers(List<Integer> list) {
@@ -59,6 +70,17 @@ public class FilterInDeep {
         return list.stream()
                 .filter(s -> s.length() > 4)
                 .toList();
+    }
+
+    // Filter Based on a Condition in a Map
+    // Extract all map entries where the value is greater than 50.
+    public static Map<String, Integer> filterMap(Map<String, Integer> scores) {
+        return scores.entrySet().stream()
+                .filter(s -> s.getValue() > 50)
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue
+                ));
     }
 }
 
