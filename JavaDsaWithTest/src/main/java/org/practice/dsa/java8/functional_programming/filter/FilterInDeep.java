@@ -22,6 +22,9 @@ public class FilterInDeep {
 
         List<Student> students = List.of(new Student("V", 25), new Student("R", 15), new Student("T",19));
         filterStudents(students).forEach(s -> System.out.print(s.getName()+" "));
+        System.out.println();
+
+        System.out.println(filterLength(stringList));
     }
 
     public static List<Integer> evenNumbers(List<Integer> list) {
@@ -48,6 +51,13 @@ public class FilterInDeep {
     public static List<Student> filterStudents(List<Student> students) {
         return students.stream()
                 .filter(student -> student.getAge() > 18)
+                .toList();
+    }
+
+    // Filter strings from list whose length is greater than 4
+    public static List<String> filterLength(List<String> list) {
+        return list.stream()
+                .filter(s -> s.length() > 4)
                 .toList();
     }
 }
