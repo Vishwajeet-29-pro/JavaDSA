@@ -30,6 +30,17 @@ public class CustomStack {
         }
     }
 
+    public void display() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty---");
+        } else {
+            for (int i = top; i >=0 ; i--) {
+                System.out.print(stack[i]+ " ");
+            }
+            System.out.println();
+        }
+    }
+
     private boolean isFull() {
         return top == capacity -1;
     }
@@ -45,11 +56,14 @@ public class CustomStack {
         customStack.push(30);
         customStack.push(50);
         customStack.push(60);
+        customStack.display();
 
         System.out.println(customStack.pop());
         System.out.println(customStack.pop());
+        customStack.display();
         System.out.println(customStack.pop());
         System.out.println(customStack.pop());
+        customStack.display();
         System.out.println(customStack.pop());
     }
 }
