@@ -36,6 +36,9 @@ public class FilterInDeep {
         );
 
         System.out.println(filterMap(scores));
+
+        List<Employee> employees = List.of(new Employee("V", 2500000), new Employee("R", 15000), new Employee("T",190000));
+        System.out.println(filterBySalary(employees));
     }
 
     public static List<Integer> evenNumbers(List<Integer> list) {
@@ -54,6 +57,7 @@ public class FilterInDeep {
     // Filter out null values from the list
     public static List<String> filterNullValues(List<String> list) {
         return list.stream()
+//                .filter(a -> a != null)
                 .filter(Objects::nonNull)
                 .toList();
     }
@@ -81,6 +85,37 @@ public class FilterInDeep {
                         Map.Entry::getKey,
                         Map.Entry::getValue
                 ));
+    }
+
+    // Filter the employees based on the salaries.
+    public static List<Employee> filterBySalary(List<Employee> list) {
+        return list.stream()
+                .filter(s -> s.getSalary() > 500000)
+                .toList();
+    }
+
+}
+
+class Employee {
+    String empName;
+    double salary;
+
+    public Employee(String empName, double salary) {
+        this.empName = empName;
+        this.salary = salary;
+    }
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public String toString() {
+        return STR."\{getEmpName()} \{getSalary()}";
     }
 }
 
