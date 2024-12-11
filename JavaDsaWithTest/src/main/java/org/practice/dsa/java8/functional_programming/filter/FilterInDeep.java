@@ -39,6 +39,8 @@ public class FilterInDeep {
 
         List<Employee> employees = List.of(new Employee("V", 2500000), new Employee("R", 15000), new Employee("T",190000));
         System.out.println(filterBySalary(employees));
+
+        System.out.println(filterPrimeNumbers(integerList));
     }
 
     public static List<Integer> evenNumbers(List<Integer> list) {
@@ -94,6 +96,24 @@ public class FilterInDeep {
                 .toList();
     }
 
+//  Problem: Extract all prime numbers from a list of integers.
+    public static List<Integer> filterPrimeNumbers(List<Integer> integers) {
+        return integers.stream()
+                .filter(FilterInDeep::isPrime)
+                .toList();
+    }
+
+    public static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 class Employee {
