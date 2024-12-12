@@ -119,10 +119,17 @@ public class FilterInDeep {
 class Employee {
     String empName;
     double salary;
+    String department;
 
     public Employee(String empName, double salary) {
         this.empName = empName;
         this.salary = salary;
+    }
+
+    public Employee(String empName, double salary, String department) {
+        this.empName = empName;
+        this.salary = salary;
+        this.department = department;
     }
 
     public String getEmpName() {
@@ -131,6 +138,10 @@ class Employee {
 
     public double getSalary() {
         return salary;
+    }
+
+    public String getDepartment() {
+        return department;
     }
 
     @Override
