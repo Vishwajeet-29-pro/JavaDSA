@@ -15,16 +15,20 @@ docker run -name postgres-container -e POSTGRES_PASSWORD=password -p 5432:5432 P
 ```
 In the above command, we call the run command to create a container from the postgres image that is present in our local repository
 We provide some parameters here as you see:
--name: This parameter give the name to that container. 
--e: This tag stands for the environment variables to that image.
-In the above command we provide the POSTGRES_PASSWORD 
--p: We need to define on which port is the database going to run in the container and which port on the host can be used to access it. As you can see, there are two ports mentioned in the command which are in the form HOST_PORT:DOCKER_PORT.
+- -name: This parameter give the name to that container. 
+- -e: This tag stands for the environment variables to that image.
+- In the above command we provide the POSTGRES_PASSWORD 
+- -p: We need to define on which port is the database going to run in the container and which port on the host can be used to access it. As you can see, there are two ports mentioned in the command which are in the form HOST_PORT:DOCKER_PORT.
+
 By running this command you have successfully created a postgres container
 
 Once you run the command, you can see that the container starts up and is ready to accept database connections. An important point to note here is that we have not executed the command in detached mode, which means the database or the container will be running as long as the terminal is open.
 Now to connect to the database, let us open a new terminal window and type the following command.
+
 `docker exec -it postgres-container bash`
+
 This command will start an interactive terminal inside the container. Next, you can start the PostgreSQL by running the following command on the same terminal.
+
 `psql -h localhost -U postgres`
 
 if with above command it not worked then use following command:
