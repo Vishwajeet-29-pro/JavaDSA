@@ -6,6 +6,9 @@ JAR_FILE := $(BUILD_DIR)/libs/Java-DSA-1.0-SNAPSHOT.jar
 # Targets
 .PHONY: all build clean run test
 
+.PHONY: pipeline
+pipeline: all
+
 all: build
 
 # Build the project
