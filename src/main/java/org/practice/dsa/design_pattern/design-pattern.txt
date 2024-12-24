@@ -1,0 +1,35 @@
+There are 23 design pattern.
+Singleton Pattern
+Factory Method Pattern
+Abstract Factory Pattern
+Builder Pattern
+Prototype Pattern
+Adapter Pattern
+Bridge Pattern
+Composite Pattern
+Decorator Pattern
+Facade Pattern
+Flyweight Pattern
+Proxy Pattern
+Chain of Responsibility Pattern
+Command Pattern
+Interpreter Pattern
+Iterator Pattern
+Mediator Pattern
+Memento Pattern
+Observer Pattern
+State Pattern
+Strategy Pattern
+Template Method Pattern
+Visitor Pattern
+
+Here are the most common design patterns list:
+1. Singleton Pattern        : done
+2. Factory Method Pattern   : done
+3. Builder Pattern          : done
+4. Adapter Pattern          : done
+5. Decorator Pattern        : done
+6. Proxy Pattern            :
+7. Observer Pattern         : done
+8. Strategy Pattern         : done
+9. Template Method Pattern  :
