@@ -8,3 +8,10 @@ Feature: Library Management System
       | The Pragmatic Programmer | Andy Hunt               | 0             |
     When I search for "Clean Code"
     Then the result should be "Available"
+
+  Scenario: Barrow a book
+    Given the library has following books
+      | Title                    | Author                  | Quantity      |
+      | Clean Code               | Robert Martin           | 5             |
+    When I barrow the "Clean code"
+    Then the quantity of "Clean code" should be 4
