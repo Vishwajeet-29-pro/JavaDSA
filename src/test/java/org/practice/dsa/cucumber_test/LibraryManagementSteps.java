@@ -32,4 +32,19 @@ public class LibraryManagementSteps {
     public void theResultShouldBe(String expected) {
         assertEquals(expected, searchResult);
     }
+
+    @When("I barrow the {string}")
+    public void iBarrowThe(String title) {
+        int quantity = books.getOrDefault(title, 0);
+        if (quantity > 0) {
+            books.put(title, quantity - 1);
+        } else {
+            errorMessage = "Book not available";
+        }
+    }
+
+    @Then("the quantity of {string} should be {int}")
+    public void theQuantityOfShouldBe(String title, int expectedQuantity) {
+        assertEquals(expectedQuantity, books.get(title));
+    }
 }
