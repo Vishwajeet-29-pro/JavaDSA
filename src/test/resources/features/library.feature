@@ -13,5 +13,5 @@ Feature: Library Management System
     Given the library has following books
       | Title                    | Author                  | Quantity      |
       | Clean Code               | Robert Martin           | 5             |
-    When I barrow the "Clean code"
-    Then the quantity of "Clean code" should be 4
+    When I barrow the "Clean Code"
+    Then the quantity of "Clean Code" should be 4
