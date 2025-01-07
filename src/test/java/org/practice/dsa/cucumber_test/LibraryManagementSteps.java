@@ -47,4 +47,20 @@ public class LibraryManagementSteps {
     public void theQuantityOfShouldBe(String title, int expectedQuantity) {
         assertEquals(expectedQuantity, books.get(title));
     }
+
+    @When("I add a new book {string} with author {string} and quantity {int}")
+    public void iAddANewBookWithAuthorAndQuantity(String title, String author, int quantity) {
+        books.put(title, quantity);
+    }
+
+    @Then("the library should be updated with book details")
+    public void theLibraryShouldBeUpdatedWithBookDetails(io.cucumber.datatable.DataTable dataTable) {
+        Map<String, Integer> expectedBooks = new HashMap<>();
+        dataTable.asMaps(String.class, String.class).forEach(row -> {
+            String title = row.get("Title");
+            int quantity = Integer.parseInt(row.get("Quantity"));
+            expectedBooks.put(title, quantity);
+        });
+        assertEquals(expectedBooks, books, "Library books do not match with the expected data");
+    }
 }
