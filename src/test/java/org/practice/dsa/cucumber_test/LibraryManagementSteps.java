@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LibraryManagementSteps {
     private Map<String, Integer> books = new HashMap<>();
@@ -62,5 +63,16 @@ public class LibraryManagementSteps {
             expectedBooks.put(title, quantity);
         });
         assertEquals(expectedBooks, books, "Library books do not match with the expected data");
+    }
+
+    @When("I delete the book {string}")
+    public void iDeleteTheBook(String title) {
+        books.remove(title);
+    }
+
+    @Then("the book with name {string} is removed")
+    public void theBookWithNameIsRemoved(String title) {
+        boolean isRemoved = !books.containsKey(title);
+        assertTrue(isRemoved, "The book was not removed successfully.");
     }
 }
