@@ -15,3 +15,13 @@ Feature: Library Management System
       | Clean Code               | Robert Martin           | 5             |
     When I barrow the "Clean Code"
     Then the quantity of "Clean Code" should be 4
+
+  Scenario: Add a new book
+    Given the library has following books
+      | Title      | Author        | Quantity |
+      | Clean Code | Robert Martin | 5        |
+    When I add a new book "Effective Java" with author "Joshua Bloch" and quantity 5
+    Then the library should be updated with book details
+      | Title          | Author        | Quantity |
+      | Clean Code     | Robert Martin | 5        |
+      | Effective Java | Joshua Bloch  | 5        |
